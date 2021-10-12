@@ -9,9 +9,14 @@ My bookmarks
 <li><a href="https://who.is/">WhoIs</a> </li>
 <li><a href="https://bellard.org/jslinux/">Online-Terminal-SSH-Sed-Awk-NC</a> </li>
 <li><a href="https://copy.sh/">Boot-from-image-online-linux-system</a> </li>
+<li><a href="https://www.tutorialspoint.com/unix_terminal_online.php">Bash Practice</a> </li>
+<li><a href="https://linuxcontainers.org/">Terminal-for-29minutes</a> </li>
 
 
-https://copy.sh/
+
+
+
+
 
 
 
