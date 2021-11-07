@@ -16,6 +16,9 @@ My bookmarks
 <li><a href="https://www.tutorialspoint.com/unix_terminal_online.php">Bash Practice</a> </li>
 <li><a href="https://linuxcontainers.org/">Terminal-for-29minutes</a> </li>
 <li><a href="https://paiza.io/en/projects/new?language=bash/">Bash-Awesome-Projects-Online-Terminal</a> </li>
+<li><a href="https://telegra.ph/">Telegraph-post-TextShare</a> </li>
+
+
 
 
 
