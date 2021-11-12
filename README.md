@@ -22,6 +22,9 @@ My bookmarks
 <li><a href="https://thenounproject.com/">Icons for free thenounproject/</a> </li>
 <li><a href="https://www.autodraw.com/">Draw automatically autodraw</a> </li>
 <li><a href="https://screenshot.guru/">Screenshort any web page screenshot/</a> </li>
+  <li><a href="https://pixlr.com/x/#editor">Image Editor pixlr</a> </li>
+
+  
   </ol>
 
 
