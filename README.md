@@ -1,7 +1,8 @@
 # EFX-Tv-Bookmarks
-My bookmarks
 
-# Top used websites by Hackers and people interested in graphics
+<details>
+<summary>Hackers Site</summary>
+<br>
 <ol>
 <li><a href="https://www.vpngate.net/en/">Ovpn-config-files-UDP-VPN</a> </li>
 <li><a href="https://m.freeopenvpn.org/">Ovpn-config-files-UDP-VPN2</a> </li>
@@ -15,7 +16,18 @@ My bookmarks
 <li><a href="https://linuxcontainers.org/">Terminal-for-29minutes</a> </li>
 <li><a href="https://paiza.io/en/projects/new?language=bash/">Bash-Awesome-Projects-Online-Terminal</a> </li>
 <li><a href="https://telegra.ph/">Telegraph-post-TextShare</a> </li>
+<li><a href="https://www.ssavr.com/">Text-Share-Inside-Lan</a> </li>
 <li><a href="https://www.ratatype.com/">Ratatype.com Typing Skill/</a> </li>
+<li><a href="https://www.dnsleaktest.com/">Ratatype.com Typing Skill/</a> </li>
+<li><a href="https://www.ipchicken.com/#editor">Ipchicken</a> </li>
+</ol>
+</details>
+
+
+<details>
+<summary>Editing</summary>
+<br>
+<ol>
 <li><a href="https://vectr.com/">vectr ONLINE</a> </li>
 <li><a href="https://www.sejda.com/">Edit pdf online sejda</a> </li>
 <li><a href="https://pexels.com/">download videos images pexels</a> </li>
@@ -23,9 +35,11 @@ My bookmarks
 <li><a href="https://www.autodraw.com/">Draw automatically autodraw</a> </li>
 <li><a href="https://screenshot.guru/">Screenshort any web page screenshot/</a> </li>
   <li><a href="https://pixlr.com/x/#editor">Image Editor pixlr</a> </li>
-
-  
   </ol>
+</details>
+
+
+
 
 
 
