@@ -18,7 +18,7 @@
 <li><a href="https://telegra.ph/">Telegraph-post-TextShare</a> </li>
 <li><a href="https://www.ssavr.com/">Text-Share-Inside-Lan</a> </li>
 <li><a href="https://www.ratatype.com/">Ratatype.com Typing Skill/</a> </li>
-<li><a href="https://www.dnsleaktest.com/">Ratatype.com Typing Skill/</a> </li>
+<li><a href="https://www.dnsleaktest.com/">DNS Leaks/</a> </li>
 <li><a href="https://www.ipchicken.com/#editor">Ipchicken</a> </li>
 <li><a href="https://globfone.com/call-phone-online/">Free Calls</a> </li>
 <li><a href="https://boredhumans.com/">150+Ai Based Sites</a> </li>
