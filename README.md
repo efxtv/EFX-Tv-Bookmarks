@@ -8,7 +8,7 @@
 <li><a href="https://m.freeopenvpn.org/">Ovpn-config-files-UDP-VPN2</a> </li>
 <li><a href="https://spys.one/free-proxy-list/GB/">Spys.one</a> </li>
 <li><a href="https://unblock-websites.com/">Unblock-city-Online-proxy</a> </li>
-<li><a href="https://www.ipchicken.com/">IpChicken</a> </li>
+<li><a href="https://subdomainfinder.c99.nl/">Subdomain Lookup c99</a> </li>
 <li><a href="https://who.is/">WhoIs</a> </li>
 <li><a href="https://bellard.org/jslinux/">Online-Terminal-SSH-Sed-Awk-NC</a> </li>
 <li><a href="https://copy.sh/">Boot-from-image-online-linux-system</a> </li>
