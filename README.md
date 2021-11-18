@@ -1,5 +1,5 @@
 # EFX-Tv-Bookmarks
-
+Top website, webpages, chrome plugins, online editing tools for any time access for hacking purposes.
 <details>
 <summary>Hackers Site</summary>
 <br>
