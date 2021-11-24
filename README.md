@@ -1,5 +1,18 @@
 # EFX-Tv-Bookmarks
 Top website, webpages, chrome plugins, online editing tools for any time access for hacking purposes.
+
+<details>
+<summary>EFX -TV files</summary>
+<br>
+<ol>
+ <li><a href="https://t.me/Efxtv/156">Download Configure NGROK</a> </li>
+  <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg">Chrome Agent Switcher</a></li>
+   <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en">User agent switcher manager</a> </li>
+    <li><a href="https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme">Zenmate VPN</a> </li>
+  </ol>
+</details>
+
+
 <details>
 <summary>Hackers Site</summary>
 <br>
@@ -47,7 +60,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 </details>
 
 <details>
-<summary>Chrome Extensions Fownload</summary>
+<summary>Chrome Extensions Download</summary>
 <br>
 <ol>
  <li><a href="https://mybrowseraddon.com/proxy-switcher.html?v=0.1.5&type=install">Proxy Switcher</a> </li>
