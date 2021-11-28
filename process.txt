@@ -1,0 +1,50 @@
+Each time the process ID is changed for all processes except init. The init process is always the first process in the system and the ancestor of all other processes, it holds PID 1.
+
+The default maximum value of PIDs is 32768 on 32-bit machine. And you can set the value higher on 64-bit systems up to 2^22 (approximately 4 million). This can be verified by running the following command on your machine:
+
+cat /proc/sys/kernel/pid_max 
+
+You may ask, why do we need such large number of PIDs? This is because PIDs cannot be reused immediately and also to prevent potential errors.
+
+You can find the PID of processes running on the system using the below nine command.
+
+pidof: pidof – find the process ID of a running program.
+pgrep: pgre – look up or signal processes based on name and other attributes.
+ps: ps – report a snapshot of the current processes.
+pstree: pstree – display a tree of processes.
+ss: ss is used to dump socket statistics.
+netstat: netstat is displays a list of open sockets.
+lsof: lsof – list open files.
+fuser: fuser – list process IDs of all processes that have one or more files open
+systemctl: systemctl – Control the systemd system and service manager
+
+1) Finding a process ID (PID) with pidof command
+ pidof apache2
+ 
+2) How to search a process ID (PID) in Linux, using pgrep command?
+The pgrep command looks at the processes currently running, and lists the process IDs that match the selection criteria.
+ pgrep apache2
+ 
+3) locating a process ID (PID) with pstree
+pstree -p | grep "apache2"
+pstree -p | grep "apache2" | head -1
+
+4) How to find a process ID (PID) using ps command?
+ps aux | grep "apache2"
+
+5) Finding a process ID (PID) using ss command
+ss -tnlp | grep apache2
+
+6) Finding a process ID (PID) with netstat command
+netstat -tnlp | grep apache2
+
+7) How to find a process ID (PID) in Linux, using lsof command?
+lsof -i -P | grep apache2
+
+8) Searching a process ID (PID) using fuser command
+fuser -v 80/tcp
+
+9) How to find a process ID (PID) in Linux, using systemctl command?
+systemctl status apache2
+
+Read : https://www.2daygeek.com/check-find-parent-process-id-pid-ppid-linux/
