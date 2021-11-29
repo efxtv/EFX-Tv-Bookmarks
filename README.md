@@ -69,6 +69,19 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
   </ol>
 </details>
 
+<details>
+<summary>Seo</summary>
+<br>
+<ol>
+ <li><a href="https://seoanalyser.me">SEO analyserr</a> </li>
+  <li><a href="https://socialblade.com/">Social Blade</a></li>
+   <li><a href="https://ahrefs.com/">Backlink Checker</a> </li>
+    <li><a href="https://www.seoreviewtools.com/">Backlink-checkier2</a> </li>
+ 
+ 
+  </ol>
+</details>
+
 ---------------------------------------
 India :  7503453371@ybl<br />
 <a href="https://paypal.me/efxtv"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/donate-efx-tv.png" alt="Paypal" width="125" height="40"></a>
