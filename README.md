@@ -36,6 +36,10 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://www.ratatype.com/">Ratatype.com Typing Skill/</a> </li>
 <li><a href="https://globfone.com/call-phone-online/">Free Calls</a> </li>
 <li><a href="https://boredhumans.com/">150+Ai Based Sites</a> </li>
+ <li><a href="https://haveibeenpwned.com/">Data leak check</a> </li>
+
+ 
+ 
 </ol>
 </details>
 
