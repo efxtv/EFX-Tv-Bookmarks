@@ -22,9 +22,6 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://lira.epac.to/DOCS-TECH/Hacking/">Study resources3</a> </li>
 <li><a href="https://download.itadmins.net/">Study resources4</a> </li>
 <li><a href="https://drive.google.com/drive/folders/1_G6kt5leGkmzMs_hveS0oUya591gVso2">Android</a> </li>
-  <li><a href="https://venomgrills.com/">Free Hacking Files</a> </li>
-
-  
   
 
   
