@@ -18,29 +18,34 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <br>
 <ol>
  <li><a href="https://app.diagrams.net/">Flow chart</a> </li>
+ <li><a href="https://network-tools.com">Network tool</a> </li>
  <li><a href="https://unblock-websites.com/">Unblock-city-Online-proxy</a> </li>
  <li><a href="https://www.dnsleaktest.com/">DNS Leaks/</a> </li>
  <li><a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> </li>
+ <li><a href="https://pastebin.com">PasteBin</a> </li>
  <li><a href="https://www.file.io/">Peer to peer file share</a> </li>
  <li><a href="https://www.ipchicken.com/#editor">Ipchicken</a> </li>
-<li><a href="https://www.vpngate.net/en/">Ovpn-config-files-UDP-VPN</a> </li>
-<li><a href="https://m.freeopenvpn.org/">Ovpn-config-files-UDP-VPN2</a> </li>
-<li><a href="https://spys.one/free-proxy-list/GB/">Spys.one</a> </li>
-<li><a href="https://subdomainfinder.c99.nl/">Subdomain Lookup c99</a> </li>
-<li><a href="https://who.is/">WhoIs</a> </li>
-<li><a href="https://bellard.org/jslinux/">Online-Terminal-SSH-Sed-Awk-NC</a> </li>
-<li><a href="https://copy.sh/">Boot-from-image-online-linux-system</a> </li>
-<li><a href="https://www.tutorialspoint.com/unix_terminal_online.php">Bash Practice</a> </li>
-<li><a href="https://linuxcontainers.org/">Terminal-for-29minutes</a> </li>
-<li><a href="https://paiza.io/en/projects/new?language=bash/">Bash-Awesome-Projects-Online-Terminal</a> </li>
-<li><a href="https://telegra.ph/">Telegraph-post-TextShare</a> </li>
-<li><a href="https://www.ssavr.com/">Text-Share-Inside-Lan</a> </li>
-<li><a href="https://www.ratatype.com/">Ratatype.com Typing Skill/</a> </li>
-<li><a href="https://globfone.com/call-phone-online/">Free Calls</a> </li>
-<li><a href="https://boredhumans.com/">150+Ai Based Sites</a> </li>
+ <li><a href="https://www.vpngate.net/en/">Ovpn-config-files-UDP-VPN</a> </li>
+ <li><a href="https://rentry.co/">Secure html to public</a> </li>
+ <li><a href="https://login2.me">login2.me Login any website</a> </li>
+ <li><a href="https://m.freeopenvpn.org/">Ovpn-config-files-UDP-VPN2</a> </li>
+ <li><a href="https://spys.one/free-proxy-list/GB/">Spys.one</a> </li>
+ <li><a href="https://subdomainfinder.c99.nl/">Subdomain Lookup c99</a> </li>
+ <li><a href="https://who.is/">WhoIs</a> </li>
+ <li><a href="https://www.passwordgeneratorsecure.com/">Stroing password</a> </li>
+ <li><a href="https://bellard.org/jslinux/">Online-Terminal-SSH-Sed-Awk-NC</a> </li>
+ <li><a href="https://copy.sh/">Boot-from-image-online-linux-system</a> </li>
+ <li><a href="https://www.tutorialspoint.com/unix_terminal_online.php">Bash Practice</a> </li>
+ <li><a href="https://linuxcontainers.org/">Terminal-for-29minutes</a> </li>
+ <li><a href="https://paiza.io/en/projects/new?language=bash/">Bash-Awesome-Projects-Online-Terminal</a> </li>
+ <li><a href="https://telegra.ph/">Telegraph-post-TextShare</a> </li>
+ <li><a href="https://www.ssavr.com/">Text-Share-Inside-Lan</a> </li>
+ <li><a href="https://www.ratatype.com/">Ratatype.com Typing Skill/</a> </li>
+ <li><a href="https://globfone.com/call-phone-online/">Free Calls</a> </li>
+ <li><a href="https://boredhumans.com/">150+Ai Based Sites</a> </li>
  <li><a href="https://haveibeenpwned.com/">Data leak check</a> </li>
  <li><a href="https://e.ggtimer.com/">Time</a> </li>
-  <li><a href="http://websdr.ewi.utwente.nl:8901/">Radio</a> </li>
+ <li><a href="http://websdr.ewi.utwente.nl:8901/">Radio</a> </li>
 
 
  
