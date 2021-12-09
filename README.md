@@ -17,9 +17,11 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Hackers Site</summary>
 <br>
 <ol>
+ <li><a href="https://app.diagrams.net/">Flow chart</a> </li>
  <li><a href="https://unblock-websites.com/">Unblock-city-Online-proxy</a> </li>
  <li><a href="https://www.dnsleaktest.com/">DNS Leaks/</a> </li>
  <li><a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> </li>
+ <li><a href="https://www.file.io/">Peer to peer file share</a> </li>
  <li><a href="https://www.ipchicken.com/#editor">Ipchicken</a> </li>
 <li><a href="https://www.vpngate.net/en/">Ovpn-config-files-UDP-VPN</a> </li>
 <li><a href="https://m.freeopenvpn.org/">Ovpn-config-files-UDP-VPN2</a> </li>
@@ -37,6 +39,9 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://globfone.com/call-phone-online/">Free Calls</a> </li>
 <li><a href="https://boredhumans.com/">150+Ai Based Sites</a> </li>
  <li><a href="https://haveibeenpwned.com/">Data leak check</a> </li>
+ <li><a href="https://e.ggtimer.com/">Time</a> </li>
+  <li><a href="http://websdr.ewi.utwente.nl:8901/">Radio</a> </li>
+
 
  
  
@@ -49,7 +54,10 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <br>
 <ol>
  <li><a href="https://manytools.org/hacker-tools/convert-images-to-ascii-art/">Image to ASCII text </a> </li>
+  <li><a href="https://copypastecharacter.com/">Alt Character</a> </li>
+   <li><a href="https://sumo.app/paint/?lang=en">PaintOnline</a> </li>
  <li><a href="https://vectr.com/">vectr ONLINE</a> </li>
+ <li><a href="https://webcamtoy.com/">Cam fun</a> </li>
 <li><a href="https://www.sejda.com/">Edit pdf online sejda</a> </li>
 <li><a href="https://pexels.com/">download videos images pexels</a> </li>
 <li><a href="https://thenounproject.com/">Icons for free thenounproject/</a> </li>
