@@ -22,11 +22,29 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://lira.epac.to/DOCS-TECH/Hacking/">Study resources3</a> </li>
 <li><a href="https://download.itadmins.net/">Study resources4</a> </li>
 <li><a href="https://drive.google.com/drive/folders/1_G6kt5leGkmzMs_hveS0oUya591gVso2">Android</a> </li>
+  <li><a href="https://www.geeksforgeeks.org/">geeksforgeeks</a> </li>
+
+  
   
 
   
 </ol>
 </details>
+
+<!-- payloads -->
+<details>
+<summary>Payloads</summary>
+<br>
+<ol>
+<li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings">PayloadsAllTheThings</a> </li>
+<li><a href="https://github.com/payloadbox/rfi-lfi-payload-list">Php Payloads Special</a></li>
+  <li><a href="https://stackoverflow.com/questions/65170797/accept-request-payload-in-php">Accept Request Payload in PHP</a></li>
+    <li><a href="https://www.codegrepper.com/code-examples/php/send+payload+in+php+for+a+method+">Send payload in PHP</a></li>
+ 
+</ol>
+</details>
+
+
 
 <!--hacking2 -->
 <details>
