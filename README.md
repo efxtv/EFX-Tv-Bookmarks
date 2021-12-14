@@ -22,12 +22,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://lira.epac.to/DOCS-TECH/Hacking/">Study resources3</a> </li>
 <li><a href="https://download.itadmins.net/">Study resources4</a> </li>
 <li><a href="https://drive.google.com/drive/folders/1_G6kt5leGkmzMs_hveS0oUya591gVso2">Android</a> </li>
-  <li><a href="https://www.geeksforgeeks.org/">geeksforgeeks</a> </li>
-
-  
-  
-
-  
+<li><a href="https://www.geeksforgeeks.org/">geeksforgeeks</a> </li>
 </ol>
 </details>
 
@@ -91,6 +86,55 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="http://websdr.ewi.utwente.nl:8901/">Radio</a> </li>
 </ol>
 </details>
+
+
+<!--CTF -->
+<details>
+<summary>Test your ctf skills</summary>
+<br>
+<ol>
+<li><a href="https://academy.hackaflag.com.br">Academy Hackaflag BR </a> </li>	
+<li><a href="https://tryhackme.com">Try Hack Me </a> </li>	
+<li><a href="https://attackdefense.com">Attack-Defense </a> </li>	
+<li><a href="https://alf.nu/alert1">alert to win </a> </li>	
+<li><a href="https://ctf.komodosec.com">CTF Komodo Security </a> </li>	
+<li><a href="https://cmdchallenge.com">CMD Challenge </a> </li>	
+<li><a href="https://exploit.education">Explotation Education </a> </li>	
+<li><a href="https://capturetheflag.withgoogle.com">Google CTF </a> </li>	
+<li><a href="https://www.hackthebox.eu">HackTheBox </a> </li>	
+<li><a href="https://www.hackthis.co.uk">Hackthis </a> </li>	
+<li><a href="https://www.hacksplaining.com/exercises">Hacksplaining </a> </li>	
+<li><a href="https://ctf.hacker101.com">Hacker101 </a> </li>	
+<li><a href="https://capturetheflag.com.br">Hacker Security </a> </li>	
+<li><a href="https://www.hacking-lab.com/index.html">Hacking-Lab </a> </li>	
+<li><a href="https://hstrike.com">HSTRIKE </a> </li>	
+<li><a href="https://immersivelabs.com">ImmersiveLabs </a> </li>	
+<li><a href="https://labs.wizard-security.net">Labs Wizard Security </a> </li>	
+<li><a href="https://www.newbiecontest.org">NewbieContest </a> </li>	
+<li><a href="http://overthewire.org">OverTheWire </a> </li>	
+<li><a href="https://practicalpentestlabs.com">Practical Pentest Labs </a> </li>	
+<li><a href="https://pentesterlab.com">Pentestlab </a> </li>	
+<li><a href="http://www.amanhardikar.com/mindmaps/Practice.html">Penetration Testing Practice Labs </a> </li>	
+<li><a href="https://lab.pentestit.ru">PentestIT LAB </a> </li>	
+<li><a href="https://picoctf.com">PicoCTF </a> </li>	
+<li><a href="https://pwnable.kr/play.php">PWNABLE </a> </li>	
+<li><a href="https://www.root-me.org">Root-Me </a> </li>	
+<li><a href="http://ctf.rootinjail.com">Root in Jail </a> </li>	
+<li><a href="https://shellterlabs.com/pt">Shellter </a> </li>	
+<li><a href="https://www.holidayhackchallenge.com">SANS Challenger </a> </li>	
+<li><a href="http://smashthestack.org/wargames.html">SmashTheStack </a> </li>	
+<li><a href="https://tryhackme.com">Try Hack Me </a> </li>	
+<li><a href="https://cryptopals.com">The Cryptopals Crypto Challenges </a> </li>	
+<li><a href="https://www.vulnhub.com">Vulnhub </a> </li>	
+<li><a href="https://w3challs.com">W3Challs </a> </li>	
+<li><a href="http://www.wechall.net">WeChall </a> </li>	
+<li><a href="https://www.zenk-security.com/epreuves.php">Zenk-Security </a> </li>	
+  </ol>
+</details>
+
+
+
+
 
 <!--Editing -->
 <details>
