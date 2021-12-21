@@ -45,3 +45,4 @@ Hindi    : https://www.youtube.com/channel/UCFN3nMftNABqOKBNRPeBXYA	-
 [+] CSS - The Complete Guide 2020 (incl. Flexbox, Grid Sass) https://drive.google.com/folderview?id=1zTjlqkSyXqmFHdTr2rGAAnx3_XCt3qIw 
 [+] AWS Certified Solutions Architect - Associate 2020 https://drive.google.com/folderview?id=14eS7Bpil9ZQWo44NYDNWWGJ9Fam9up6B 
 [+] Google Data Studio A-Z for Data Visualization and Dashboards https://drive.google.com/folderview?id=11vvsLQCiXgg2BlA3mHIJw7sNS_MS-S3_ 
+[+] https://drive.google.com/drive/folders/1CdrveRU2iXGabR-nQ-G1o9GC4GusU-92?fbclid=IwAR1K9QFH8vK4k432rh7V7rnd_sHtGCHx6Tt7uNlkpmOUkQ_2RZaotFvymX0
