@@ -142,11 +142,13 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Editing</summary>
 <br>
 <ol>
+<li><a href="https://imgur.com/">Direct image link share</a> </li>
 <li><a href="https://manytools.org/hacker-tools/convert-images-to-ascii-art/">Image to ASCII text </a> </li>
 <li><a href="https://www.photopea.com/">Online Photoshop</a> </li>
 <li><a href="https://copypastecharacter.com/">Alt Character</a> </li>
 <li><a href="https://sumo.app/paint/?lang=en">PaintOnline</a> </li>
 <li><a href="https://vectr.com/">vectr ONLINE</a> </li>
+<li><a href="https://vocalremover.org/">Vocal-Removal</a> </li> 
 <li><a href="https://webcamtoy.com/">Cam fun</a> </li>
 <li><a href="https://www.sejda.com/">Edit pdf online sejda</a> </li>
 <li><a href="https://pexels.com/">download videos images pexels</a> </li>
