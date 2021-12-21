@@ -1,0 +1,43 @@
+Ways to get RHOST IP for Unknown web applications and servers having 
+Vulnerability: User Enumeration, privilege escalation, Directory Enumeration
+
+
+
+#Ruby
+system("echo hello world")
+
+#PHP (more https://www.php.net/manual/en/function.shell-exec.php)
+<?php 
+$command = "echo hello world;";
+system($command);
+?>
+
+#Python 
+import os
+cmd = 'ls -la'
+os.system(cmd)
+
+
+Ways to get the HOST IP
+***************************
+1. curl ifconfig.me
+2. curl -4/-6 icanhazip.com
+3. curl ipinfo.io/ip
+4. curl api.ipify.org
+5. curl checkip.dyndns.org
+6. dig +short myip.opendns.com @resolver1.opendns.com
+7. host myip.opendns.com resolver1.opendns.com
+8. curl ident.me
+9. curl bot.whatismyipaddress.com
+10 curl ipecho.net/plain
+
+The following commands will get you the private IP address of your interfaces:
+
+ ifconfig -a
+ ip addr (ip a)
+ hostname -I | awk '{print $1}'
+ ip route get 1.2.3.4 | awk '{print $7}'
+ echo "ifconfig"/sh
+ (Fedora) Wifi-Settings→ click the setting icon next to the Wifi name that you are connected to → Ipv4 and Ipv6 both can be seen
+ nmcli -p device show
+

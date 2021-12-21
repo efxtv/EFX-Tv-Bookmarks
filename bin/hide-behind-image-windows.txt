@@ -1,0 +1,42 @@
+!!Hide Full Zip Within an Image!!
+
+
+?No Software or app Needed
+
+? Set up:
+
+1. Must have a .zip or .rar compressor.
+2. Willingness to learn.
+
+
+? Steps:
+
+1. Save the picture of choice to your desktop.
+
+2. Make a new .rar or .zip folder on your desktop.
+
+3. Add the files you want to hide into the .zip or .rar
+
+4. Click start menu, run, cmd.
+
+5. In Command Prompt type cd "desktop" with the quotation marks.
+
+6. Now type in copy /b picturename.jpg + foldername.rar outputfilename.jpg
+
+ 
+
+( If you use .zip then: copy /b picturename.jpg + foldername.zip outputfilename.jpg)
+
+7. Now there should be the outputed file name with a .jpg extension on the desktop.
+( Do not close Command Prompt just yet )
+
+8. Double click it to open the picture and check it out.
+
+9. When your done looking, and want to view the hidden files
+
+Type: ren outputfilename.jpg outputfilename.rar or zip
+
+Now you're done!
+
+?A quick info-fact:
+✅ With this technique of hiding files in a jpg you can send this to anyone and they just have to rename the file extension to .zip or .rar, With this technique the Al-Qaeda operatives were able to send info to others secretively.

@@ -1,0 +1,20 @@
+How to capture Victims ip address By sending a normal link
+
+- First go to iplogger.org
+
+- Then paste any Destination url ex - image link, YouTube video link , or any other link based on your victims interest
+
+- Now click Get ip logger code and then click next
+
+- Now you will get a Link (green color) this link is your automate ip phishing page share with it your victim
+
+- When victim will click the link he will redirect instantly to the destination url and You will get all ip data in your iplogger page
+
+ 
+
+
+- You can also short that ip logger code link using bitly.com , tinyurl.com or any other professional url shortner service for making it real and genuine
+
+Note - For Viewing statistics time to time just copy the url of page where you get the green color link. And save that url for accessing in future.
+
+Comment Below To Join our Community.
