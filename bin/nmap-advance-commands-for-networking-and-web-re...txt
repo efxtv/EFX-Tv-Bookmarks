@@ -1,0 +1,431 @@
+Copy these commands to cd /usr/share/nmap/scripts/ or 
+you can use them directly by specifying the script location
+
+For more must Visit https://github.com/efxtv
+will put all the things in EFX Tv bookmarks
+
+Must share it with others and join our temegram for such 
+notifications t.me/efxtv
+*********************************************************
+
+What is NMAP?
+Network Mapper tol.
+
+What language is nmap written in?
+C, Python, C++, Lua
+
+Who developed Nmap?
+Gordon Lyon
+
+Nmap useful options 
+-v, -vv, -vvv lead to increasingly verbose output.
+-sU is used for UDP scans.
+
+Most poppular scan (TCP SYN Stealth Scan -sS)
+nmap -p22,113,139 192.168.1.1
+nmap -p 1-65535 192.168.1.1
+
+Is Nmap illegal?
+While civil and (especially) criminal court cases are the nightmare scenario for Nmap users, these are very rare. After all, no United States federal laws explicitly criminalize port scanning. ... Unauthorized port scanning, for any reason, is strictly prohibited. In India or for that sake anywhere in the world, port scanning using any tool is considered illegal and can result in jail term/penalty or legal action. In India or for that sake anywhere in the world, port scanning using any tool is considered illegal and can result in jail term/penalty or legal action. You can even get in trouble scanning your own public IP address with some ISPs. If you're attempting the latter, give NMAP your private address range to scan, not your public address. Your routers most likely sit behind an ISP owned device that hands out private addresses to your local network.
+
+Alternative of namap (are best and equal)
+Nikto, Zenmap, OWASP ZAP, burp suite, wireshark
+
+How to install and update nmap?
+INSTALL 	sudo apt-get install nmap
+UPDATE		sudo apt-get update
+
+What is NSE?
+Nmap Scripting Engine
+
+Define the NSE scripts?
+The way NSE scripts are defined is based on a list of predefined categories where each script belongs. These categories include: auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, version, and vuln.
+
+Where is Nmap Nmap script located?
+LINUX |				Windows |			 or 
+ls /usr/share/nmap/scripts/    |dir "C:\Program Files\Nmap\scripts"    |dir “C:\Program Files (x86)\Nmap\scripts”
+
+How to obtain information on the purpose of the script?
+nmap --script-help vuln
+
+How to run multiple NSE scripts in one go? (there is no need to use .nse, system will atutomatically detect script after --script or -sC)
+nmap --script script1.nse,script2.nse -sV IP/host
+
+How to run specific vulnerability scans with Nmap?
+nmap -p 8333 --script bitcoin-getaddr website
+
+How to find Vulnerable PHP versions?
+nmap -sV --script=http-php-version testphp.vulnweb.com
+
+How to find PHP-CGI is vulnerable to CVE-2012-1823 (Common Gateway Interface)?
+nmap -sV --script http-vuln-cve2012-1823 testphp.vulnweb.com or nmap -p80 --script http-vuln-cve2012-1823 --script-args http-vuln-cve2012-1823.uri=/test.php testphp.vulnweb.com
+
+What is CVE?
+CVE stands for Common Vulnerabilities and Exposures
+
+What is CVS?
+A minimal CVS (Concurrent Versions System) pserver protocol implementation which currently only supports authentication.
+
+Demo of a commaon nse script
+nmap -Pn --script vuln 192.168.1.1
+
+nmap -p- -n --script vuln 192.168.1.1 -v
+
+
+
+***********************************
+*Host discovery and identification*
+***********************************
+Basic scanning		nmap <target>
+
+Launch a ping scan (subnet)	nmap -sn <target> Ex: nmap -sn 192.168.1.0/24
+
+Scan a list of targets	nmap -iL [targets.txt]
+
+Ping scan with traceroute	nmap -sn –traceroute abc.org abcd.org
+
+TCP SYN ping	nmap -PS 192.168.1.1
+
+UDP ping	nmap -PU 192.168.1.1
+
+Scan IPv6 target	nmap -6 192.168.1.1
+
+Specify NSE script	nmap -sn –script dns-brute example.org
+
+Manually assign DNS servers	nmap –dns-servers <servers> 192.168.1.1
+
+ARP discovery	nmap -PR 192.168.1.1 or 192.168.1.0/24
+
+UDP discovery on specified port	nmap -PU53 192.168.1.1
+
+No DNS resolution	nmap -n 192.168.1.1
+
+Select network interface	nmap -e eth0 192.168.1.1
+
+Skip host discovery	nmap -Pn 192.168.1.1
+
+Scan all ports 	nmap -p 1-65535 -sV 192.168.1.1 -v
+
+Scan all ports CVS	nmap -sT -T4 -sV -O -p 1-65535 -vv 192.168.1.1
+
+To save output 	nmap -Pn 192.168.1.1 -oX test.xml
+
+Convert xml to html 	xsltproc files-found.xml -o text.html
+
+
+***********************************
+	*Version detection*
+***********************************
+Service detection	nmap -sV <target> Ex: nmap -sV scanme.nmap.org
+
+OS detection	nmap -O 192.168.1.1
+
+Attempt OS guessing	nmap -O –osscan-guess 192.168.1.1
+
+Increasing version detection	nmap -sV –version-intensity 0-9> 192.168.1.1
+
+Troubleshoot version scans	nmap -sV –version-trace 192.168.1.1
+
+Aggressive detection mode	nmap -A 192.168.1.1
+
+Verbose mode	nmap -O -v 192.168.1.1
+
+
+***********************************
+    *Network and port scanning*
+***********************************
+TCP SYN ping scan	nmap -sn -PS 192.168.1.1 or nmap -sS
+
+Scanning multiple ports	nmap -sn -PS80,100-1000 192.168.1.1
+
+TCP ACK ping scan	nmap -sn -PA 192.168.1.1 or nmap -sA
+
+UDP ping scan	nmap -sn -PU 192.168.1.1
+
+ICMP ping scan	nmap -sn -PE 192.168.1.1
+
+SCTP INIT ping scan	nmap -sn -PY 192.168.1.1 or nmap -sY
+
+IP protocol ping scan (tracing)	nmap -sn -PO –packet-trace 192.168.1.1
+
+Scan random number of hosts	nmap -iR [number]
+
+Broadcast ping scan	nmap –script broadcast-ping –packet-trace
+
+Xmas scan (Sets the FIN, PSH, and URG flags)	nmap -sX 192.168.1.1
+
+UDP scan (with verbosity)	nmap -sU -v <target>
+
+Scan a firewall (split TCP header into tiny fragments)	nmap -f <target>
+
+Cloak a scan with decoys	nmap -D <decoy1>[,<decoy2>] <target>Ex: nmap -D 192.168.1.101,192.168.1.102 192.168.1.1
+
+Spoof source IP address	nmap -S <IP_Address> 192.168.1.1
+
+Spoof MAC address)	nmap –spoof-mac [MAD_ADDRESS] 192.168.1.1
+
+Scan using a random MAC address	nmap -v -sT -PN –spoof-mac 0 192.168.1.1
+
+***********************************
+    *NTiming and performance*
+***********************************
+Rate limiting	nmap –scan-delay 192.168.1.1
+
+Adjust delay between probes	nmap –scan-delay TIME; –max-scan-delay TIME
+
+Paranoid timing template	nmap -T0 192.168.1.1
+
+Sneaky – ID evasion (also T0)	nmap -T1 192.168.1.1
+
+Polite – Slower than normal scan	nmap -T2 192.168.1.1
+
+Normal – Default speed	nmap -T3 192.168.1.1
+
+Aggressive – Recommended mode	nmap -T4 -n -Pn -p- 192.168.1.1
+
+Insane – Very fast networks	nmap -T5 192.168.1.1
+
+Host timeouts – Give up on hosts	nmap -sV -A -p- –host-timeout 5m 192.168.1.1
+
+
+***********************************
+   *Nmap Scripting Engine (NSE)*
+***********************************
+Safe category – Default	nmap -sC <host> Ex: nmap -sC scanme.nmap.org
+
+Execute (multiple) scripts by name	nmap –script default,safe
+
+Select script by category	nmap –script exploit <target>
+
+Execute NSE script file	nmap –script /path/to/script.nse <target>
+
+Exclude a specific category	nmap -sV –script “not exploit” <target>
+
+Include two different categories	nmap –script “broadcast and discovery” <target>
+
+Combining wildcards	nmap –script “http-*” <target>
+
+Set arguments	nmap -sV –script http-title –script-args http.useragent=”Mozilla 1337”<target>
+
+Load arguments from a file	nmap –script “discovery” –script-args-file nmap-args.txt<target>
+
+
+***********************************
+      *Scanning web servers*
+***********************************
+List supported HTTP methods	nmap -p80,443 –script http-methods –script-args httpmethods.test-all=true <target>
+
+Discover interesting paths/folders	nmap –script http-enum -sV <target>
+
+Brute-forcing HTTP basic auth	nmap -p80 –script http-brute <target>
+
+Provide own user/password list	nmap -sV –script http-brute –script-args userdb=~/usernames.txt,passdb=~/passwords.txt <target>
+
+Brute-forcing common web platforms (e.g., WordPress)	nmap -sV –script http-wordpress-brute <target>
+
+Detect a web application firewall	nmap -sV –script http-waf-detect,http-waf-fingerprint<target>
+
+Detect XST vulnerabilities (via HTTP TRACE method)	nmap -sV –script http-methods,http-trace –script-argshttp-methods.retest <target>
+
+Detect XSS vulnerabilities	nmap -sV –script http-unsafe-output-escaping <target>
+
+Detect SQL injection vulnerabilities	nmap -sV –script http-sql-injection <target>
+
+Finding default credentials	nmap -sV –script http-default-accounts <target>
+
+Finding exposed Git repos	nmap -sV –script http-git <target>
+
+
+***********************************
+     *Scanning mail servers*
+***********************************
+Brute-force SMTP	nmap -p25 –script smtp-brute <target>
+
+Brute-force IMAP	nmap -p143 –script imap-brute <target>
+
+Brute-force POP3	nmap -p110 –script pop3-brute <target>
+
+Enumerate users	nmap -p 25 –script=smtp-enum-users <target>
+
+SMTP running on alternate port(s)	nmap -sV –script smtp-strangeport <target>
+
+Discovering open relays	nmap -sV –script smtp-open-relay -v <target>
+
+Find available SMTP commands	nmap -p 25 –script=smtp-commands <target>
+
+
+***********************************
+     *Scanning databases*
+***********************************
+Identify MS SQL servers	nmap -p1433 –script ms-sql-info <target>
+
+Brute-force MS SQL passwords	nmap -p1433 –script ms-sql-brute <target>
+
+Dump password hashes (MS SQL)	nmap -p1433 –script ms-sql-empty-password,ms-sql-dump-hashes<target>
+
+List databases (MySQL)	nmap -p3306 –script mysql-databases –script-args mysqluser=[user],mysqlpass=[password] <target>
+
+Brute-force MySQL passwords	nmap -p3306 –script mysql-brute <target>
+
+Root/Anonymous accounts with empty passwords	nmap -p3306 –script mysql-empty-password <target>
+
+Brute-force Oracle SIDs	nmap -sV –script oracle-sid-brute <target>
+
+Identify MongoDB servers	nmap -p27017 –script mongodb-info <target>
+
+Listing CouchDB databases	nmap -p5984 –script couchdb-databases <target>
+
+Identify Cassandra databases	nmap -p9160 –script cassandra-brute <target>
+
+Brute-force Redis passwords	nmap -p6379 –script redis-brute <target>
+
+
+***********************************
+     *ICS/SCADA systems*
+***********************************
+Detect standard (open) ports	nmap -Pn -sT –scan-delay 1s –max-parallelism 1-p80,102,443,502,1089, 1091,2222,4000,4840, 20000,34962,34964, 34980,44818,47808, 55000,55003 <target>
+
+Control system ports (BACnet/IP)	nmap -Pn -sU -p47808 –script bacnet-info <target>
+
+Ethernet/IP	nmap -Pn -sU -p44818 –script enip-info <target>
+
+Discover a Modbus device	nmap -Pn -sT -p502 –script modbus-discover <target>
+
+Discover a Niagara Fox device	nmap -Pn -sT -p1911,4911 –script fox-info <target>
+
+Discover a PCWorx device	nmap -Pn -sT -p1962 –script pcworx-info <target>
+
+
+***********************************
+     *Generating reports*
+***********************************
+Normal output to filename	nmap -oN [filename] <target>
+
+Send results to XML format	nmap -oN [filename] -oX <filename.xml> <target>
+
+Output to all formats (Normal, XML & grep)	nmap -oA [filename] <target>
+
+Increase verbosity and debugging levels	nmap -v3 -d2 -oN [filename] <target>
+
+Display host and port state reasons	nmap –reason <target>
+
+Print periodic timing stats	nmap -Pn <target> –stats-every 10s
+
+Trace packets and data sent and received	nmap -T4 –packet-trace <target>
+
+Show open ports only	nmap –open <target>
+
+List interfaces and routes	nmap –iflist
+
+***********************************
+     *Password Cracking*
+***********************************
+locate *.nse |grep Brute
+FTP Password Cracking	 nmap -p21 --script ftp-brute.nse --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+SSH Password Cracking	 nmap -p22 --script ssh-brute.nse --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+Telnet Password Cracking  nmap -p23 --script telnet-brute.nse --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+SMB Password Cracking  nmap -p445 --script smb-brute.nse --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+Pqsql Password Cracking  nmap -p5432 --script pgsql-brute --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+Mysql			  nmap -p3306 --script mysql-brute --script-args userdb=usr.txt 192.168.1.1
+
+HTTP-form Password Cracking nmap -p 80 --script=http-form-brute --script-args "userdb=usr.txt,passdb=passwd.txt,http-form-brute.path=/dvwa/login.php" 192.168.1.150
+
+Ms-SQL			  nmap -p1433 --script ms-sql-brute --script-args userdb=usr.txt,passdb=passwd.txt 192.168.1.1
+
+
+
+
+What is Nmap-vulners?
+Nmap-vulners is one of the most famous vulnerability scanners in use. Let’s explore how to install this tool, as well as how to perform a simple CVE scan.
+
+How to install Nmap-Vulners?
+Use the commands metioned below:
+#/usr/share/nmap/scripts/ is the location where nmap stores all the scripts to use from.
+cd /usr/share/nmap/scripts/
+git clone url
+
+Tip: you can also use your own CVE local database by using the vulscandb argument:
+--script-args vulscandb=your_own_database
+
+Some example repos which contain some powerful scripts are mentioned below:-
+You can target hostname or IP. If you want to target specific posts, you simply need to add -p80 at the end
+
+Repo:		git clone https://github.com/scipag/vulscan
+Command:	nmap -sV --script=vulscan/vulscan.nse 192.168.1.1
+
+
+Repo:		git clone https://github.com/vulnersCom/nmap-vulners.git
+Command:	nmap --script nmap-vulners/ -sV 192.168.1.1
+
+Running specific vulnerability scans with Nmap
+
+Combine two scripts in one using commans eg: nmap-vulners/,vulscan/,some/,other/
+nmap --script nmap-vulners/,vulscan/ -sV 192.168.1.1
+
+
+*********************************************
+**Some Powerful NSE Scripts you should know**
+*********************************************
+1. http-enum.nse
+Command: nmap -n -p80 --script http-enum IP/DOMAIN
+Use: uses the default fingerprints database
+sends over 2,000 queries to the web server
+find files and/or directories to popular web applications
+code “200 OK” or “401 Authentication Required” means desired file or directory is available on the server
+Alternative: Web application Scanner – Nikto 6500 entries (sudo apt install nikto)
+NIKTO IS WELL KNOWN FOR ITS FEATURES LIKE:
+* SSL support for Unix and Windows OS
+* HTTP proxy support
+* Multiple ports and servers scanning
+* Multiple output file formats
+* Encoding techniques (for IDS evasion)
+* Mutation techniques for fishing
+* Custom scanning options
+* False-positive reducing techniques
+* Credentials guessing for authorization
+
+
+2. http-grep.nse
+Command: nmap --script http-grep uk2blogger.blogspot.com
+Use: to collect email contact address and publically shared data
+
+
+3. ssh-brute.nse
+Command: nmap --script ssh-brute.nse 192.168.1.1
+To specify port: nmap -n -p22 --script ssh-brute.nse 192.168.1.1
+
+
+Use: to bruitforce the ssh server
+
+4. dns-brute.nse
+Command: nmap -p80 --script dns-brute.nse 192.168.1.1
+Specify custom file:  nmap --script dns-brute --script-args dns-brute.domain=foo.com,dns-brute.threads=6,dns-brute.hostlist=./hostfile.txt,newtargets -sS -p 80
+
+
+5. http-wordpress-enum.nse
+Command: nmap -n -p80 --script http-wordpress-enum.nse wordpress.tv -v
+
+6. firewalk.nse
+Command: sudo nmap --script firewalk.nse --traceroute 192.168.1.1 -v
+
+7. mysql-users.nse
+Command: sudo nmap -p80 --script mysql-users.nse 192.168.1.1 -v
+
+8. http-headers
+Command: nmap --script http-headers 192.168.1.1 -v
+
+
+
+
+
+
+
+
+
+
+
