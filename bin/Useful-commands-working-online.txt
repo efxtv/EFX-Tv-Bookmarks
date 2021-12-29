@@ -1,0 +1,9 @@
+#PDF to Text
+$ pdftotext -layout vocabulary.pdf vocabulary.txt
+
+----------------------------------------------------------
+#Link to plain text
+wget -qO- http:://url| sed -e 's/<[^>]*>//g'
+wget -qO- http://.../ | sed -e 's/<[^>]*>//g;s/^ //g' > downloaded_stripped_file.txt
+w3m -dump https://
+----------------------------------------------------------
