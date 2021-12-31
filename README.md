@@ -187,7 +187,6 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 </details>
 
 ---------------------------------------
-India :  7503453371@ybl<br />
 <a href="https://paypal.me/efxtv"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/donate-efx-tv.png" alt="Paypal" width="125" height="40"></a>
 ---------------------------------------
 
