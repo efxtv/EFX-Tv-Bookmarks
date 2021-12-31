@@ -136,6 +136,21 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 
 
 
+<!--Youtube-channels -->
+<details>
+<summary>Chrome Extensions Download</summary>
+<br>
+<ol>
+<li><a href="https://www.youtube.com/c/ippsec/videos">Hack-thebox</a> </li>
+<li><a href="https://www.youtube.com/user/Hak5Darren/videos">Hack5</a> </li> 
+<li><a href="https://www.youtube.com/user/hackaday/videos">HackDay</a></li>
+<li><a href="https://www.youtube.com/channel/UCW6xlqxSY3gGur4PkGPEUeA/videos">Seytonic</a> </li>
+<li><a href="#">DEMO</a> </li>
+</ol>
+</details>
+
+
+
 
 
 <!--Editing -->
