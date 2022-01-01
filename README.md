@@ -138,7 +138,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 
 <!--Youtube-channels -->
 <details>
-<summary>Chrome Extensions Download</summary>
+<summary>Top Hacking channel on youtue</summary>
 <br>
 <ol>
 <li><a href="https://www.youtube.com/c/ippsec/videos">Hack-thebox</a> </li>
