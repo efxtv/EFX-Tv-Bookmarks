@@ -1,0 +1,106 @@
+Remove Exif Properties from Pictures
+exiftool -all= picture.jpg
+exiftool -all= *.jpg
+for i in *.jpg; do echo "Processing $i"; exiftool -all= "$i"; done
+
+Find Files Missing Exif Properties
+exiftool -filename -r -if '(not $datetimeoriginal)' /path/to/picture.jpg
+
+Add CreateDate Exif Property to a Picture
+exiftool -createdate="2007:06:19 13:38:55" /path/to/picture.jpg
+
+ExifTool processes directories
+exiftool -all= SOME_DIRECTORY
+
+Add copyright on images
+exiftool -r -overwrite_original -P -all= -copyright="My Name" *.jpg *.jpeg *.JPG
+
+Change JPG to jpg and MOV to mov in filenames
+for i in *.JPG; do mv "$i" "${i%%.JPG}.jpg"; done; !#:gs/JPG/MOV/:gs/jpg/mov/
+
+Change last created and modified for files in a directory YYYY:MM:DD HH:MM:SS
+$ find . -name "*.jpg" | while read filename;  
+    exiftool "-AllDates=1986:11:05 12:00:00" "$filename";
+done
+
+or 
+
+exiftool "-AllDates=1986:11:05 12:00:00" -if '$filetype eq "JPEG"' .
+
+Rename files to datestamp
+exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%d %H.%M.%S%%-c.%%e" . 
+
+Rename Files to With Milliseconds
+exiftool -v '-Filename<${datetimeoriginal}${subsectimeoriginal;$_.=0 x(3-length)}.%e' -d %Y%m%d_%H%M%S .
+
+Copy directory recursively into organized folder (-o ~/dummy This flag is to copy, not move.)
+$ exiftool -o ~/dummy/ -if '$filesize# > 300000' '-Directory<CreateDate' -d ~/Desktop/old_photos2/%Y/%m\ %B -r ~/Desktop/iPhoto\ Library/
+
+Show what date/time tags exist in files
+exiftool "-AllDates=1992:11:05 12:00:00" *
+
+Change Original date 
+exiftool "-DateTimeOriginal=2020:04:04 09:04:02" *
+
+# generate CSV file with common tags from all images in a directory
+exiftool -common -csv dir > out.csv
+ 
+# update metadata for all images in a directory from CSV file
+exiftool -csv=a.csv dir
+
+find images containing a specific keyword (case insensitive)
+exiftool -if '$keywords =~ /harvey/i' -filename dir
+
+Deletes the _original copies of all files specified 
+exiftool -delete_original a.jpg
+
+Generate HTML/pdf pages from a hex dump of EXIF information in all images
+exiftool -htmldump -w tmp/%f_%e.html *.png
+exiftool -a -b -ee -embeddedimage -W Image_%.3g3.%s file.pdf
+
+Delete all meta information except JFIF group from an image.
+exiftool -all= --jfif:all dst.jpg
+
+Delete Photoshop meta information from an image 
+exiftool -Photoshop:All= dst.jpg
+
+Write a new comment only if the image doesn't have one already.
+exiftool -comment-= -comment='new comment' a.jpg
+
+Erase all meta information from dst.jpg
+exiftool -all= -tagsfromfile src.jpg -exif:all dst.jpg
+
+Copy title from one image to another and set a new author name.
+exiftool -TagsFromFile src.jpg -title -author=Phil dst.jpg
+
+Copy only the EXIF information from one image to another, excluding SubIFD tags.
+exiftool -tagsfromfile src.jpg -exif:all --subifd:all dst.jpg
+
+
+Copy all possible information from src.jpg and write in XMP format to dst.jpg.
+exiftool -TagsFromFile src.jpg '-xmp:all<all' dst.jpg
+
+Set the image Description from the file name after removing the extension.
+exiftool '-Description<${FileName;s/\.[^.]*$//}' dir
+
+Add camera make to list of keywords.
+exiftool '-keywords+<make' image.jpg
+
+Copy all meta information in its original form from a JPEG image to a MIE file.
+exiftool -TagsFromFile src.jpg -all:all dst.mie
+
+Reverse of above command
+exiftool -o dst.mie -all:all src.jpg
+
+Geotag an image
+exiftool -geotag track.log a.jpg
+
+Geotag an image with the GPS position for a specific time.
+exiftool -geotag t.log -geotime='2009:04:02 13:41:12-05:00' a.jpg
+
+Delete GPS tags which may have been added by the geotag feature
+exiftool -gps:all=a.jpg
+
+
+#share and subscribe EFX Tv
+
