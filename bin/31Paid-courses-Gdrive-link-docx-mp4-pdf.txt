@@ -50,3 +50,5 @@ Hindi    : https://www.youtube.com/channel/UCFN3nMftNABqOKBNRPeBXYA	-
 [+] Technical Sagar Ethical Hacking Course (Download it may be deleted later)
 Link : https://mega.nz/folder/PQw11YZR
 Decryption Key : w3q1KLL3KpvYw-FizJCt8w 
+
+[+] https://courses.sudobyte.workers.dev/0:/Elearn%20Security/
