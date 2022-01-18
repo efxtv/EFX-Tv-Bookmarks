@@ -7,3 +7,5 @@ wget -qO- http:://url| sed -e 's/<[^>]*>//g'
 wget -qO- http://.../ | sed -e 's/<[^>]*>//g;s/^ //g' > downloaded_stripped_file.txt
 w3m -dump https://
 ----------------------------------------------------------
+Grep all the links form a file.txt
+cat file.txt|grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"
