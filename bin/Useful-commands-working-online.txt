@@ -9,3 +9,6 @@ w3m -dump https://
 ----------------------------------------------------------
 Grep all the links form a file.txt
 cat file.txt|grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"
+
+Short unique link
+cat file.txt|grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"|sort -u
