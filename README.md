@@ -10,6 +10,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en">User agent switcher manager</a> </li>
 <li><a href="https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme">Zenmate VPN</a> </li>
   <li><a href="https://snapdrop.net/">ShareFiles Snapdroid.net</a> </li>
+  <li>Utility to edit pdf: sudo apt-get install pdfarranger</li>
   </ol>
 </details>
 
