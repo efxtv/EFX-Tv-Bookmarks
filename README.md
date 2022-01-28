@@ -48,6 +48,8 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Hackers Site</summary>
 <br>
 <ol>
+<li><a href="https://maps.google.com/locationhistory">Hoogle Location History</a> </li>
+
 <li><a href="https://app.diagrams.net/">Flow chart</a> </li>
 <li><a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">Pentestmonkey reverse shell cheat sheet</a> </li> 
 <li><a href="https://network-tools.com">Network tool</a> </li>
