@@ -1,0 +1,182 @@
+<div align="justify">You might know about ZIP, RAR files widely used archive file format used to compress multiple files and formats together into a single file. Similarly, tar is a computer software UNIX-based utility for combining multiple files into a single archive (tar, gz, tgz, bz2, tbz, tb2) tar is also known as Tape Archive. It is likely suggested by developers in place of ZIP and RAR format.</div>
+
+<div align="justify">It is used to back up the system and is widely used for distributing the larger files in highly compressed format. The tar archives are often used in computer software to store the custom database chunks. Let's see some commonly used lists of tar commands.</div>
+
+Tar Usage and the Options we should know
+
+	c – create an archive file.
+	C – specified directory
+	x – extract an archive file.
+	v – Verbosely show the .tar file progress.
+	v – show the progress of the archive file.
+	f – filename of the archive file.
+	t – viewing the content of the archive file.
+	j – filter archive through bzip2.
+	z – filter archive through gzip.
+	r – append or update files or directories to the existing archive files.
+	W – Verify an archive file.
+	z – To create a compressed gzip archive file
+	
+
+In this blog we will discuss all the tar commands. Related topics are listed below:
+- CREATE archive (tar, tar.gz, and tar.bz2) 
+- compression
+- extract archive file
+- extract a single file
+- view content of the file
+- verify a file
+- add files or directories to the existing archive file, 
+- estimate the size of tar archive file
+- split tar file
+- iso to multiple tar archive
+- Join multiple splitted tar arcive in a single file
+	
+# CREATE tar
+$ tar -cvf FILE_TO_BE_CREATED.tar /path/to/files
+
+# CREATE tar.gz
+$ tar -cvfz FILE_TO_BE_CREATED.tar.gz /path/to/files
+$ tar -cvfz FILE_TO_BE_CREATED.tgz /path/to/files
+
+# CREATE tar.bz2 Highly compressed
+$ tar -cvfj FILE_TO_BE_CREATED.tar.bz2 /path/to/files
+$ tar -cvfj FILE_TO_BE_CREATED.tar.tbz /path/to/files
+$ tar -cvfj FILE_TO_BE_CREATED.tar.tb2 /path/to/files
+
+# untar files in current directory
+$ tar -xvf FILE_TO_BE_UNTARRED.tar
+$ tar -xvf FILE_TO_BE_UNTARRED.tar.gz
+$ tar -xvf FILE_TO_BE_UNTARRED.tar.bz2
+
+# untar files in specified Directory
+$ tar -xvf FILE_TO_BE_UNTARRED.tar -C /path/to/files
+$ tar -xvf FILE_TO_BE_UNTARRED.tar.gz -C /path/to/files
+$ tar -xvf FILE_TO_BE_UNTARRED.tar.bz2 -C /path/to/files
+
+# untar single file
+$ tar -xvf FILE_TO_BE_UNTARRED.tar SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+$ tar -xvfz FILE_TO_BE_UNTARRED.tar.gz SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+$ tar -xvfj FILE_TO_BE_UNTARRED.tar.bz2 SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+
+# untar single file, using verbose arguments
+$ tar --extract --file=FILE_TO_BE_UNTARRED.tar SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+$ tar --extract --file=FILE_TO_BE_UNTARRED.bz2 SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+$ tar --extract --file=FILE_TO_BE_UNTARRED.tar.gz SINGLE_FILE_WITH_ANY_FILE_EXTENSION
+
+# untar multiple files from tar, tar.gz, tar.bz2
+$ tar -xvf FILE_TO_BE_UNTARRED.tar "FILE_TWO" "FILE_TWO"
+$ tar -xvfz FILE_TO_BE_UNTARRED.tar.gz "FILE_TWO" "FILE_TWO"
+$ tar -xvfj FILE_TO_BE_UNTARRED.tar.bz2 "FILE_TWO" "FILE_TWO"
+
+# untar group of file using wildcard
+$ tar -xvf FILE_TO_BE_UNTARRED.tar --wildcards 'WILDCARD_TO_BE_USED'
+$ tar -xvfz FILE_TO_BE_UNTARRED.tar --wildcards 'WILDCARD_TO_BE_USED'
+$ tar -xvfj FILE_TO_BE_UNTARRED.tar --wildcards 'WILDCARD_TO_BE_USED'
+
+# list content of tar archive file
+$ tar -tvf FILE_TO_BE_UNTARRED.tar
+$ tar -tvf FILE_TO_BE_UNTARRED.tar.gz
+$ tar -tvf FILE_TO_BE_UNTARRED.tar.bz2
+
+#add
+$ tar -rvf FILE_TO_BE_UNTARRED.tar FILE_TO_BE_ADDED_WITH_ANY_EXTENSION
+$ tar -rvf FILE_TO_BE_UNTARRED.tar.gz FILE_TO_BE_ADDED_WITH_ANY_EXTENSION
+$ tar -rvf FILE_TO_BE_UNTARRED.tar.bz2 FILE_TO_BE_ADDED_WITH_ANY_EXTENSION
+
+#verify
+$ tar -tvfW FILE_TO_BE_UNTARRED.tar
+$ tar -tvfW FILE_TO_BE_UNTARRED.tar.gz
+$ tar -tvfW FILE_TO_BE_UNTARRED.tar.bz2
+
+1. CREATE tar Archive File in Linux
+$ base	directory/filename	files
+$ tar -cvf tecmint-14-09-12.tar /home/tecmint/
+
+2. CREATE tar.gz Archive File in Linux
+$ tar cvzf MyImages-14-09-12.tar.gz /home/MyImages
+$ tar cvzf MyImages-14-09-12.tgz /home/MyImages
+
+3. CREATE tar.bz2 Archive File in Linux
+$ tar cvfj Phpfiles-org.tar.bz2 /home/php
+$ tar cvfj Phpfiles-org.tar.tbz /home/php
+$ tar cvfj Phpfiles-org.tar.tb2 /home/php
+
+4. Untar tar Archive File in Linux
+#Untar files in Current Directory
+$ tar -xvf public_html-14-09-12.tar
+
+#Untar files in specified Directory
+$ tar -xvf public_html-14-09-12.tar -C /home/public_html/videos/
+
+5. Uncompress tar.gz Archive File in Linux
+$ tar -xvf thumbnails-14-09-12.tar.gz
+
+6. Uncompress tar.bz2 Archive File in Linux
+$ tar -xvf videos-14-09-12.tar.bz2
+
+7. List Content of tar Archive File in Linux
+$ tar -tvf uploadprogress.tar
+
+8. List Content tar.gz Archive File in Linux
+$ tar -tvf staging.tecmint.com.tar.gz
+
+9. List Content tar.bz2 Archive File in Linux
+$ tar -tvf Phpfiles-org.tar.bz2
+
+10. Untar Single file from tar File in Linux
+$ tar -xvf cleanfiles.sh.tar cleanfiles.sh
+$ tar --extract --file=cleanfiles.sh.tar cleanfiles.sh
+
+11. Untar Single file from tar.gz File in Linux
+tar -zxvf tecmintbackup.tar.gz tecmintbackup.xml
+tar --extract --file=tecmintbackup.tar.gz tecmintbackup.xml
+
+12. Untar Single file from tar.bz2 File in Linux
+$ tar -jxvf Phpfiles-org.tar.bz2 home/php/index.php
+$ tar --extract --file=Phpfiles-org.tar.bz2 /home/php/index.php
+
+13. Untar Multiple files from tar, tar.gz, and tar.bz2 File
+$ tar -xvf tecmint-14-09-12.tar "file1" "file2" 
+$ tar -zxvf MyImages-14-09-12.tar.gz "file1" "file2" 
+$ tar -jxvf Phpfiles-org.tar.bz2 "file1" "file2"
+
+14. Extract Group of Files using Wildcard in Linux
+$ tar -xvf Phpfiles-org.tar --wildcards '*.php'
+$ tar -zxvf Phpfiles-org.tar.gz --wildcards '*.php'
+$ tar -jxvf Phpfiles-org.tar.bz2 --wildcards '*.php'
+
+15. Add Files or Directories to tar Archive File in Linux
+$ tar -rvf tecmint-14-09-12.tar xyz.txt
+$ tar -rvf tecmint-14-09-12.tar php
+
+16. Add Files or Directories to tar.gz and tar.bz2 Files
+$ tar -rvf MyImages-14-09-12.tar.gz xyz.txt
+$ tar -rvf Phpfiles-org.tar.bz2 xyz.txt
+
+17. How To Verify tar, tar.gz, and tar.bz2 Archive File
+$ tar tvfW tecmint-14-09-12.tar
+<br>
+18. Check the Size of the tar, tar.gz, and tar.bz2 Archive File in Kilobytes (KB)
+$ tar -czf - tecmint-14-09-12.tar | wc -c
+$ tar -czf - MyImages-14-09-12.tar.gz | wc -c
+$ tar -czf - Phpfiles-org.tar.bz2 | wc -c
+<br>
+19. How to Split Large tar Archive into Multiple Files of Certain Size (-b is used to specify the file size to split)
+#file home.tar.bz2
+$ split -b 10M home.tar.bz2 "home.tar.bz2.part"
+$ ls -lh home.tar.bz2.parta*
+<br>
+20. Solit ISO file in multiple parts
+#CREATE an archive file of a Linux Mint ISO image file.
+$ tar -cvzf linux-mint-18.tar.gz linux-mint-18.iso 
+#Check file size
+$ ls -lh linux-mint-18.tar.gz 
+#split
+$ split -b 200M linux-mint-18.tar.gz "ISO-archive.part"
+<br>
+21. How to Join Tar Files After Splitting
+$ cat home.tar.bz2.parta* >backup.tar.gz.joined
+
+
+
+

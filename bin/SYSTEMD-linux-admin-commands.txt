@@ -1,0 +1,164 @@
+In this text file we are going to learn list of commands for Basics to the advance of systemd Basics to the advance of systemd (to manage the processes and units on your system) for Linux beginners and Experienced admins. Systemd is basically called demons or unit (demons also known as background processes) systemd name it units. All the units have their own start,stop, enable, disable, and reload scripts. Whenever you see units that will be referred to demons (a program that is running in the background and system helps in managing those).	  
+
+
+##Jobs and other list unit
+
+#Show if units are loaded/active
+$ systemctl list-units
+
+#View active systemd jobs
+$ systemctl list-jobs
+
+#See unit files and their states
+$ systemctl list-unit-files
+
+#List default target (like run level)
+$ systemctl get – default
+
+#check accounts have the most failed logins
+$ grep "invalid user" /var/log/auth.log
+
+#dependencies
+#Show a unit’s dependencies
+$ systemctl list-dependencies
+
+#Dependency dependent units recursively
+systemctl list-dependencies --all
+
+#To see the unit file of the atd scheduling daemon
+$ systemctl cat atd.service
+
+#Show a unit’s dependencies	
+$ systemctl list-sockets
+
+#Show properties of a service or other unit
+$ systemctl show service.service
+
+#Show single properties of the service or unit
+$ systemctl show sshd.service -p Conflicts
+
+##To check the status of the services
+#Stop a running service
+$ systemctl stop service
+
+#Start a service
+$ systemctl start service
+
+#Restart a running service
+$ systemctl restart service
+
+#Reload all config files in service
+$ systemctl reload service
+
+#See if service is running/enabled
+$ systemctl status service
+
+#Enable a service to start on boot
+$ systemctl enable service
+
+#Disable service wont start at boot
+$ systemctl disable service
+
+#not sure if service has the functionality to reload its configuration
+$ sudo systemctl reload-or-restart service.service
+
+#For instance, to check to see if a unit is currently active (running)
+$ systemctl is-active service.service
+
+#To see if the unit is enabled
+systemctl is-enabled service.service
+
+#check is whether the unit is in a failed state.
+$ systemctl is-failed application.service
+
+#Mask unmask services (completely unstartable, automatically or manually)
+#systemctl show sshd.service -p ConflictsWe saw in the service management section how to stop or disable a service, but systemd also has the ability to mark a unit as completely unstartable, automatically or manually, by linking it to /dev/null. This is called masking the unit, and is possible with the mask command:
+$ sudo systemctl mask nginx.service
+
+#To unmask a unit
+$ sudo systemctl unmask nginx.service
+
+##analyze 
+#To get an overview of the system boot-up time
+$ systemd-analyze
+
+#If you want to view a list of all running units/services (check which service is taking longer time while booting and analyze the issue)
+$ systemd-analyze blame 
+
+#Next, we can also view a tree of the time-critical chain for the default target or a list of specified units with the critical-chain sub-command as shown.
+$ systemd-analyze critical-chain 
+
+#more details about running service (systemd-analyze blame)
+$ systemd-analyze critical-chain ntp.service networking.service
+
+#Finally, let’s look at one more important sub-command that allows for producing graphical (svg format) detailing of system services that have been started, and at what time, highlighting their initialization time, as follows.
+$ systemd-analyze plot > boot_analysis.svg
+
+
+#Run any systemctl command remotely
+$ systemctl -H host status network
+
+#Reboot the system reboot.target
+$ systemctl reboot
+
+#Power off the system poweroff.target
+$ systemctl poweroff
+
+#Put in emergency mode emergency.target
+$ systemctl emergency
+
+#Back to default target multi user.target
+$ systemctl default
+
+Viewing Log Messages
+#Show all collected log messages
+$ journalctl
+
+#Show all collected log messages from the present boot only
+$ journalctl -b
+
+#See log messages from specific unit
+$ journalctl -u network.service
+
+#See ssh servicre logs 
+journalctl -u ssh.service	
+
+#Follow messages as they appear
+$ journalctl -f
+
+#Show only kernel messages
+$ journalctl -k
+
+
+## units that systemd has loaded are inactive, active, all (for more type help in place of *** --status=help)
+#list all units
+$ systemctl list-units --all
+
+#list all the inactive
+$ systemctl list-units --all --state=inactive
+
+#To check all the running units
+$ systemctl list-units -all --state=running
+
+#Displaying a Unit File
+$ systemctl cat atd.service
+
+##Editing Unit Files
+#Normal edit using blank snippet
+$ sudo systemctl edit service.service
+
+#full edit 
+$ sudo systemctl edit --full service.service
+
+##Stopping or Rebooting the Server
+#Power off the system
+$ sudo systemctl poweroff
+
+#Restart or reboot
+$ sudo systemctl reboot
+
+#Switch to the climode also known as rescue mode
+$ sudo systemctl rescue
+
+
+
