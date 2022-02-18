@@ -1,0 +1,63 @@
+Would you like to create your own google page. Run the command and see the magic. It woks with  most of the webpages.
+
+Note: Use proxy to perform these tricks
+$ wget -e http_proxy=xx.xx.xx.xx:8080 http://www.web.com 
+
+1. Command to clone any website Homepage Only
+$ wget -mpk google.com
+$ wget -r google.com
+
+2. Download all the images
+$ wget -r -l inf -A .png,.jpg,.jpeg,.gif -nd web.com
+
+3. Download complete Website
+$ wget -m -r -linf -k -p -q -E -e robots=off http://website.com
+
+4. POST a JSON file and redirect output to stdout
+$ wget -q -O - --header="Content-Type:application/json" --post-file=foo.json http://127.0.0.1
+
+5. Inspect webpage sourcecode
+$ wget -qO- google.com |less
+
+7. Clone webpage 2nd command
+$ wget -m google.com
+
+8. wget users often use -mpNHk, a bundle of several options, to intuitively crawl a website.
+$ wget -mpNHk http://www.gnu.org/software/wget/manual/
+
+9. Grep all the link on front page
+$ wget -qO- google.com |tr \" \\n | grep https\*://
+
+10. Get top level domain
+$ wget -qO- http://google.com/ |grep -Eo 'href="[^\"]+"' | grep -Eo '(http|https)://[^/"]+'
+output
+
+11. Download file using wget
+$ wget -O -c file.txt http://web.com/htlm
+
+12. Read url from a file
+$ wget -i /wget/urls.txt
+
+13. Download in background
+$ wget -b saved.txt http://web.com/file.txt
+
+14. Download silently
+wget -O -c file.txt http://web.com/file.txt -q
+
+15. Download from link if filesize is below and equeal to 10MB
+$ wget -Q10m -i links.txt
+
+16. Download entire website
+$ wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains site.com --no-parent site.com
+
+17. Download any website from fake device
+$ wget --debug \
+--header="User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1" \
+http://yahoo.com
+$ wget -U 'Mozilla/5.0' google.com
+
+18. To download files according to a pattern
+$ wget http://site.com/files-{1..15}.tar.bz2
+
+19. Recursively download a part of a website
+$ wget -r -k -np -nH --cut-dirs=3 "http://site.com/html" -P "directory-name"
