@@ -1,3 +1,6 @@
+#alias
+alias xmltohtml="xsltproc"
+
 #PDF to Text
 $ pdftotext -layout vocabulary.pdf vocabulary.txt
 
