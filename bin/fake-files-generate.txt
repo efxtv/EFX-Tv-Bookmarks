@@ -1,0 +1,13 @@
+fallocate -l 5M ostechnix.txt
+head -c 5MB /dev/urandom > ostechnix.txt
+head -c 5MB /dev/zero > ostechnix.txt
+truncate -s 24m example.mp4
+dd if=/dev/zero of=daygeek2.txt  bs=20M  count=1
+xfs_mkfile 10M daygeek5.txt
+openssl rand -out random.tmp 1000000
+
+
+for  ((x=0; x<9000000; ++x))
+do
+    echo a 
+done >> dummy.zip 
