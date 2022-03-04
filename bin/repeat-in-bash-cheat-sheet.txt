@@ -1,0 +1,43 @@
+#Unlimited loop
+while true; do COMMAND;COMMAND; done
+
+#Unlimited loop (you can use n in place of --interval)
+watch --interval 0 <command>
+watch -n0 <command>
+
+# Repeat for specified times (! = 2times , !!=3 times)
+yourcommand; !#
+
+#repeat 10 times
+for i in {1..10}; do command; done
+
+#Repeat using while loop
+i=1; while [[ $i -le 5 ]]; do echo "Command no. $i"; let ++i; done
+
+#repeat using xargs
+seq 5 | xargs -I{} echo "Command no. {}"
+
+#repeat using bash functions
+function repeat(){   for ((i=0;i<$1;i++)); do     eval ${*:2};   done; }
+
+or 
+
+function repeat(){
+  for ((i=0;i<$1;i++)); do
+    eval ${*:2}
+  done
+}
+
+repeat 5 echo "Command"
+
+or
+
+repeat 5 echo "Command" ";" echo "Another command"
+
+#repeat using Yes command unlimited times
+yes command|bash
+example:
+yes service --status-all |bash
+
+#create tool
+while true; do $1;done
