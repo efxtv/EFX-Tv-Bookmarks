@@ -41,3 +41,8 @@ yes service --status-all |bash
 
 #create tool
 while true; do $1;done
+
+#create loop in funcions (mac generator)
+hi (){ clear;while :; do printf '  Changing MAC :   00:60:2F:%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]; sleep 0.3; done };hi
+
+
