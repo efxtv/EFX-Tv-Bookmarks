@@ -11,3 +11,7 @@ for  ((x=0; x<9000000; ++x))
 do
     echo a 
 done >> dummy.zip 
+
+
+cat file.exe >> new-file.exe
+cat file.jpg >> new-file.jpg
