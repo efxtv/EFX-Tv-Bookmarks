@@ -177,6 +177,10 @@ $ split -b 200M linux-mint-18.tar.gz "ISO-archive.part"
 21. How to Join Tar Files After Splitting
 $ cat home.tar.bz2.parta* >backup.tar.gz.joined
 
+#Most compressed (install sudo apt install p7zip-full p7zip-rar)
+7za a -t7z $PWD/files.7z directory #Compress
+#Extract
+
 
 
 
