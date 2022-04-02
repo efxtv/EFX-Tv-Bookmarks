@@ -25,6 +25,9 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://download.itadmins.net/">Study resources4</a> </li>
 <li><a href="https://drive.google.com/drive/folders/1_G6kt5leGkmzMs_hveS0oUya591gVso2">Android</a> </li>
 <li><a href="https://www.geeksforgeeks.org/">geeksforgeeks</a> </li>
+<li><a href="https://www.cybrary.it/">Cybrary</a> </li>
+
+  https://www.cybrary.it/
 </ol>
 </details>
 
@@ -139,6 +142,9 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://twitter.com/TalBeerySec">Twitter23</a> </li>
 <li><a href="https://twitter.com/iSecurity">Twitter24</a> </li>
 <li><a href="https://twitter.com/samwcyo">Twitter25</a> </li>
+<li><a href="http://www.effecthacking.com/">Effecthacking</a> </li>
+
+
 
   </ol>
 </details>
@@ -149,6 +155,8 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Test your ctf skills</summary>
 <br>
 <ol>
+  
+  <li><a href="https://oops.cmdchallenge.com/">CmdChallange</a> </li>	
 <li><a href="https://academy.hackaflag.com.br">Academy Hackaflag BR </a> </li>	
 <li><a href="https://tryhackme.com">Try Hack Me </a> </li>	
 <li><a href="https://attackdefense.com">Attack-Defense </a> </li>	
