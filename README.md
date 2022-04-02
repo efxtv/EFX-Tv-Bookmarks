@@ -91,7 +91,56 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://haveibeenpwned.com/">Data leak check</a> </li>
 <li><a href="https://e.ggtimer.com/">Time</a> </li>
 <li><a href="http://websdr.ewi.utwente.nl:8901/">Radio</a> </li>
+<li><a href="http://cracked.io">cracked.io</a> </li>
+
+
 </ol>
+</details>
+
+<!--NEWS -->
+<details>
+<summary>NEWS </summary>
+<br>
+<ol>
+<li><a href="https://packetstormsecurity.com/news/">Packetstormsecurity</a> </li>
+  <li><a href="https://malware.news/">Malware</a></li>
+<li><a href="https://www.bleepingcomputer.com//">Bleepingcomputer</a> </li>
+<li><a href="https://www.zdnet.com/">Zdnet</a> </li>
+<li><a href="https://thehackernews.com/">TheHackernews/</a> </li>
+<li><a href="https://www.difesaesicurezza.com/en/category/cyber-en/">Difesaesicurezza</a></li>
+<li><a href="https://krebsonsecurity.com/">Krebsonsecurity</a> </li>
+<li><a href="https://www.sans.org/apac/">Sans</a> </li> 
+<li><a href="https://www.hexacorn.com/blog/">Hexacorn Blogs</a> </li>
+<li><a href="https://www.vkremez.com/">vkremez</a> </li>
+<li><a href="https://lab52.io/blog/">lab52.io</a> </li>
+<li><a href="twitter.com/ochsenmeier">Twitter 1</a> </li>
+<li><a href="twitter.com/kinugawamasato">Twitter2</a> </li>
+<li><a href="twitter.com/MalwareTechBlog">Twitter3</a> </li>
+<li><a href="twitter.com/threatpost">Twitter4</a> </li>
+<li><a href="twitter.com/nas_bench">Twitter5</a> </li>
+<li><a href="twitter.com/malwareunicorn">Twitter6</a> </li>
+<li><a href="twitter.com/reach2ratan">Twitter7</a> </li>
+<li><a href="twitter.com/garymetz">Twitter8</a> </li>
+<li><a href="twitter.com/Bank_Security">Twitter9</a> </li>
+<li><a href="twitter.com/rimpq">Twitter10</a> </li>
+<li><a href="twitter.com/blueteamsec1">Twitter11</a> </li>
+<li><a href="twitter.com/USCERT_gov">Twitter12</a> </li>
+<li><a href="twitter.com/VK_Intel">Twitter13</a> </li>
+<li><a href="twitter.com/malwrhunterteam">Twitter14</a> </li>
+<li><a href="twitter.com/io_strap">Twitter15</a> </li>
+<li><a href="twitter.com/CioAmaro">Twitter16</a> </li>
+<li><a href="twitter.com/cyb3rops">Twitter17</a> </li>
+<li><a href="twitter.com/malware_traffic">Twitter18</a> </li>
+<li><a href="twitter.com/CatherineAdenle">Twitter19</a> </li>
+<li><a href="twitter.com/SecurityMB">Twitter20</a> </li>
+<li><a href="twitter.com/ale_sp_brazil">Twitter20</a> </li>
+<li><a href="twitter.com/bit_reader">Twitter21</a> </li>
+<li><a href="twitter.com/PwnFunction">Twitter22</a> </li>
+<li><a href="twitter.com/TalBeerySec">Twitter23</a> </li>
+<li><a href="twitter.com/iSecurity">Twitter24</a> </li>
+<li><a href="twitter.com/samwcyo">Twitter25</a> </li>
+
+  </ol>
 </details>
 
 
@@ -212,14 +261,9 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://ahrefs.com/">Backlink Checker</a> </li>
 <li><a href="https://www.tunepocket.com/">Youtube Video tag Extractor</a> </li> 
 <li><a href="https://www.seoreviewtools.com/">Backlink-checkier2</a> </li>
-  <li><a href="https://ytrank.net/">Youtube-Video-tag-Rank-Checker</a> </li>
-  <li><a href="https://web.dev/measure/">Website-optimizer</a> </li>
-  
-  
-
-  
-  
-</ol>
+<li><a href="https://ytrank.net/">Youtube-Video-tag-Rank-Checker</a> </li>
+<li><a href="https://web.dev/measure/">Website-optimizer</a> </li>
+  </ol>
 </details>
 
 ---------------------------------------
