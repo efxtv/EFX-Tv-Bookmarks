@@ -38,3 +38,19 @@ rm -rf !(file)
 
 #Delete all but exclude two or multiple files
 rm -rf !(directory|file1|drectory2|file2)
+
+#Delete files with prompt y/n
+rm -ri directory
+rm -ri *
+
+#Delete all mp3 files
+rm *.mp3
+rm *.mp4
+
+#Delete file present in previous directory
+rm ../filename
+
+#Search and delete all mp3 files in sub directoryes also
+find . -name "*.mp3" | xargs rm
+find . -name "*.mp3" -type f -delete
+find . -name "*.mp3" -type f
