@@ -152,10 +152,12 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 
 <!--CTF -->
 <details>
-<summary>Test your ctf skills</summary>
+<summary>Test your ctf skills and games </summary>
 <br>
 <ol>
   
+  <li><a href="https://www.learnshell.org/">Learnshell</a> </li>	
+<li><a href="https://overthewire.org/wargames/">Overthewire</a> </li>	
   <li><a href="https://oops.cmdchallenge.com/">CmdChallange</a> </li>	
 <li><a href="https://academy.hackaflag.com.br">Academy Hackaflag BR </a> </li>	
 <li><a href="https://tryhackme.com">Try Hack Me </a> </li>	
