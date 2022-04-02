@@ -1,30 +1,40 @@
 #Delete file
 rm filename
 
-#delete directory
+#Delete directory
 rm -rf directory
+
+#Delete directory are not empty
+rm -r
 
 #Delete empty directory only
 rm -d
 rm -d *
 
-#delete files includiong hidden direcotories
+#Delete files includiong hidden direcotories
 rm -rf $PWD{*,.*}
 
-#delete all the files in single command
+#Delete all the files in single command
 rm *.*
 
-#delete files and directoryes in single command
+#Delete files and directoryes in single command
 rm -rf *
 
 #delete all the files start from r
 rm r*
 
-#delete all the files contain t character
+#Delete all the files contain t character
 rm *t
 
-#delete all the files contain s character in them
+#Delete all the files contain s character in them
 rm *s*
+
+#Delete all files but kep all contain t character
+rm -rf !(*t*)
+
 
 #Delete all the files but accept a directory or file
 rm -rf !(file)
+
+#Delete all but exclude two or multiple files
+rm -rf !(directory|file1|drectory2|file2)
