@@ -513,6 +513,50 @@ trap returntrap RETURN  # is executed each time a shell function or a script exe
 # Reset
 Color_Off='\033[0m' # Text Reset
 
+##############################################################################
+# Your first tool demo
+##############################################################################
+#!/bin/bash
+
+check() 
+{
+#check if file exist
+if [[ -e .file]]
+then
+  echo ""
+else
+#show error
+echo "Here will be the output"
+fi
+}
+
+#custom var
+vport()
+{
+cat .file.txt
+}
+
+#EXTRAS
+if [ "$1" == "-h" ]; then
+echo "
+	 > demo
+	 > demo2
+	 > demo3"
+#-----------------------------------------------------------------------------start
+elif [ "$2" = "demo" ]; then
+elif [ "$2" = "demo" ]; then
+#elif [ "$2" = "demo" ]; then      ## GOOD
+#elif [ "$2" = "demo" ]; then      ## GOOD
+#elif [ "$2" = "demo" ]; then      ## GOOD
+#elif [ "$2" = "demo" ]; then      ## GOOD
+#elif [ "$2" = "demo" ]; then      ## GOOD
+#elif [ "$2" = "demo" ]; then      ## GOOD
+else
+echo "Error... need help? tload -h"
+fi
+#############################################################################################
+
+
 # Regular Colors
 Black='\033[0;30m'  # Black
 Red='\033[0;31m'    # Red
