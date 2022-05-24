@@ -15,3 +15,9 @@ cat file.txt|grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"
 
 Short unique link
 cat file.txt|grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"|sort -u
+----------------------------------------------------------
+#Grep all a herf links from database
+cat website.htm | grep -E '<a href=".*">' > links.txt
+
+#Grep all links from text file
+grep -Po '(?<=href=")[^"]*'
