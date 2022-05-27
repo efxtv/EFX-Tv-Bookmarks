@@ -1,3 +1,12 @@
+#Ngrok links
+#1st curl -sS http://localhost:4040/api/tunnels | jq '.tunnels[0].public_url'|sed 's#"##g'
+
+#2nd curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z-]*\.ngrok.io"
+
+#TCP tunnel
+curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url
+----------------------------------------------------------
+
 #alias
 alias xmltohtml="xsltproc"
 
