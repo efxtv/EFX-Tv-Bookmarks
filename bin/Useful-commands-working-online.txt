@@ -30,3 +30,41 @@ cat website.htm | grep -E '<a href=".*">' > links.txt
 
 #Grep all links from text file
 grep -Po '(?<=href=")[^"]*'
+----------------------------------------------------------
+Url encorder
+#change file name 
+tail -f file.log | php -R 'echo urldecode($argn)."\n";'
+
+#create function and run as command
+function urldecode() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+
+#python url encorder
+cat inputfile.txt | python -c "import sys, urllib as ul; print ul.unquote(sys.stdin.read());" > ouputfile.txt
+
+#By creating aliases Python2
+alias urldecode='python -c "import sys, urllib as ul; \
+    print ul.unquote_plus(sys.argv[1])"'
+#alias Python2
+alias urlencode='python -c "import sys, urllib as ul; \
+    print ul.quote_plus(sys.argv[1])"'
+
+#python3
+#Alias1
+alias urldecode='python3 -c "import sys, urllib.parse as ul; \
+    print(ul.unquote_plus(sys.argv[1]))"'
+
+#Alias2
+alias urlencode='python3 -c "import sys, urllib.parse as ul; \
+    print (ul.quote_plus(sys.argv[1]))"'
+
+#Sead alias
+alias urldecode='sed "s@+@ @g;s@%@\\\\x@g" | xargs -0 printf "%b"'
+
+#Awk
+awk -niord '{printf RT?$0chr("0x"substr(RT,2)):$0}' RS=%..
+
+#perl url encorder
+perl -i -MURI::Escape -e 'print uri_unescape($ARGV[0])' file
+
+#perl
+echo '%21%22' |  perl -pe 's/\%(\w\w)/chr hex $1/ge'
