@@ -14,6 +14,27 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
   </ol>
 </details>
 
+<!--Proxylist -->
+<details>
+<summary>Proxy List</summary>
+<br>
+<ol>
+<li><a href="https://spys.one/en/free-proxy-list/">PROXY-List1</a> </li>
+<li><a href="https://hidemy.name/en/proxy-list/">PROXY-List2</a> </li>
+<li><a href="https://free-proxy-list.net/">PROXY-List3</a> </li>
+<li><a href="https://www.freeproxylists.net/">PROXY-List4</a> </li>
+<li><a href="https://www.sslproxies.org/">PROXY-List5</a> </li>
+<li><a href="https://www.freeproxylists.net/">PROXY-Lis6t</a> </li>
+<li><a href="https://www.proxy-list.download/HTTP">PROXY-List7</a> </li>
+<li><a href="https://geonode.com/free-proxy-list/">PROXY-List8</a> </li>
+<li><a href="https://www.proxynova.com/proxy-server-list/">PROXY-List9</a> </li>
+<li><a href="http://free-proxy.cz/en/">PROXY-List10</a> </li>
+<li><a href="https://openproxy.space/list">PROXY-List11</a> </li>
+<li><a href="https://www.proxyscan.io/">PROXY-List12</a> </li>
+<li><a href="https://vpnoverview.com/privacy/anonymous-browsing/free-proxy-servers/">PROXY-List13</a> </li>
+  </ol>
+</details>
+
 <!--study resources -->
 <details>
 <summary>Study Resources</summary>
