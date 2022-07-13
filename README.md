@@ -19,6 +19,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Proxy List</summary>
 <br>
 <ol>
+<li><a href="https://www.proxysite.com/">Online-best-Proxy</a></li>
 <li><a href="https://spys.one/en/free-proxy-list/">PROXY-List1</a> </li>
 <li><a href="https://hidemy.name/en/proxy-list/">PROXY-List2</a> </li>
 <li><a href="https://free-proxy-list.net/">PROXY-List3</a> </li>
