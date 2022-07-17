@@ -14,6 +14,22 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
   </ol>
 </details>
 
+<!--Uploader -->
+<details>
+<summary>Upload and share</summary>
+<br>
+<ol>
+<li><a href="https://anonfiles.com/">anonfiles</a> </li>
+<li><a href="https://mega.io/">Mega</a></li>
+<li><a href="https://www.pcloud.com/">Pcloud</a> </li>
+<li><a href="https://www.dropbox.com/">Dropbox VPN</a> </li>
+  <li><a href="https://www.box.com/en-gb/drive">Box</a> </li>  
+  <li><a href="https://www.mediafire.com/">Mediafire</a> </li>  
+ 
+  </ol>
+</details>
+
+
 <!--Proxylist -->
 <details>
 <summary>Proxy List</summary>
