@@ -3,3 +3,4 @@ https://www.tutorialspoint.com/unix/pdf/unix-useful-commands.pdf
 https://buildmedia.readthedocs.org/media/pdf/lym/latest/lym.pdf
 http://cc.iiti.ac.in/docs/linuxcommands.pdf
 https://people.cs.uchicago.edu/~kaharris/cspp51081/Links/unix-resources/linux-fund.pdf
+https://nomispeaks.files.wordpress.com/2018/07/linux_commands_08.pdf
