@@ -1,0 +1,310 @@
+CMD Commands	Function
+A
+ addusers	  Used to add and list users in a CSV file
+ admodcmd	  Used for bulk modifying contents in an active directory
+ arp	      Address Resolution Protocol is used to map IP address to the hardware address
+ assoc	    Used to change associations for file extensions
+ associat	 One step file association
+ at	 Run a command at a specific time
+ atmadm	    Display connection info of the ATM adapter
+ attrib	    Used to change file attributes
+B
+ bcdboot	 Used to create and repair a system partition
+ bcdedit	 Used to manage boot configuration data
+ bitsadmin	 Used to manage the Background Intelligent Transfer Service
+ bootcfg	 Used to edit boot configuration in Windows
+ break	   Enable/Disable break capability (CTRL+C) in CMD
+C
+ cacls	   Used to change permissions of files
+ call	 Used one batch program to call another
+ certreq	 Used to request a certificate from a certification authority
+ certutil	 Manage Certification Authority files and services
+ cd	 Used to change folder (directory) or go to a specific one
+ change	 Used to change terminal services
+ chcp	 Displays the number of active console code page
+ chdir	 Same as cd command
+ chkdsk	 Used to check and repair issues in the disk
+ chkntfs	 Used to check the NTFS file system
+ choice	 Accept user input (via keyboard) to a batch file
+ cipher	 Used to encrypt/decrypt files and folder
+ cleanmgr	 Used clean temp files and recycle bin automatically
+ clip	 Copy result of any command (stdin) to Windows clipboard
+ cls	 Clear CMD screen
+ cmd	 Used to start a new CMD shell
+ cmdkey	 Used to manage stored usernames and passwords
+ cmstp	 Used to install or remove a connection manager service profile
+ color	 Change the color of the CMD shell using options
+ comp	 Compare contents of two files or two sets of files
+ compact	 Compress files and folders on an NTFS partition
+ compress	 Compress one or more files
+ convert	 Convert a FAT partition to NTFS
+ copy	 Copy one or more files to another location
+ coreinfo	 Show the mapping between logical and physical processors
+ cprofile	Cleans specified profiles of wasted space and disabled user-specific file associations
+ cscmd	 Configure offline files on a client computer
+ csvde	 Import or Export the data of an active directory
+D
+ date	 Used to display the date or change it
+ defrag	 Used to defragment system hard drive
+ del	 Used to delete a file(s)
+ delprof	 Used to delete user profile(s)
+ deltree	 Used to delete a folder and its sub-folders
+ devcon	 Access the command line device manager utility
+ dir	 Used to display files and folders list
+ dirquota	 Manage File Server Resource Manager quotas
+ diruse	 Used to display disk usage
+ diskcomp	 Compare contents of two floppy disks
+ diskcopy	 Copy data of one floppy disk to another
+ diskpart	 Make changes to partitions of storage, both internal and connected
+ diskshadow	 Access the Disk Shadow Copy Service
+ diskuse	 View used space in folder(s)
+ doskey	 Used to edit command line, recall commands, and create macros
+ driverquery	 Display a list of installed device drivers
+ dsacls	 View and edit access control entries for objects in active directory
+ dsadd	 Used to add objects to active directory
+ dsget	 View objects in active directory
+ dsquery	 Find objects in an active directory
+ dsmod	 Used to modify objects in an active directory
+ dsmove	 Rename or move an active directory object.
+ dsrm	 Remove objects from an active directory
+ dsmgmt	 Manage Active Directory Lightweight Directory Services
+E
+echo	Turn command-echoing feature on/off, display a message on the screen
+endlocal	End localization environment changes in a batch file
+erase	Used to delete on or more file(s)
+eventcreate	Add custom event to Windows event log (Admin rights required)
+eventquerry	Display list of events and their properties from event logs
+eventtriggers	Display and configure event triggers on local and remote machines
+exit	Exit the command line (Quit current batch script)
+expand	Uncompress one or more .CAB file(s)
+explorer	Open Windows Explorer
+extract	Uncompress one or more Windows cabinet file(s)
+F
+fc	Used to compare two files
+find	Used to search a specified text string in a file
+findstr	Used to find string patterns in files
+finger	Display information about user(s) on a specified remote computer
+flattemp	Used to enable/disable flat temporary folders
+For	Run a command in a loop for a file(s) for defined parameter
+forfiles	Used for batch processing of selected file(s)
+format	Used to format a disk
+freedisk	Used to check free space on a disk
+fsutil	File system utility to manage file and drive properties
+ftp	Use FTP service to transfer files from one PC to another
+ftype	Display/ Modify file extension type associations
+G
+getmac	Used to display the MAC address of your network adapter
+goto	Used to direct a batch program to a line identified by a label
+gpresult	Display Group Policy Settings and Resultant Set of Policy for a user
+gpupdate	Update local and active directory based on group policy settings
+graftabl	Turn on the ability to display an extended character in graphics mode
+H
+help	Display a list of commands and see online information for them
+hostname	Used to display host name of the computer
+I
+icacls	Used to change permissions of files and folders
+iexpress	Used to create a self-extracting zip archive
+if	Used for conditional processing in batch programs
+ifmember	Display the group(s) an active user belongs to
+inuse	Replace the files which the OS is currently using (restart required)
+ipconfig	Display and change Windows IP configuration
+ipseccmd	Used to configure IP Security policies
+ipxroute	Display and modify routing table information used by IPX protocol
+irftp	Used to send files over an infrared link (infrared functionality required)
+L
+label	Used to change the name of a disk
+lodctr	Update registry values with latest performance counters
+logman	Used to manage performance monitor logs
+logoff	Log a user off
+logtime	Add the date, time, and a message to a text file
+lpq	Displays print queue status
+lpr	Used to send a file to a computer running the Line Printer Daemon service
+M
+macfile	Manage files server for Mackintosh
+makecab	Used to create .cab files
+mapisend	Used to send email from command line
+mbsacli	Microsoft Baseline Security Analyser
+mem	Used to show memory usage
+md	Used to create directories and sub-directories
+mkdir	Used to create directories and sub-directories
+mklink	Used to create symbolic link to a directory
+mmc	Access Microsoft Management Console
+mode	Configure COM, LPT, CON system devices
+more	Display one screen of output at time
+mountvol	Create, list, or delete a volume mount point
+move	Used to move files from one folder to another
+moveuser	Move user account to a domain or between machines
+msg	Used to send a pop-up message to a user
+msiexec	Install, modify, configure using Windows Installer
+msinfo32	Display system information
+mstsc	Create a remote desktop connection
+N
+nbstat	Display NetBIOS over TCP/IP information
+net	Used to manage network resources and services
+netdom	Network Domain Manager utility
+netsh	Display or modify network configuration
+netstat	Display active TCP/IP connections
+nlsinfo	Used to display locale information
+nltest	List domain controllers, force remote shutdown, etc
+now	Display date and time
+nslookup	Check IP address on a Name Server
+ntbackup	Backup data to tape using CMD or batch file
+ntcmdprompt	Runs cmd.exe instead of command.exe in an MS-DOS application
+ntdsutil	Manage Active Directory Domain Services
+ntrights	Used to edit user account privileges
+ntsd	Only for system developers
+nvspbind	Used to modify network bindings
+O
+openfiles	Queries or displays open files
+P
+pagefileconfig	Display and configure Virtual memory settings
+path	Set PATH environment variable for executable files
+pathping	Latency and Packet loss info for each node in the network path
+pause	Used to stop processing of a batch file
+pbadmin	Starts Phone Book Administrator
+pentnt	Detect Floating Point Division error in the Pentium chip
+perfmon	Access performance monitor in CMD
+perms	Display a user\’s ACL permissions for a file
+ping	Test network connection to a computer
+popd	Go to the latest path/folder stored by PUSHD command
+portqry	Display TCP and UDP port status
+powercfg	Used to configure power settings and know battery health
+print	Used to print a text file(s) from CMD
+printbrm	For backup/recovery/migration of the print queue
+prncnfg	Used to configure/rename a printing device
+prndrvr	List/add/delete printer drivers
+prnjobs	List/pause/resume/cancel print jobs
+prnmngr	List/add/delete printers, display/set default printer
+prnport	List/create/delete TCP printer ports, display/change port configuration
+prnqctl	Clear printer queue, print a test page
+procdump	Monitor system for CPU spikes, generate a crash report during a spike
+prompt	Used to change the Prompt in CMD
+psexec	Run a CMD process on a remote computer
+psfile	Display remotely opened files, close an open file
+psinfo	List system information about a local/remote machine
+pskill	Kill a process(es) using its name or process ID
+pslist	Display process status and info about active processes
+psloggedon	See active users on machine
+psloglist	Display event log records
+pspasswd	Used to change account password
+psping	Used to measure network performance
+psservice	Display and control services on a machine
+psshutdown	Shutdown/restart/logoff/lock a local or remote machine
+pssuspend	Used to suspend a process on a local or remote computer
+pushd	Change current folder and store previous folder for use by POPD
+Q
+qgrep	Search file(s) for a given string pattern
+query process or qprocess	Display information about processes
+R
+rasdial	Display Remote Access Service Status
+rasphone	Manage RAS connections
+rcp	Copy files to a computer running remote shell service
+recover	Recover readable data from a defective disk
+reg	Display/add/change registry keys and values in Windows registry
+regedit	Import/export/delete settings from a .reg text file
+regsvr32	Used to register/unregister a DLL file
+regini	Used to change registry permissions
+relog	Export performance counters to other formats like TSV, CSV, SQL
+rem	Add comments in batch file
+ren	Used to rename a file(s)
+replace	Used to replace a file with another file of same name
+reset session	Used to reset a remote desktop session
+rexec	Run commands on remote machines running Rexec service
+rd	Used to delete a folder(s)
+rmdir	Used to delete a folder(s)
+rmtshare	Manage file and printer shares local or remote servers
+robocopy	Used to copy files and folders that have changed
+route	Display/change the local IP routing table
+rsh	Run commands on remote servers running RSH service
+rsm	Manage media resources using Removable storage
+runas	Run a program as a different user
+rundll32	Used to run a DLL program
+S
+sc	Use Service Controller to manage Windows services
+schtasks	Schedule command(s) to run at a specific time
+secedit	Configure system security
+set	Display/set/remove environment variables in CMD
+setlocal	Control visibility of environment variables in a batch file
+setspn	Manage Service Principal Names for an Active Directory service account
+setx	Set Environment Variables permanently
+sfc	System File Checker
+share	List/edit a file share or print on any computer
+shellrunas	Used to run a command as a different user
+shift	Change the position of the batch parameters in a batch file
+shortcut	Create a Windows shortcut
+shutdown	Shutdown the computer
+sleep	Put computer to sleep for specified number of seconds
+slmgr	Software Licensing Management tool for activation and KMS
+sort	Used to sort and display a redirected or piped input
+start	Start a program, command, or batch file
+strings	Find ANSI and UNICODE strings in binary files
+subinacl	Display/modify ACEs for file and folder permissions
+subst	Associate a path with a drive letter
+sysmon	Monitor and log system activity to Windows event log
+systeminfo	Display detailed configuration information about the computer
+T
+takeown	Used to take the ownership of a file
+taskkill	Used to terminate on or more running processes
+tasklist	Display a list of running apps and services.
+tcmsetup	Enable/disable TAPI client
+telnet	Communicate with a remote machine using TELNET protocol
+tftp	Transfer files to and from a remote machine running TFTP protocol
+time	Display/change system time
+timeout	Delay a batch file execution for specified seconds
+title	Change the text on top of CMD window
+touch	Change file timestamps
+tracerpt	Process event trace logs and generate trace analysis report
+tracert	Trace route to a remote host by sending ICMP request messages
+tree	Display a folder structure in the form of a graphical tree
+tsdiscon	Terminate a remote desktop connection
+tskill	Terminate a running process on a RD Session Host server
+tssutdn	Shutdown/reboot a terminal server remotely
+type	Show contents of a text file
+typeperf	Write performance data to a CMD window or a log file
+tzutil	Time Zone Utility
+U
+unlodctr	Remove performance counter names and explain text for a service from the registry
+V
+ver	Show version number of installed OS
+verify	Verify whether files are saved correctly on the disk
+vol	Show disk volume label and serial number
+vssadmin	Show shadow copy backups, installed shadow copy writers and providers
+W
+w32tm	Access Windows Time Service Utility
+waitfor	Used to synchronize events between networked computer(s)
+wevtutil	Retrieve information about event logs and publishers
+where	Find and display file(s) in the current directory
+whoami	Display information about the active user
+windiff	Compare contents of two files or sets of files
+winrm	Windows Remote Management
+winrs	Windows Remote Shell
+wmic	Windows Management Instrumentation Command
+wuauclt	Windows Update Agent to downIoad new update files
+X
+xcalcs	Change ACLs for files and folders
+xcopy	Copy files or directory trees to another folder
+::	Comment
+And it is done! If you think we forgot to add any other cmd commands to this list, please let us know. Also, get a copy of the CMD command list in PDF format here. And expect more command-line tricks soon. Also, don’t forget to check the CMD keyboard shortcuts listed below.
+
+ 
+
+Command line keyboard shortcuts 
+ 
+
+Here are some important CMD keyboard shortcuts to make your work on the command line easier.
+
+CMD Keyboard Shortcuts	Function
+F1	Pastes the last executed command (character by character)
+F2	Copies characters from the previous command
+F3	Repeats the last command
+F4	Deletes current prompt text up to the entered character
+F5	Pastes recently executed commands (does not cycle)
+F6	Pastes ^Z to the prompt
+F7	Shows list of all previous commands from the command history
+F8	Type character and press F8 key to cycle through matching commands
+F9	Asks for the number of the command from the F7 list to paste
+Up Arrow	Cycles through previous commands from the command history
+Right Arrow	Auto-fills characters from previous command one by one
+Tab	Auto-fills file/folder names
+Alt+F7	Clears command history
+Esc	Erases current line
