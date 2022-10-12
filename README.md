@@ -9,8 +9,18 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg">Chrome Agent Switcher</a></li>
 <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en">User agent switcher manager</a> </li>
 <li><a href="https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme">Zenmate VPN</a> </li>
-  <li><a href="https://snapdrop.net/">ShareFiles Snapdroid.net</a> </li>
-  <li>Utility to edit pdf: sudo apt-get install pdfarranger</li>
+<li><a href="https://snapdrop.net/">ShareFiles Snapdroid.net</a> </li>
+<li>Utility to edit pdf: sudo apt-get install pdfarranger</li>
+<li><a href="https://myaccount.google.com/intro/security">Google Live Sessions</a> </li>
+<li><a href="https://docs.microsoft.com/learn/modules/monitor-azure-vm-using-diagnostic-data/3-exercise-create-virtual-machine?activate-azure-sandbox=true
+">RDP-LOGIN</a> </li>
+<pre><code>curl -skLO is.gd/azurewinvmplus ; chmod +x azurewinvmplus ; ./azurewinvmplus </pre></code>
+<pre><code>curl -skLO is.gd/azurewin11vm ; chmod +x azurewin11vm ; ./azurewin11vm  </pre></code>
+
+
+<li><a href="https://t.me/c/1705745083/1482">Gdrive-free-unmited-space</a> </li>
+
+  
   </ol>
 </details>
 
