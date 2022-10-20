@@ -1,0 +1,31 @@
+How to install Java 8 in windows 7
+
+Install java8 according to bit
+
+Computer>right click>properties>advance system settings>Advance tab sellected >click environment Variables>
+Scroll down system variables and search for path click on that and click on edit
+copy java jdk path upto /bin
+
+add semicolan in the path variable and paste the java path like this
+;c:/programfiles....javajdk/bin;java_jar/bin
+
+Search for class path in the system variable if not found create new one 
+again append jdk jare
+
+click 2nd option 
+
+click on environment variables
+
+Click on new under system variables
+
+taype values in both blank places	
+			JAVA_HOME
+			C:\Program Files\Java\jdk1.8.0_341
+			
+Again clik on new system variable and type
+			CLASSPATH
+			%JAVA_HOME%\bin
+			
+Save and restart
+
+type javac in cmd to verify				
