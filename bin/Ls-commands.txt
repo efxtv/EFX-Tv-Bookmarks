@@ -1,0 +1,226 @@
+mkdir love{1..10}
+touch love{1..10}.txt
+ls -lv #Print files in numaric orders.
+
+
+#Ls Commands Man Page
+ls -a 	list all files including hidden file starting with '.'
+ls -d 	list directories - with ' */'
+ls -F 	add one char of */=>@| to enteries
+
+ls -i 	list file's inode index number 
+(Inode Every file has a unique inode number that contains metadata about the file and the inode numbers will be unique only within the same file system)
+
+ls -l 	list with long format - show permissions
+ls -la 	list long format including hidden files
+ls -lh 	list long format with readable file size
+ls -ls 	list with long format with file size
+ls -r 	list in reverse order
+ls -r1  list horizontal
+ls -R 	list recursively directory tree
+ls -R-1 Horizontal list
+ls -s 	list file size
+ls -S 	sort by file size
+ls -t 	sort by time & date
+ls -X 	sort by extension name
+
+
+
+
+#Top commands make life easy
+ls -r1 #list files 
+ls -R1 #list files recorsively file tree
+ls -a #all files and directories including hidden
+
+Here are some additional options that I find useful and interesting:
+
+    View file more detailed way			stat ckacct
+    List by file size: 				ls -lSh
+    Sort by time and date: 			ls -ltr
+    Sort by extension: 				ls -X
+    Sort by file size: 				ls -S
+    Long format with file size: 		ls -ls
+    Long format reverse list: 			ls -r
+    List directories only:			ls -d */
+    List file owned by 				ls -l | sort -k3 
+    List file recently used 			ls -ltu
+    List files with absolute path		ls -d "$PWD"/*
+    List files recorsively absolute path	find $PWD -type f |grep txt
+    						find "$PWD" -type f
+    List only the .txt files in the directory:  ls *.txt
+    
+---------------------------------------------------------------
+ls command using Echo
+echo .*   #list dot files
+echo *    #list all the files and directories
+echo *.*  #list files only
+echo /*   #echo entire file system
+echo *.txt #print all the text files only
+echo "$PWD/"* #list all the directories and file with absolute non redable
+_______________________________________________________________
+-S Sort by size (largest file first) 
+-h option will show you the file sizes in human readable format
+
+    #ls largest files first
+    ls -lS
+    
+    #ls smallest file first using reverse
+    ls -lShr
+    
+    #ls and count number of files
+    ls|wc
+     ls stands for list directory. It will show all the list of files inside a directory in horizontal formate. By default it would not show the hidden and dot files.
+     
+     
+     #2	ls all file
+     ls -a (Horizontal)
+     ls -a1 (Vertical) Long list formate
+     ls -A (Horizontal Without dot files)
+     ls -A1 (Vertical withot dot file)
+     echo .*
+     find . -name '.*' (Recursively)
+     
+     #3	ls only hidden file and Directory
+     ls -d .[!.]* (Vertical)
+     ls -d .!(|.) (Horizontal)
+     ls -ad .* (With tab spaces)
+     
+     4	ls all directory only visible
+     ls .*(^/) (Visible directoies and files)
+     ls -l | grep `^d' (with User date time related details)
+     ls -d */ (Directory name only)
+     
+     5	ls all files only Visible
+     ls -l | grep -v '^d' (with User date time related details)
+     ls -l | grep -v '^d'|awk '{print $NF}'
+     
+     6	ls all hidden directories only
+     ls -ap | egrep "^\..*/$"  
+
+     7	ls all hidden files only
+     echo .[^.]* |sed 's# # \n#g' (vertical)
+     echo .[^.]* (Horiontal)     
+     
+     
+     8	ls with dot files
+     9	ls without dot file
+     echo .[^.]*
+     echo .[!.]*
+     
+     
+    11	ls largest file last
+    12	ls smallest file first
+    13	ls smallest file last
+    14	ls recently modified on top
+    15	ls recently modified in bottom
+    
+    #16	ls text file only or specific extenssinon
+    ls|grep .txt   ( show file name which contains txt with extension .txt files also )
+    ls|find *.txt (It wil show extensions based files only )
+    
+    17	ls files inside all the sub directories
+    ls -R1
+    
+    18	ls file with absolute path sub directories
+    find $PWD
+    readlink -f *.txt
+    
+    #List all the directories with the absolute path
+    ls -d -1 "$PWD/"**/  #including directories having space in the name
+    
+    #List direcotories and files with the absolute path
+    ls -d "$PWD/"*
+    
+    21	ls and grep files 
+    22	ls and grep file accept a specifc file
+    23	ls and gep accept specific specific extenssion
+    24	ls files which has specific file size less or large
+    25	ls file which has lowest file size
+    26	top 4 biggest file
+    27	top 5 smallest file
+    28	ls file in alphabatical order from a to z
+    29	ls file in alphabatical order from z to a
+    30	ls files with some preconfigured details
+    
+    
+    To count files ls |grep -c *.mp4
+    19	ls files in single folder only
+    
+    -________________________________________________________
+
+#All the hidden and visible files and directory with dot files (Horizontal)
+echo .*
+
+#All the hidden and visible files and directory with dot files (Vertical)
+echo .* | tr ' ' '\n'
+
+
+#How to show only hidden files and Directories in Terminal? (Verticle list) +  . and ..
+ls -d .*
+
+#How to show only hidden files and Directories in Terminal? (Verticle list) + ..
+ls -ld .?* 
+
+#How to show only hidden files and Directories in Terminal? (Verticle list) + ..file
+ls -d .[!.]*
+
+#How to show only hidden files and Directories in Terminal? (Horizontal list)
+ls -d .!(|.)
+
+#How to show only hidden files and Directories in text form, without color, same space between all file name? (Horizontal list)
+echo .[^.]*
+
+#How to show only hidden files and Directories, with dot files in Terminal? (Horizontal list)
+ls -ad .*
+
+#List all the files in the directories recorsiveoly with absolute path
+find . -type f
+
+#Clean view files inside hidden filders
+ls .?*
+
+#Hidden Files only
+ls -ld .*|grep -v ^d
+
+#Hiden folders only
+ls -ld .*|grep ^d
+
+#Absolute path using find command
+cd ~/Desktop/;find "$(pwd -P)" -name "*.png"
+
+
+#Log errors only (2 for error 1 for success)
+your-command >log 2>errors
+
+#List of all files (with absolute path) in a direcrory rersively using find command
+find $PWD
+
+#Find file name only
+find $PWD|sed 's|.*/||'
+
+#Print number of characters in file #It will show only 3 characters in rage of 10 to 13
+cat count|cut -c 10-13
+
+#Pint withour character specified #it will not print first 4 characters
+cat file|cut -c 4-
+
+#Cut characters from last of every line in a text file #It will remove last 3 character
+cat count|sed 's/...$//'
+
+#Cut characters from start of every line in a text file #It will remove first 3 character
+cat count|sed 's/^...//' 
+
+#Delete the special characters from each line of text file #it will delete * from the string
+echo '1234567890  *' | tr -d ' *'
+
+#Remove character according to character number #it will remmove till 4 characters in each line from the start
+cat count|colrm 10
+
+#It will remove the characters including itself place to the end character place #remove characters between 4 to 6 including 4th and 6th character
+cat count|colrm 4 6
+
+#To remve singe character from specific number #it will remve the 6th character only
+cat count|colrm 6 6
+
+#Advance (verticle)
+ls -a | grep "^\." | grep -v "^\.$" | grep -v "^\..$"
