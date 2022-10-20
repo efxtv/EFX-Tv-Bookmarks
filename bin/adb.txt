@@ -1,0 +1,4 @@
+adb shell pm list packages
+adb shell
+pm uninstall -k --user 0 splash.plytro.googlsrvap
+
