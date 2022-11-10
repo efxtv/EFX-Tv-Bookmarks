@@ -11,7 +11,7 @@ curl -L -o $HOME/FILE3 https://raw.githubusercontent.com/efxtv/figlet-fonts/main
 INSTALL LINUX:
 
 ls -1 /data/data/com.termux/files/usr/share/figlet|grep flf|awk '{print "figlet -f "$1" \"Hellow\";echo -e \"[[ --"$1"-- ]]\n\n\""}'|bash >$HOME/FILE2
-cat FILE1 FILE2 FILE3 >index.html
+cat FILE1 FILE2 FILE3 >$HOME/index.html
 rm FILE1 FILE2 FILE3 
 php -S localhost:5555 > /dev/null 2>&1 &
 echo ": http://localhost:5555"
