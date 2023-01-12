@@ -306,7 +306,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 
 <!--Youtube-channels -->
 <details>
-<summary>Top Hacking channel on youtue</summary>
+<summary>Top Hacking channel on youtube</summary>
 <br>
 <ol>
 <li><a href="https://www.youtube.com/c/ippsec/videos">Hack-thebox</a> </li>
