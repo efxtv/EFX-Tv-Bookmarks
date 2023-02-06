@@ -18,11 +18,11 @@ apt install sudo net-tools iputils-ping php python zip unzip wget curl git npm n
 sudo atp-get update;sudo apt-get upgrade
 curl -L -o $HOME/Tools.zip https://github.com/efxtv/EFX-Tv-Bookmarks/blob/main/bin/ubuntu-tools/Tools.zip?raw=true --progress-bar
 unzip Tools.zip -d Tools > /dev/null 2>&1 &
-sudo chmod +x $HOME/Tools/vnc/*
-ln -s $HOME/Tools/vnc/list /usr/bin/
-ln -s $HOME/Tools/vnc/start /usr/bin/
-ln -s $HOME/Tools/vnc/stop /usr/bin/
-ln -s $HOME/Tools/vnc/vnchelp /usr/bin/
+sudo chmod +x $HOME/Tools/Tools/vnc/*
+ln -s $HOME/Tools/Tools/vnc/list /usr/bin/
+ln -s $HOME/Tools/Tools/vnc/start /usr/bin/
+ln -s $HOME/Tools/Tools/vnc/stop /usr/bin/
+ln -s $HOME/Tools/Tools/vnc/vnchelp /usr/bin/
 clear
 echo
 vnchelp
