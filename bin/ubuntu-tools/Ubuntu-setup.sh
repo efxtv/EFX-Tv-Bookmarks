@@ -15,7 +15,7 @@ installgui(){
 cd
 apt update;apt upgrade
 apt install sudo net-tools iputils-ping php python zip unzip wget curl git npm nano nodejs openjdk-8-jdk openjdk-8-jre
-sudo atp-get update;sudo apt-get upgrade
+sudo apt-get update;sudo apt-get upgrade
 curl -L -o $HOME/Tools.zip https://github.com/efxtv/EFX-Tv-Bookmarks/blob/main/bin/ubuntu-tools/Tools.zip?raw=true --progress-bar
 unzip Tools.zip -d Tools > /dev/null 2>&1 &
 sudo chmod +x $HOME/Tools/Tools/vnc/*
