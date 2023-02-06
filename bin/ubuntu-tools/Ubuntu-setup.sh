@@ -23,8 +23,10 @@ ln -s $HOME/Tools/Tools/vnc/list /usr/bin/
 ln -s $HOME/Tools/Tools/vnc/start /usr/bin/
 ln -s $HOME/Tools/Tools/vnc/stop /usr/bin/
 ln -s $HOME/Tools/Tools/vnc/vnchelp /usr/bin/
-sudo chmod +x /usr/bin/*
-
+sudo chmod +x /usr/bin/list
+sudo chmod +x /usr/bin/start
+sudo chmod +x /usr/bin/stop
+sudo chmod +x /usr/bin/vnchelp
 clear
 echo
 vnchelp
