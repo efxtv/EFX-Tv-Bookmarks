@@ -309,6 +309,8 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Top Hacking channel on youtube</summary>
 <br>
 <ol>
+
+<li><a href="https://www.youtube.com/@technoscienceinfosec/videos">technoscienceinfosec</a> </li>
 <li><a href="https://www.youtube.com/c/ippsec/videos">Hack-thebox</a> </li>
 <li><a href="https://www.youtube.com/user/Hak5Darren/videos">Hack5</a> </li> 
 <li><a href="https://www.youtube.com/user/hackaday/videos">HackDay</a></li>
