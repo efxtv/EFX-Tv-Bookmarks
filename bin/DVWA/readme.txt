@@ -116,6 +116,9 @@ ________________________________________________________________
 How to install DVWA (kali Ubuntu)?
 https://pastebin.com/Ka44uQBi
 
+How to install DVWA in Termux ?
+https://pastebin.com/sL0L3ejw
+
 In this lecture, we are going to talk about brute forcing login pages using hydra and burp suite. We will attack: 
 DVWA and http://testasp.vulnweb.com
 
