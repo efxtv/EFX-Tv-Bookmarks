@@ -15,4 +15,4 @@ cyan=`tput setaf 6`
 white=`tput setaf 7`
 lwhite=`tput setaf 15`
 shineblue=`tput setaf 87`
-reset='tput sgr0
+reset='tput sgr0'
