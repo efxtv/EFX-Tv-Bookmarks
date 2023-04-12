@@ -1,0 +1,198 @@
+Creating RDP with Doker
+___________________________________________________________________
+Base commands
+___________________________________________________________________
+https://labs.play-with-docker.com/
+docker pull ubuntu
+docker run -it ubuntu
+
+___________________________________________________________________
+Docker PS
+___________________________________________________________________
+
+#Download ubuntu minimal version
+#command pull dockerimage 
+docker pull ubuntu
+docker pull ubuntu:22.04
+
+___________________________
+#Delete docker image
+___________________________
+$ docker image rm -f myfirstdockerimage
+$ docker image ls
+
+#Multiple versions pull
+docker image pull --all-tags ubuntu
+
+#works like grep
+docker image ls --filter reference=ubuntu
+
+#docker rename 
+docker rename CONTAINER NEW_NAME
+
+#docker restart
+docker restart my_container
+
+#run Docker (it would run one process and wiat for it to exit, you can not change it, you can run it to create full server)
+-i interactive
+-t sudo terminal
+docker run -it ubuntu
+
+#Check for os release
+cat /etc/os-release
+
+#Check docker running
+docker ps
+
+#Check all the docker running processes
+docker ps -a
+
+_________________________________
+#Portforwarding -p 1234:80 (localport outside the network will be 1234 to access port80)
+_________________________________
+#Install nginx
+docker pull nginx
+docker run nginx
+
+docker exec -it containerID bash
+
+curl http://localhost:80
+
+#port 1234 will take to 80
+which 
+docker run -p 1234:80 nginx
+docker run -p 127.0.0.1:1234:80 nginx
+
+_________________________________
+#Detach docker
+_________________________________
+docker run -d -p 127.0.0.1:1234:80 nginx
+docker stop containerId Nginix
+
+_________________________________
+#Go to shell in to running container
+_________________________________
+docker run -d -p 2234:80 nginx
+docker ps
+docker exec containerid /bin/bash
+docker exec -it containerid /bin/bash
+
+_________________________________
+#Name the container
+_________________________________
+docker run --name server -d -p 2234:80 nginx
+docker ps
+docker exec -it server bash
+
+List docker images in your system
+docker image ls
+docker image ls|head -n 2
+
+_________________________________
+#Create docker file. What is docker file (-t dockerName
+			
+_________________________________
+To create a docker file in cloud shell.
+Create a new directory as docker in home
+$ mkdir docker
+$ cd docker
+$ touch Dockerfile
+$ echo 'FROM ubuntu' >Dockerfile
+
+# Build doker
+$ docker build -t mudokerimagename .
+$ docker image ls
+
+#Run Custom image
+$ docker run -it mudokerimagename bash
+or
+$ docker run -it --rm mudokerimagename
+
+___________________________
+#Modify your custom docker image add wget
+___________________________
+To create a docker file in cloud shell.
+Create a new directory as docker in home
+$ mkdir docker
+$ cd docker
+$ nano Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install git
+
+#Build doker
+$ docker build -t mudokerimagename ./docker
+$ docker image ls
+
+#Run Custom image
+$ docker run -it mudokerimagename bash
+or
+$ docker run -it --rm mudokerimagename
+
+___________________________
+#How layering works in doker
+___________________________
+When you run build command docker turns it in to multiple layers
+FROM ubuntu
+# Layer1 Differnet image
+RUN apt-get update
+# Layer 1+2 Different image
+RUN apt-get -y install git
+
+
+___________________________
+#How compy command works in doker
+___________________________
+$ mkdir docker
+$ cd docker
+$ nano Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install git
+COPY flag.txt /root/myflag.txt
+
+#Build doker
+docker build -t mydokerubuntu .
+docker run -it mudokerimagename bash
+
+___________________________
+#Docker compose(software to use multiple container, using a single script) file docker-compose.yml holds details live version.(services means container)
+___________________________
+$ docker compose version
+$ nano docker-compose.yml
+version: '3.8'
+services:
+simpleubuntu:
+	container_name: mydokerubuntu
+	build:
+		context: .
+		dockerfile: Dockerfile
+#start compose
+docker-compose up
+			
+
+___________________________
+#How to execute a command in docker
+___________________________
+$ mkdir docker
+$ cd docker
+$ nano Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install git
+COPY flag.txt /root/myflag.txt
+CMD [ "ls" ]
+
+$docker-compose up --build
+
+#Build doker
+docker build -t mydokerubuntu .
+docker run -it mudokerimagename bash
+
+
+sudo nano /lib/systemd/system/x11vnc.service
+passwordd
+systemctl daemon-reload
+systemctl enable x11vnc.service
+
+
