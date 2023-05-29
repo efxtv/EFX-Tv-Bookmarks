@@ -7,7 +7,7 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <ol>
 <li><a href="https://www.perplexity.ai/">Chat GPT Alternative</a> </li>
 <li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
-<li><a href="#">demo</a></li>
+<li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
 <li><a href="#">demo</a></li>
 <li><a href="#">demo</a></li>
 <li><a href="#">demo</a></li>
