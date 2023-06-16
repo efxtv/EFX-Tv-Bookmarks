@@ -1,5 +1,22 @@
 # Best hacking websites (Bookmark) for ethical hackers
 Top website, webpages, chrome plugins, online editing tools for any time access for hacking purposes.
+
+<!--Dark web Listing -->
+<details>
+<summary>Dark web</summary>
+<br>
+<ol>
+<li><a href="https://hiddenwiki.me/">Hiden Wiki</a> </li>
+<li><a href="https://thehiddenwiki.org/">thehiddenwiki.org</a></li>
+<li><a href="https://thehiddenwiki2023.com/">thehiddenwiki2023</a></li>
+<li><a href="https://hidden-wiki.cc/">hidden-wiki</a></li>
+<li><a href="">#</a></li>
+<li><a href="">#</a></li>
+
+
+  </ol>
+</details>
+
 <!--AI -->
 <details>
 <summary>AI based WEB PAGES</summary>
