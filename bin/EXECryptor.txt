@@ -7,3 +7,7 @@ $ wine EXECryptor.exe
 sudo nano /etc/bash.bashrc
 alias crypt="wine '/home/demo/.wine/drive_c/Program Files (x86)/EXECryptor/EXECryptor.exe'"
 _____________________________________________
+Source https://download.cnet.com/Cryptor/3000-2094_4-10805019.html
+Setup: wine
+wine cryptor.exe
+_____________________________________________
