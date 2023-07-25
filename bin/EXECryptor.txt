@@ -1,0 +1,9 @@
+_____________________________________________
+Source https://execryptor.en.softonic.com/
+Setup: Wine, Bashrc file
+$ wine EXECryptor.exe
+
+# Alias
+sudo nano /etc/bash.bashrc
+alias crypt="wine '/home/demo/.wine/drive_c/Program Files (x86)/EXECryptor/EXECryptor.exe'"
+_____________________________________________
