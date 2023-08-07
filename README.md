@@ -510,6 +510,17 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
   </ol>
 </details>
 
+<!--PORTFORWARDING -->
+<details>
+<summary>Port forwarding binary</summary>
+<br>
+<ol>
+<li><a href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz">Ngrok Linux</a> </li>
+  <li><a href="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz">Ngrok Android AARCH64</a></li>
+
+  </ol>
+</details>
+
 ---------------------------------------
 <a href="#"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/3eeb7756-68ca-41b6-86aa-00a4c575bed9.png.webp" alt="Phonepay" width="241" height="269"></a>
 <a href="https://paypal.me/efxtv"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/donate-efx-tv.png" alt="Paypal" width="125" height="40"></a>
