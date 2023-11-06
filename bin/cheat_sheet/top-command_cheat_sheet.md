@@ -143,5 +143,15 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
   6. Cyan.
   7. White.
 
+- create a payload to check tool is running or not, if else in bash
+  ```
+  #!/bin/bash
+   if pgrep -x "top" > /dev/null; then
+    echo "top command is running."
+   else
+    echo "top command is not running."
+   fi
+   ```
+
 ---
 
