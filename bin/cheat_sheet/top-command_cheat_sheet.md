@@ -58,11 +58,11 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
      - wa stands for waiting (process waiting for input or output)
      - hi stands for hardware interrupts (time CPU spends managing hardware interrupts)
      - si stands for software interrupts (time CPU spends managing software interrupts)
-     - st stands for how much virtual CPU is waiting for the physical CPU.
+     - st stands for how much virtual CPU is waiting for physical CPU.
 
    - 4th Line: Memory-related information, including total memory, free memory, used memory, and cached memory:
      ```
-     MiB Mem:  23708.3 total,  16222.5 free,   2419.9 used,   5065.9 buff/cache
+     MiB Mem :  23708.3 total,  16222.5 free,   2419.9 used,   5065.9 buff/cache
      ```
      - Total memory
      - Free memory
@@ -80,7 +80,7 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
    - NI - Niceness value
    - VIRT - Total amount of virtual memory used by that task
    - RES - Physical memory being used by the process
-   - SHR - Shared memory, how much-shared memory is being used by the task
+   - SHR - Shared memory, how much shared memory is being used by the task
    - %CPU - CPU percentage
    - %MEM - Memory percentage
    - TIME - How much time CPU has spent on that particular task
@@ -106,7 +106,7 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
 
 - `$ top -n 1 -b > top-output.txt`
 
-- Press Shift + o, and enter a value to see processes using more than a specified %MEM.
+- Press Shift + o, enter a value to see processes using more than a specified %MEM.
 
 - Press 'z' to add color to the display.
 - Press Shift + Z to open color settings and choose display elements to change colors.
@@ -128,4 +128,3 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
   7. White.
 
 ---
-
