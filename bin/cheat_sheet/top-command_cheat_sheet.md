@@ -87,6 +87,20 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
    - %MEM - Memory percentage
    - TIME - How much time CPU has spent on that particular task
    - COMM - The command that has been executed by the task
+  
+**NICING THE PROCESS EXAMPLE VIA CLI**
+- Run a Process with a Specific Niceness:
+     ```
+     nice -n 10 command-to-run
+     ```
+- Change Niceness of a Running Process:
+     ```
+     renice 5 -p 12345
+     ```
+- If you want to change the niceness of a process by its name (command), you can use the -u (user) or -g (group)
+     ```
+     renice 10 -u john
+     ```
 
 **Some Shortcuts:**
 
