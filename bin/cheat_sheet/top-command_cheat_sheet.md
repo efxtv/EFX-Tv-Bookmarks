@@ -53,14 +53,14 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
      ```
      %Cpu(s):  4.2 us,  0.6 sy,  0.0 ni, 95.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
      ```
-     - us stands for user space (user-specific program run)
-     - sy stands for system or kernel-specific programs (kernel space)
-     - ni stands for niceness (task priority)
-     - id stands for idle (CPU idle time)
-     - wa stands for waiting (process waiting for input or output)
-     - hi stands for hardware interrupts (time CPU spends managing hardware interrupts)
-     - si stands for software interrupts (time CPU spends managing software interrupts)
-     - st stands for how much virtual CPU is waiting for physical CPU.
+     - `us` stands for user space (user-specific program run)
+     - `sy` stands for system or kernel-specific programs (kernel space)
+     - `ni` stands for niceness (task priority)
+     - `id` stands for idle (CPU idle time)
+     - `wa` stands for waiting (process waiting for input or output)
+     - `hi` stands for hardware interrupts (time CPU spends managing hardware interrupts)
+     - `si` stands for software interrupts (time CPU spends managing software interrupts)
+     - `st` stands for how much virtual CPU is waiting for physical CPU.
 
    - 4th Line: Memory-related information, including total memory, free memory, used memory, and cached memory:
      ```
@@ -76,17 +76,17 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
 
 2. **LOWER SECTION**
 
-   - PID - Process ID
-   - USER - Which user is running the process
-   - PR - Priority
-   - NI - Niceness value
-   - VIRT - Total amount of virtual memory used by that task
-   - RES - Physical memory being used by the process
-   - SHR - Shared memory, how much shared memory is being used by the task
-   - %CPU - CPU percentage
-   - %MEM - Memory percentage
-   - TIME - How much time CPU has spent on that particular task
-   - COMM - The command that has been executed by the task
+   - `PID` - Process ID
+   - `USER` - Which user is running the process
+   - `PR` - Priority
+   - `NI` - Niceness value
+   - `VIRT` - Total amount of virtual memory used by that task
+   - `RES` - Physical memory being used by the process
+   - `SHR` - Shared memory, how much shared memory is being used by the task
+   - `%CPU` - CPU percentage
+   - `%MEM` - Memory percentage
+   - `TIME` - How much time CPU has spent on that particular task
+   - `COMM` - The command that has been executed by the task
   
 **NICING THE PROCESS EXAMPLE VIA CLI**
 - Run a Process with a Specific Niceness:
@@ -104,28 +104,31 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
 
 **Some Shortcuts:**
 
-- Shift + p: Sort processes by CPU usage.
-- Shift + m: Sort processes by memory usage.
-- Press K, enter a process ID to kill a process.
-- Press D and enter to change the default delay time (1 = 1 second) for refreshing the top screen.
-- Press e and choose a size unit (k, m, g, t, p) to change display units.
-- Press i to show idle processes.
-- Press n, enter the number of processes to display.
+- `Shift + p`: Sort processes by CPU usage.
+- `Shift + m`: Sort processes by memory usage.
+- Press `K`, enter a process ID to kill a process.
+- Press `D` and enter to change the default delay time (1 = 1 second) for refreshing the top screen.
+- Press `e` and choose a size unit (k, m, g, t, p) to change display units.
+- Press `i` to show idle processes.
+- Press `n`, enter the number of processes to display.
 - `top -u root` to check user-specific usage.
-- Press t to toggle graphs on/off.
-- Press Shift + l to locate and highlight a process.
-- Press r, enter a nice value to renice a Linux process (e.g., -20: highest, 0: default, +19: lowest).
+- Press `t` to toggle graphs on/off.
+- Press `Shift + l` to locate and highlight a process.
+- Press `r`, enter a nice value to renice a Linux process (e.g., `-20: highest, 0: default, +19: lowest`).
 - In Linux, the nice value is an integer in the range of -19 to 20. The higher the nice value, the lower the priority of the process. The default nice value is zero.
-- Press c to show the absolute path of a running process.
+- Press `c` to show the absolute path of a running process.
 
 **Save Top Command Results in a File:**
 
 - `$ top -n 1 -b > top-output.txt`
 
 - Press Shift + o, enter a value to see processes using more than a specified %MEM.
-
-- Press 'z' to add color to the display.
-- Press Shift + Z to open color settings and choose display elements to change colors.
+- Press Shift + o, enter a value (the processes that used more than 5% memory)
+- `%MEM>5.0`
+- Press Shift + o, enter a value (the processes that used more than 5% CPU)
+- `%CPU>5.0`
+- Press `z` to add color to the display.
+- Press `Shift + Z` to open color settings and choose display elements to change colors.
 
   - Choose which display element you want to change by pressing:
     - S. Summary Data area.
