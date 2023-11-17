@@ -101,6 +101,8 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Study Resources</summary>
 <br>
 <ol>
+  
+  <li><a href="https://app.ziteboard.com/">White Board</a> </li>
 <li><a href="http://index-of.es">Study resources</a> </li>
 <li><a href="http://s28.bitdl.ir/?C=N&O=D">Study resources2</a></li>
 <li><a href="https://lira.epac.to/DOCS-TECH/Hacking/">Study resources3</a> </li>
@@ -454,6 +456,8 @@ Top website, webpages, chrome plugins, online editing tools for any time access 
 <summary>Editing</summary>
 <br>
 <ol>
+  
+  <li><a href="https://app.ziteboard.com/">White Board</a> </li>
 <li><a href="https://imgur.com/">Direct image link share</a> </li>
 <li><a href="https://soundful.com">SoundMixAI</a> </li>
 <li><a href="https://vocalremover.org/">VocalRemoval</a> </li>
