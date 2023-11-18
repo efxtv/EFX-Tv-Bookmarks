@@ -4,6 +4,8 @@
 
 **Top Command**
 
+
+
 Find out what's running on your Linux, monitor resource contention, CPU and memory issues, and usage.
 
 - The `top` command updates the screen every 3 seconds.
@@ -26,7 +28,7 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
    - In the load average, if all the numbers (e.g., load average: 0.84, 1.35, 1.12) become 7, it means you are using 100% CPU, and it indicates you have 7 CPUs in your system.
    - 100% busy = number of CPUs you have.
 
-   - Logged in users can be checked with the command:
+   - Logged-in users can be checked with the command:
      ```
      $ w
      ```
@@ -82,7 +84,7 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
    - `NI` - Niceness value
    - `VIRT` - Total amount of virtual memory used by that task
    - `RES` - Physical memory being used by the process
-   - `SHR` - Shared memory, how much shared memory is being used by the task
+   - `SHR` - Shared memory, how much-shared memory is being used by the task
    - `%CPU` - CPU percentage
    - `%MEM` - Memory percentage
    - `TIME` - How much time CPU has spent on that particular task
@@ -157,4 +159,7 @@ Find out what's running on your Linux, monitor resource contention, CPU and memo
    ```
 
 ---
+![Screenshot from 2023-11-18 16-19-14](https://github.com/efxtv/EFX-Tv-Bookmarks/assets/59799893/86c6f9f0-934c-4e1b-94c8-28b9e1601595)
 
+- Watch [full Tutorial video Here](https://t.me/c/1480784123/2223/2464)
+- Join our premium group [EFXTV](https://t.me/errorfix_tv)
