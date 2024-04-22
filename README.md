@@ -527,7 +527,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 </details>
 
 ---------------------------------------
-<a href="#"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/3eeb7756-68ca-41b6-86aa-00a4c575bed9.png.webp" alt="Phonepay" width="241" height="269"></a>
+# Donate
 <a href="#"><img src="https://raw.githubusercontent.com/efxtv/EFX-Tv-Bookmarks/main/bin/PAYMENT/USDT.png" alt="CryptoUSDT" width="241" height="269"></a>
 
 
