@@ -63,6 +63,10 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 
 <li><a href="https://filen.io">filen.io</a> </li>
 
+<li><a href="https://gofile.io/">Gofile</a> </li>
+
+
+
 <li><a href="https://anonfiles.com/">anonfiles</a> </li>
 <li><a href="https://mega.io/">Mega</a></li>
 <li><a href="https://www.pcloud.com/">Pcloud</a> </li>
