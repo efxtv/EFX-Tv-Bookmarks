@@ -530,6 +530,17 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
   </ol>
 </details>
 
+<!--AI -->
+<details>
+<summary>AI</summary>
+<br>
+<ol>
+<li><a href="https://www.blackbox.ai/">Chat Bot Blackbox</a> </li>
+  <li><a href="https://chat.openai.com">Chat Bot Chat GPT</a></li>
+
+  </ol>
+</details>
+
 ---------------------------------------
 # Donate
 <a href="#"><img src="https://raw.githubusercontent.com/efxtv/EFX-Tv-Bookmarks/main/bin/DONATE/USDT.png" title="Please donate to support EFX Tv" alt="CryptoUSDT" width="241" height="269"></a>
