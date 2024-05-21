@@ -536,7 +536,9 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <br>
 <ol>
 <li><a href="https://www.blackbox.ai/">Chat Bot Blackbox</a> </li>
-  <li><a href="https://chat.openai.com">Chat Bot Chat GPT</a></li>
+<li><a href="https://chat.openai.com">Chat Bot Chat GPT</a></li>
+<li><a href="https://www.perplexity.ai/">Chat BotPerplexity</a></li>
+
 
   </ol>
 </details>
