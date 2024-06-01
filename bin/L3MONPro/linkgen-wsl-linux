@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Define color codes for output
+declare -A COLORS=(
+    ["Black"]='\033[0;30m'
+    ["Red"]='\033[0;31m'
+    ["Green"]='\033[0;32m'
+    ["IGreen"]='\033[0;92m'
+    ["Yellow"]='\033[0;33m'
+    ["IYellow"]='\033[0;93m'
+    ["Blue"]='\033[0;34m'
+    ["Purple"]='\033[0;35m'
+    ["Cyan"]='\033[0;36m'
+    ["White"]='\033[0;37m'
+    ["Clear"]='\033[0m'
+)
+
+# Download and setup ngrok if not already available
+download_ngrok() {
+    rm -f "$HOME/ngrok" "$HOME/ngrokz.zip"
+    sudo apt-get update
+    sudo apt-get install -y jq zip unzip wget curl
+    
+    curl -L -o "$HOME/ngrokz.zip" https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --progress-bar
+    tar -xf "$HOME/ngrokz.zip" -C "$HOME"
+    "$HOME/ngrok" authtoken 2UNAUfd41du7ogYGZNRXRL3yYQ3_7cLygUqLDYgsfhb34ADcA
+}
+
+# Start ngrok TCP tunnel on the specified port
+start_ngrok_tcp() {
+    local port=$1
+    "$HOME/ngrok" tcp "$port" > /dev/null &
+    sleep 7
+
+    local tunnel_info=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
+    local public_url=${tunnel_info#tcp://}
+    ipo=$(echo "$public_url" | cut -d: -f1)
+    ip=$(host "$ipo" | awk '/has address/ { print $4 }')
+    vport=$(echo "$public_url" | cut -d: -f2)
+
+    echo -e "${COLORS[Green]} [${COLORS[IGreen]} OK ${COLORS[Green]}] ${COLORS[Cyan]}LPORT ${COLORS[Green]}   = ${COLORS[IYellow]}$port"
+    echo -e "${COLORS[Green]} [${COLORS[IGreen]} OK ${COLORS[Green]}] ${COLORS[Cyan]}IP ${COLORS[Green]}      = ${COLORS[IYellow]}$ip"
+    echo -e "${COLORS[Green]} [${COLORS[IGreen]} OK ${COLORS[Green]}] ${COLORS[Cyan]}VPORT ${COLORS[Green]}   = ${COLORS[IYellow]}$vport"
+    echo -e "${COLORS[Clear]}"
+}
+
+# Display ngrok tunnel information
+display_server_info() {
+    curl -s localhost:4040/api/tunnels
+}
+
+# Display help
+display_help() {
+    echo "Usage: ./linkgen [OPTION] [PORT]"
+    echo
+    echo "Options:"
+    echo "  PORT      Start ngrok tunnel on the specified port (default: 5555)"
+    echo "  stop      Stop ngrok process"
+    echo "  server    Display ngrok tunnel information"
+    echo "  -h        Display this help message"
+}
+
+# Main execution
+if [[ ! -e "$HOME/ngrok" ]]; then
+    download_ngrok
+fi
+
+case $1 in
+    stop)
+        pkill ngrok
+        echo "ngrok process stopped."
+        ;;
+    server)
+        display_server_info
+        ;;
+    -h)
+        display_help
+        ;;
+    *)
+        port=${1:-5555}
+        start_ngrok_tcp "$port"
+        ;;
+esac
+
