@@ -22,10 +22,10 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <summary>AI based WEB PAGES</summary>
 <br>
 <ol>
-<li><a href="https://www.perplexity.ai/">Chat GPT Alternative</a> </li>
+<li><a href="https://www.perplexity.ai/">Perplexityy</a> </li>
 <li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
 <li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
-<li><a href="#">demo</a></li>
+<li><a href="https://www.perplexity.ai/">Perplexityy</a></li>
 <li><a href="#">demo</a></li>
 <li><a href="#">demo</a></li>
   
