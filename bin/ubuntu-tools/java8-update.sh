@@ -1,27 +1,24 @@
 #!/bin/bash
 
-# Java 8 as default 
-java_alternatives=$(update-alternatives --list java)
-java_8_path="java-8"
-line_number=0
-found=false
+# Set the specific Java 8 path
+java_8_path="/opt/jre1.8.0_381/bin/java"
 
-for path in $java_alternatives; do
-    line_number=$((line_number + 1))
-    if [[ $path == *$java_8_path* ]]; then
-        found=true
-        break
-    fi
-done
+# Check if the specific Java 8 path exists in the alternatives list
+if update-alternatives --list java | grep -q "$java_8_path"; then
+#    echo "Setting Java 8 as the default..."
 
-if $found; then
-#    echo "Setting Java 8 as the default (option $line_number)..."
-    sudo update-alternatives --set java $(echo $java_alternatives | awk -v n=$line_number '{print $n}')  1 > '/dev/null' 2>&1
-#    sudo update-alternatives --set javac $(echo $java_alternatives | awk -v n=$line_number '{print $n}' | sed 's/bin\/java/bin\/javac/')
+    # Set the java alternative
+    sudo update-alternatives --set java "$java_8_path" > '/dev/null' 2>&1
+
+    # Set the javac alternative
+#    javac_path="${java_8_path/bin\/java/bin\/javac}"
+#    sudo update-alternatives --set javac "$javac_path"
+
+#    echo "Java 8 has been set as the default."
 else
     echo "Java 8 not found in the alternatives list."
 fi
 
 # Verify the version
-# java -version
-# javac -version
+java -version
+#javac -version
