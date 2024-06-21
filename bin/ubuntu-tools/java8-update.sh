@@ -20,5 +20,5 @@ else
 fi
 
 # Verify the version
-java -version
+#java -version
 #javac -version
