@@ -17,20 +17,6 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
   </ol>
 </details>
 
-<!--AI -->
-<details>
-<summary>AI based WEB PAGES</summary>
-<br>
-<ol>
-<li><a href="https://www.perplexity.ai/">Perplexityy</a> </li>
-<li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
-<li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
-<li><a href="https://www.perplexity.ai/">Perplexityy</a></li>
-<li><a href="#">demo</a></li>
-<li><a href="#">demo</a></li>
-  
-</ol>
-</details>
 <!--Hacking -->
 <details>
 <summary>EFX -TV files</summary>
@@ -538,8 +524,13 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <ol>
 <li><a href="https://www.blackbox.ai/">Chat Bot Blackbox</a> </li>
 <li><a href="https://chat.openai.com">Chat Bot Chat GPT</a></li>
- <li><a href="https://app.myshell.ai/">Claud3.5</a></li>
- <li><a href="https://www.perplexity.ai/">Chat BotPerplexity</a></li>
+<li><a href="https://flowgpt.com/">Flow GPT</a></li>
+<li><a href="https://app.myshell.ai/">Claud3.5</a></li>
+<li><a href="https://www.perplexity.ai/">Chat BotPerplexity</a></li>
+<li><a href="https://www.perplexity.ai/">Perplexityy</a> </li>
+<li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
+<li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
+<li><a href="https://www.perplexity.ai/">Perplexityy</a></li>
 
 
   </ol>
