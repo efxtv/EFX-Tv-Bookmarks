@@ -12,9 +12,31 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://hidden-wiki.cc/">hidden-wiki</a></li>
 <li><a href="">#</a></li>
 <li><a href="">#</a></li>
-
-
-  </ol>
+</ol>
+</details>
+<!--Unlimited upload sites -->
+<details>
+<summary>Unlimited File UPLOAD</summary>
+<br>
+<ol>
+<li><a href="https://filebin.net/">Filebin</a></li>
+<li><a href="https://toffeeshare.com/">Toffeeshare</a></li>
+<li><a href="https://gofile.io/">Gofile</a></li>
+<li><a href="https://fileroy.com/">Fileroy</a></li>
+<li><a href="https://anonfiles.com/">Anonfiles</a></li>
+<li><a href="https://mega.co.nz/">Mega</a></li>
+<li><a href="https://www.mediafire.com/">Mediafire</a></li>
+<li><a href="https://infotomb.com/m/welcome">Infotomb</a></li>
+<li><a href="http://sharesend.com/">Sharesend</a></li>
+<li><a href="http://www.wss-coding.com/upload">Wss-coding</a></li>
+<li><a href="http://zippyshare.com/">Zippyshare</a></li>
+<li><a href="http://filetolink.com/">Filetolink</a></li>
+<li><a href="http://ge.tt/">ge.tt</a></li>
+<li><a href="http://largedocument.com/">/largedocument</a></li>
+<li><a href="http://rghost.net/">rghost</a></li>
+<li><a href="http://dox.abv.bg/files/share">/dox.abv.bg</a></li>
+<li><a href="http://secureupload.eu/">secureupload</a></li>
+</ol>
 </details>
 
 <!--Hacking -->
