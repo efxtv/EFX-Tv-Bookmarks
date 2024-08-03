@@ -29,13 +29,14 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://www.transfernow.net/">Transfernow</a></li>
 <li><a href="https://fileroy.com/">Fileroy</a></li>
 <li><a href="https://mega.co.nz/">Mega</a></li>
+<li><a href="https://filesend.io/">filesend.io</a></li>
 <li><a href="https://www.mediafire.com/">Mediafire</a></li>
 <li><a href="https://infotomb.com/m/welcome">Infotomb</a></li>
 <li><a href="http://sharesend.com/">Sharesend</a></li>
 <li><a href="http://www.wss-coding.com/upload">Wss-coding</a></li>
 <li><a href="https://www.dropbox.com/">Dropbox</a></li>
 <li><a href="http://filetolink.com/">Filetolink</a></li>
-<li><a href="http://ge.tt/">ge.tt</a></li>
+<li><a href="https://send-anywhere.com/">Send-anywhere</a></li>
 <li><a href="http://largedocument.com/">/largedocument</a></li>
 <li><a href="http://rghost.net/">rghost</a></li>
 <li><a href="http://dox.abv.bg/files/share">/dox.abv.bg</a></li>
