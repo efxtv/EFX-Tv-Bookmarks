@@ -29,6 +29,10 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://www.transfernow.net/">Transfernow</a></li>
 <li><a href="https://fileroy.com/">Fileroy</a></li>
 <li><a href="https://mega.co.nz/">Mega</a></li>
+<li><a href="https://www.transfernow.net/">Transfernow</a></li>
+<li><a href="https://upload.disroot.org/">upload.disroot</a></li>
+<li><a href="https://streamable.com/">Streamable.com</a></li>
+<li><a href="https://easyupload.io/">Easyupload.io</a></li>
 <li><a href="https://filesend.io/">filesend.io</a></li>
 <li><a href="https://www.mediafire.com/">Mediafire</a></li>
 <li><a href="https://infotomb.com/m/welcome">Infotomb</a></li>
