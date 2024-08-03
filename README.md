@@ -19,11 +19,12 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <summary>Unlimited File UPLOAD</summary>
 <br>
 <ol>
+  
+<li><a href="https://anonfile.net/">Anonfile</a></li>
 <li><a href="https://filebin.net/">Filebin</a></li>
 <li><a href="https://toffeeshare.com/">Toffeeshare</a></li>
 <li><a href="https://gofile.io/">Gofile</a></li>
 <li><a href="https://fileroy.com/">Fileroy</a></li>
-<li><a href="https://anonfiles.com/">Anonfiles</a></li>
 <li><a href="https://mega.co.nz/">Mega</a></li>
 <li><a href="https://www.mediafire.com/">Mediafire</a></li>
 <li><a href="https://infotomb.com/m/welcome">Infotomb</a></li>
