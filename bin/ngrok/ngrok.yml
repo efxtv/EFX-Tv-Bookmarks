@@ -1,0 +1,9 @@
+version: "2"
+authtoken: 27comcssAkM1oLFnACC1WVPDWlA_37JXWV5qATSYaTXgfqB45
+tunnels:
+ first-app:
+  addr: 22533
+  proto: http
+ second-app:
+  addr: 22222
+  proto: tcp
