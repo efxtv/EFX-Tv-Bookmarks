@@ -24,12 +24,14 @@ then
 cat /L3MON/maindb.json.back >/L3MON/maindb.json
 passwordds=$(echo -n efxtv | openssl md5|awk '{print $2}')
 sed -i "s/    \"password\":.*/    \"password\": \"$passwordds\",/g" /L3MON/maindb.json
+pm2 restart index.js 1>/dev/null
 echo -e "${Green}[${IGreen}1${Green}]${IYellow} Password changed efxtv ${clear}"
 else
 cd /L3MON
 pm2 restart index.js 1>/dev/null
 sleep 1
 pm2 stop index.js 1>/dev/null
+
 echo -e "${Green}[${IGreen}1${Green}]${Red} [ERROR] maindb.json not found. Try again ${clear}"
 fi
 
