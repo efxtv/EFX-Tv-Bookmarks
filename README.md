@@ -539,10 +539,10 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
 <li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
 <li><a href="https://www.perplexity.ai/">Perplexityy</a></li>
-  <li><a href="https://lovo.ai/">Voiceover</a></li>
-  <li><a href="https://copilot.microsoft.com/">GPT4 Copilot</a></li>
-    <li><a href="https://novaapp.ai/">NovaAI</a></li>
-  
+<li><a href="https://lovo.ai/">Voiceover</a></li>
+<li><a href="https://copilot.microsoft.com/">GPT4 Copilot</a></li>
+<li><a href="https://novaapp.ai/">NovaAI</a></li>  
+<li><a href="https://pentestgpt.ai">PentestAi</a></li>
 
 
 
