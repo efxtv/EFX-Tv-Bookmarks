@@ -510,7 +510,6 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://www.seoreviewtools.com/">Backlink-checkier2</a> </li>
 <li><a href="https://ytrank.net/">Youtube-Video-tag-Rank-Checker</a> </li>
 <li><a href="https://web.dev/measure/">Website-optimizer</a> </li>
-<li><a href="https://www.blackbox.ai">BlackboxAi</a></li>
   </ol>
 </details>
 
@@ -532,19 +531,16 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <ol>
 <li><a href="https://www.blackbox.ai/">Chat Bot Blackbox</a> </li>
 <li><a href="https://chat.openai.com">Chat Chat GPT</a></li>
-  <li><a href="https://chat.olakrutrim.com/home">Indian Chat GPT</a></li>
+<li><a href="https://chat.olakrutrim.com/home">Indian Chat GPT</a></li>
 <li><a href="https://flowgpt.com/">Flow GPT</a></li>
 <li><a href="https://app.myshell.ai/">Claud3.5</a></li>
-<li><a href="https://www.perplexity.ai/">Chat BotPerplexity</a></li>
-<li><a href="https://www.perplexity.ai/">Perplexityy</a> </li>
-<li><a href="https://vocalremover.org/">Vocal Removar</a> </li> 
+<li><a href="https://www.perplexity.ai/">Chat BotPerplexity</a></li> 
 <li><a href="https://beta.dreamstudio.ai">Dream AI image creator</a></li>
-<li><a href="https://www.perplexity.ai/">Perplexityy</a></li>
 <li><a href="https://lovo.ai/">Voiceover</a></li>
 <li><a href="https://copilot.microsoft.com/">GPT4 Copilot</a></li>
 <li><a href="https://novaapp.ai/">NovaAI</a></li>  
 <li><a href="https://pentestgpt.ai">PentestAi</a></li>
-  <li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
+<li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
 
 
 
