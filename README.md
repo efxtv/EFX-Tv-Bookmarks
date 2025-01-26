@@ -510,7 +510,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://www.seoreviewtools.com/">Backlink-checkier2</a> </li>
 <li><a href="https://ytrank.net/">Youtube-Video-tag-Rank-Checker</a> </li>
 <li><a href="https://web.dev/measure/">Website-optimizer</a> </li>
-<li><a href="https://www.dorkgpt.com/">DorkGPT</a> </li>
+
 
   
   </ol>
@@ -544,6 +544,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://novaapp.ai/">NovaAI</a></li>  
 <li><a href="https://pentestgpt.ai">PentestAi</a></li>
 <li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
+  <li><a href="https://www.dorkgpt.com/">DorkGPT</a> </li>
 <li><a href="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
 
 
