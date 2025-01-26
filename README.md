@@ -541,7 +541,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://novaapp.ai/">NovaAI</a></li>  
 <li><a href="https://pentestgpt.ai">PentestAi</a></li>
 <li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
-<li><a herf="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
+<li><a href="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
 
 
 
