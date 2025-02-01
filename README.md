@@ -545,6 +545,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://pentestgpt.ai">PentestAi</a></li>
 <li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
   <li><a href="https://www.dorkgpt.com/">DorkGPT</a> </li>
+  <li><a href="https://aistudio.google.com/live">GoogleAI LiveChat</a></li>
 <li><a href="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
 
 
