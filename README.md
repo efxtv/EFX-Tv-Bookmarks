@@ -536,6 +536,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://chat.openai.com">Chat Chat GPT</a></li>
 <li><a href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1">DuckDuckGo GPT</a></li>
  <li><a href="https://chat.qwenlm.ai/">Qwenlm AI</a></li>  
+<li><a href="https://grok.com/">Grok Twitter AI</a></li>
 <li><a href="https://chat.olakrutrim.com/home">Indian Chat GPT</a></li>
 <li><a href="https://flowgpt.com/">Flow GPT</a></li>
 <li><a href="https://app.myshell.ai/">Claud3.5</a></li>
