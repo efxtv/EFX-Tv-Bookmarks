@@ -21,6 +21,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <ol>
   
 <li><a href="https://anonfile.net/">Anonfile</a></li>
+<li><a href="http://i.imgur.com/">Image Direct Link</a></li>
 <li><a href="https://filebin.net/">Filebin</a></li>
 <li><a href="https://toffeeshare.com/">Toffeeshare</a></li>
 <li><a href="https://www.file.io/">File.io</a></li>
