@@ -9,7 +9,7 @@ PHP_PID=$!
 sleep 2
 
 TUNNEL_LOG=$(mktemp)
-ssh -o StrictHostKeyChecking=no -R 80:localhost:3000 serveo.net > "$TUNNEL_LOG" 2>&1 &
+nohup ssh -o StrictHostKeyChecking=no -R 80:localhost:3000 serveo.net > "$TUNNEL_LOG" 2>&1 &
 SSH_PID=$!
 
 while ! grep -q "https://" "$TUNNEL_LOG"; do
