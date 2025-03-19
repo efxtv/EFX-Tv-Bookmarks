@@ -552,7 +552,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
   <li><a href="https://aistudio.google.com/live">GoogleAI LiveChat</a></li>
 <li><a href="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
 <li><a href="https://www.sitebrew.ai/p/JFDFgD">Website Builder</a> </li>
-[Movie-Map](https://www.movie-map.com/tanner+hall)
+<li><a href="https://www.movie-map.com/">Movie-Map Fun time</a> </li>
 
 
 
