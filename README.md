@@ -563,6 +563,8 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 
 ---------------------------------------
 # Donate
+<b><a href="https://buymeacoffee.com/efxtv">Buy Me A Coffee</a></b>
+
 <a href="#"><img src="https://raw.githubusercontent.com/efxtv/EFX-Tv-Bookmarks/main/bin/DONATE/USDT.png" title="Please donate to support EFX Tv" alt="CryptoUSDT" width="241" height="269"></a>
 
 
