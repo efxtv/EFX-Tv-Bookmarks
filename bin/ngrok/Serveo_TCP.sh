@@ -51,7 +51,7 @@ printf "%-12s %s\n" "[+] LPORT :" "$local_endpoint"
 echo
 
 
-# Minimal Veraion 
+# Minimal Version 
 
 #ssh -o StrictHostKeyChecking=no -R 0:localhost:8022 serveo.net > serveo_output.log 2>&1 &
 #while ! grep -q "Forwarding TCP" serveo_output.log; do sleep 1; done
