@@ -535,6 +535,8 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <summary>Chat-BOT</summary>
 <br>
 <ol>
+  
+<li><a href="https://notegpt.io/">Note YouTube Videos</a> </li>
 <li><a href="https://www.blackbox.ai/">Chat Bot Blackbox</a> </li>
 <li><a href="https://chat.openai.com">Chat Chat GPT</a></li>
 <li><a href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1">DuckDuckGo GPT</a></li>
@@ -550,12 +552,11 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <li><a href="https://novaapp.ai/">NovaAI</a></li>  
 <li><a href="https://pentestgpt.ai">PentestAi</a></li>
 <li><a href="https://v0.dev/chat">Clone Any Website chat</a></li>
-  <li><a href="https://www.dorkgpt.com/">DorkGPT</a> </li>
-  <li><a href="https://aistudio.google.com/live">GoogleAI LiveChat</a></li>
+<li><a href="https://www.dorkgpt.com/">DorkGPT</a> </li>
+<li><a href="https://aistudio.google.com/live">GoogleAI LiveChat</a></li>
 <li><a href="https://cerebrascoder.com/">Build Web App In Seconds</a> </li>
 <li><a href="https://www.sitebrew.ai/p/JFDFgD">Website Builder</a> </li>
 <li><a href="https://www.movie-map.com/">Movie-Map Fun time</a> </li>
-
   <li><a href="https://chat.openai.com">ChatGPT</a></li>
   <li><a href="https://claude.ai">Claude</a></li>
   <li><a href="https://gemini.google.com">Gemini</a></li>
