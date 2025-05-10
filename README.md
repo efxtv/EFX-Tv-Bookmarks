@@ -456,6 +456,8 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <summary>Editing</summary>
 <br>
 <ol>
+  
+  <li><a href="https://huggingface.co/spaces">HuggingFace</a> </li>
   <li><a href="https://app.ziteboard.com/">White Board</a> </li>
   <li><a href="https://openai.fm">Free Voiceover</a> </li>
   <li><a href="https://remove.photos/">All in 1 Image Editing</a> </li>
