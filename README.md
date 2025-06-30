@@ -51,10 +51,9 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 
 <!--Hacking -->
 <details>
-<summary>EFX -TV files</summary>
+<summary>EXTRAS</summary>
 <br>
 <ol>
-<li><a href="https://t.me/Efxtv/156">Download Configure NGROK</a> </li>
 <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg">Chrome Agent Switcher</a></li>
 <li><a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg?hl=en">User agent switcher manager</a> </li>
 <li><a href="https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme">Zenmate VPN</a> </li>
