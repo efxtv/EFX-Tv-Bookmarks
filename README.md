@@ -19,7 +19,7 @@ Top website, webpages, chrome plugins, and online editing tools for any-time acc
 <summary>Unlimited File UPLOAD</summary>
 <br>
 <ol>
-  
+<li><a href="https://termbin.com">TextToLink</a></li>  
 <li><a href="https://anonfile.net/">Anonfile</a></li>
 <li><a href="http://i.imgur.com/">Image Direct Link</a></li>
 <li><a href="https://filebin.net/">Filebin</a></li>
