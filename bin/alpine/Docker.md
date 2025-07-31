@@ -330,7 +330,7 @@ docker pause
 (does not stop the container, it just halts the process scheduler)
 ```
 
-# ✅ Create the snapshot (Resume later)
+# ✅ Create the snapshot (After boot it can be resumed)
 This creates a new Docker image called my-snapshot-image
 ```bash
 docker commit <container_name_or_id> my-snapshot-image
