@@ -304,6 +304,58 @@ List of 50 Docker command cheat sheet.
     docker system df
     ```
 
+# ✅ To pause a running container (reboot os will stop all)
+```bash
+docker pause <container_name_or_id>
+```
+
+### ▶️ To resume a paused container
+```bash
+docker unpause <container_name_or_id>
+```
+
+### 🔍 Check container status
+```bash
+docker ps -a
+```
+
+```
+docker stop
+(which gracefully stops and exits the container)
+
+docker kill
+(which forcefully stops it)
+
+docker pause
+(does not stop the container, it just halts the process scheduler)
+```
+
+# ✅ Create the snapshot (Resume later)
+This creates a new Docker image called my-snapshot-image
+```bash
+docker commit <container_name_or_id> my-snapshot-image
+```
+
+### You can verify it exists using
+```bash
+docker images
+```
+
+###  💾 Optional: Tag the image with a version or date
+```bash
+docker commit <container_name> my-snapshot-image:2025-07-31
+```
+
+### 🔁 Restore (run a new container from the image)
+```bash
+docker run -it --name restored-container my-snapshot-image
+```
+
+### Port forwarding if you need port to be forwarded 
+```bash
+docker run -it -p 22533:22533 -p 22222:22222 --name Containername my-snapshot-image
+
+```
 ---
 
 Feel free to follow us on [telegram](https://t.me/efxtv) 
