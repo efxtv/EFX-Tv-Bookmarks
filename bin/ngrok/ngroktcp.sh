@@ -2,6 +2,18 @@
 
 # ngrok config add-authtoken AUTHTOKENHERE
 # 1. Start the ngrok TCP tunnel (background)
+
+# Download ngrok
+# https://github.com/efxtv/EFX-Tv-Bookmarks/raw/refs/heads/main/bin/ngrok/ngrok-v3-stable-linux-amd64.tgz
+# tar -xf ngrok-v3-stable-linux-amd64.tgz
+# chmod +x ngrok
+# sudo cp ngrok /usr/bin
+
+# Download cloudflared
+# wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O cloudflared
+# chmod +x cloudflared
+# sudo cp cloudflared /usr/bin
+
 ngrok tcp $1 > /dev/null &
 
 # 2. Give it time to establish connection
