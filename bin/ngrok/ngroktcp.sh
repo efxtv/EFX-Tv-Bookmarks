@@ -23,7 +23,7 @@ sleep 8
 public_url=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[] | select(.proto=="tcp") | .public_url')
 
 # 4. Extract the IP address (resolving the hostname)
-ip=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[] | select(.proto=="tcp") | .public_url' | sed 's#tcp://##;s#:.*##' | xargs -I@ sh -c 'host @' | awk '{print $NF}')
+ip=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[] | select(.proto=="tcp") | .public_url' | sed 's#tcp://##;s#:.*##' | xargs -I@ sh -c 'host @' | awk '{print $NF}'|grep -v ':')
 
 # 5. Extract only the PORT
 port=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[] | select(.proto=="tcp") | .public_url' | cut -d: -f3)
