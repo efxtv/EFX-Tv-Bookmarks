@@ -1,0 +1,1 @@
+wget directlinktermux/linux
