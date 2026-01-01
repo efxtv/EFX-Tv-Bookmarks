@@ -2,7 +2,6 @@ KEYMAPOPTS="us us"
 HOSTNAMEOPTS="-n alpine"
 INTERFACESOPTS="auto lo
 iface lo inet loopback
-
 auto eth0
 iface eth0 inet dhcp
     hostname alpine
@@ -10,27 +9,8 @@ iface eth0 inet dhcp
 TIMEZONEOPTS="-z UTC"
 PROXYOPTS="none"
 APKREPOSOPTS="http://dl-cdn.alpinelinux.org/alpine/v3.12/main http://dl-cdn.alpinelinux.org/alpine/v3.12/community"
-
 APKOPTS="-i 'docker docker-compose bash vim'"
-
 ROOTPWSHELL="/bin/bash"
-
 SSHDOPTS="-c openssh"
 NTPOPTS="-c busybox"
 DISKOPTS="-v -m sys -s 0 /dev/sda"
-
-cat <<EOF > /root/.profile
-export PS1="\[\e[92m\]▷ \[\e[31m\](\u@root) \w/# \[\e[m\]"
-alias ls='ls --color=auto'
-export SHELL=/bin/bash
-EOF
-
-mkdir -p /etc/skel
-cat <<EOF > /etc/skel/.profile
-export PS1="\[\e[92m\]▷ \[\e[32m\](\u@root) \w/# \[\e[m\]"
-alias ls='ls --color=auto'
-export SHELL=/bin/bash
-EOF
-
-# poweroff and run the command 
-# rc-update add docker boot && service docker start
