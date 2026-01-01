@@ -31,3 +31,6 @@ export PS1="\[\e[92m\]▷ \[\e[32m\](\u@root) \w/# \[\e[m\]"
 alias ls='ls --color=auto'
 export SHELL=/bin/bash
 EOF
+
+# poweroff and run the command 
+# rc-update add docker boot && service docker start
