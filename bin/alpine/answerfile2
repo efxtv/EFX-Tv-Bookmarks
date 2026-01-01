@@ -2,6 +2,7 @@ KEYMAPOPTS="us us"
 HOSTNAMEOPTS="-n alpine"
 INTERFACESOPTS="auto lo
 iface lo inet loopback
+
 auto eth0
 iface eth0 inet dhcp
     hostname alpine
@@ -14,3 +15,8 @@ ROOTPWSHELL="/bin/bash"
 SSHDOPTS="-c openssh"
 NTPOPTS="-c busybox"
 DISKOPTS="-v -m sys -s 0 /dev/sda"
+
+# This line tells the installer to download and run your script automatically
+USER_SCRIPT="https://raw.githubusercontent.com/efxtv/EFX-Tv-Bookmarks/refs/heads/main/bin/alpine/alpinefix.sh"
+
+
